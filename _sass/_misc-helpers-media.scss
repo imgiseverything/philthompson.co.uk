@@ -1,0 +1,47 @@
+/* Media list */
+.media-list{
+	
+}
+
+	.media-list li{
+		
+	}
+	
+		
+.media{
+	text-align: left;
+}
+
+.media, 
+.media__supporting{
+	overflow: hidden; 
+	_overflow: visible; 
+	zoom: 1;
+}
+
+	.media__object {
+		float:left; 
+		margin-right: 10px;
+		
+		img{
+			display: block;
+		}
+		
+	}
+	
+	.media__object--alt{
+		float: right;
+		margin-left: 10px;
+		margin-right: 0;
+	}
+	
+	.media__object--flush{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.media__object--block{
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}

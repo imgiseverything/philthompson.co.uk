@@ -1,0 +1,41 @@
+body{
+	font: 14px/1.3 $font-family-body;
+}
+
+.h{
+	font-family: $font-family-body;
+}
+
+.xl{ font-size: 28px; }
+.h1{ font-size: 20px; }
+.h2{ font-size: 18px; }
+.h3{ font-size: 16px; }
+.h4{ }
+.h5{ font: bold 12px $font-family-body; }
+.h5{  }
+.h6{  }
+
+
+.copy-block{
+	font-size: 14px;
+	line-height: 1.33;
+}
+
+.facilities-list li{ 
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+@media screen and (min-width: $m+px) {
+
+	body{ font-size: 16px; }
+
+	.xl{ font-size: 42px; }
+	.h1{ font-size: 30px; }
+	.h2{ font-size: 24px; }
+	.h3{ font-size: 22px; }
+	.h4{ font-size: 18px; }
+	.h5{ font-size: 14px; }
+	.h6{  }
+
+}

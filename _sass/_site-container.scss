@@ -1,0 +1,13 @@
+.site-container{
+	background: #fff;
+	
+	
+	@media screen and (min-width: $m+px) {
+		padding: 0 10px;
+	}
+	
+	@media screen and (min-width: $l+px) {
+		padding: 0 20px;
+	}
+	
+}

@@ -1,0 +1,133 @@
+
+/**
+ * Layout helper classes
+	Image replacement classes / show/hide classes
+	WordPress specific classes
+		Image alignment
+		Captions
+		Post classes
+		Post navigation
+		Pagenavi plugin styles (use the WP-Pagenavi plugin it's ace)
+	Search form
+	List classes
+	Social icons (uses symoblset.com - get a licence - it's really cheap. Be nice, do it)
+ */
+.group, 
+.field{
+	clear: both;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.field{
+	margin: 0 0 20px;
+}
+
+.column{
+	float: left;
+	position: relative;
+	width: 50%;
+}
+
+.decoration{
+	display: block;
+	position: absolute;
+}
+
+/* Clearfix */
+.clearfix:before, 
+.clearfix:after { 
+	content: "\0020"; 
+	display: block; 
+	height: 0; 
+	overflow: hidden; 
+}
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }  
+
+/**
+ * Image replacement classes / show/hide classes
+ */
+.ir { 
+	background-color: transparent; 
+	background-repeat: no-repeat; 
+	border: 0; 
+	direction: ltr; 
+	display: block; 
+	overflow: hidden; 
+	text-align: left; 
+	text-indent: -999em; 
+	*line-height: 0; 
+}
+
+.ir br { 
+	display: none; 
+}    
+
+.hidden,
+.js-hidden { 
+	display: none; 
+	visibility: hidden; 
+} 
+
+
+/* Hidden but visible to screenreaders */
+.visuallyhidden { 
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px; 
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { 
+	clip: auto; 
+	height: auto; 
+	margin: 0; 
+	overflow: visible; 
+	position: static; 
+	width: auto; 
+}
+
+.invisible { visibility: hidden; }
+	
+	
+/* Lists */
+.block-list{
+
+}
+
+	.block-list li{
+		list-style: none;
+		margin-left: 0;
+	}
+
+.grid-list{
+	margin-left: -20px;
+}
+
+	.grid-list li{
+		float: left;
+		list-style: none;
+		margin: 0 0 20px 20px;
+	}
+
+/**
+ * Social icons
+ */		
+.social-list{
+	
+}
+
+.social-list li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 10px;
+}
