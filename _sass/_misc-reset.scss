@@ -72,7 +72,11 @@ body{
 	background: $c-yellow;
 	color: $c-black;
 	margin: 0 auto;
-	width: 93.75%;
+	width: 87.5%;
+	
+	@media screen and (min-width: $s+1+px) {
+		width: 93.75%;
+	}
 	
 	@media screen and (min-width: $l+px) {
 		width: 100%;

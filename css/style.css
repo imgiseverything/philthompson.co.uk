@@ -295,7 +295,10 @@ body {
   background: #ffdd22;
   color: #151515;
   margin: 0 auto;
-  width: 93.75%; }
+  width: 87.5%; }
+  @media screen and (min-width: 321px) {
+    body {
+      width: 93.75%; } }
   @media screen and (min-width: 1024px) {
     body {
       width: 100%; } }
@@ -372,6 +375,12 @@ li {
   margin-top: 0; }
 
 @media screen and (min-width: 768px) {
+  body {
+    font-size: 28px; }
+
+  .h1 {
+    font-size: 60px; } }
+@media screen and (min-width: 1024px) {
   body {
     font-size: 36px; }
 
@@ -571,10 +580,10 @@ a.icon:after {
         transform: translateY(-50%); } }
   .section:after {
     bottom: 20px;
-    content: 'v';
+    content: 'scroll';
+    font-size: 10px;
     position: absolute;
-    text-align: center;
-    width: 100%; }
+    right: 20px; }
   .section:last-of-type:after {
     content: none; }
 

@@ -27,8 +27,9 @@
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2 class="h h2">Examples <span class="amp">&amp;</span> work history</h2>
-			<p>Description sits here</p>
+			<h2 class="h h2">Processes <span class="amp">&amp;</span> work history</h2>
+			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of SASS and Grunt. Using BEM syntax for his CSS and making sure his JavaScript passes JSLint.</p>
+			<p>As a freelancer, it's difficult to publish work and code snippets but <a href="http://github.com/imgiseverything/philthompson.co.uk">this site's code</a> is completely available on GitHub for your to look over, appreciate and/or judge.</p>
 		</div>
 	</div>
 	<div class="group section">

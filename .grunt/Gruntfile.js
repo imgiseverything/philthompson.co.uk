@@ -125,7 +125,10 @@ module.exports = function(grunt) {
 				'!../js/<%= pkg.name %>.js', 
 				'!../js/<%= pkg.name %>.min.js'
 			],
-			tasks: ['sass', 'cssmin', 'concat'/*, 'uglify'*/]
+			tasks: ['sass', 'cssmin', 'concat'/*, 'uglify'*/],
+			options: {
+		      livereload: true,
+		    }
 		}
 	});
 	

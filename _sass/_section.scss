@@ -17,10 +17,10 @@
 	
 	&:after{
 		bottom: 20px;
-		content: 'v';
+		content: 'scroll';
+		font-size: 10px;
 		position: absolute;
-		text-align: center;
-		width: 100%;
+		right: 20px;
 	}
 	
 	&:last-of-type:after{
