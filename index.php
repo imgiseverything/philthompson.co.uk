@@ -1,3 +1,4 @@
+<?php $updated = '11072014'; ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,7 +11,11 @@
 	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
 	<!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 	<meta name="viewport" content="initial-scale=1.0,minimal-ui">
+	<?php if(strpos($_SERVER['HTTP_HOST'], '.co.uk') !== false): ?>
+	<link rel="stylesheet" href="/css/style.<?php echo $updated; ?>.min.css">
+	<?php else: ?>
 	<link rel="stylesheet" href="/css/style.css">
+	<?php endif; ?>
 </head>
 <body>
 <div id="site-container">
@@ -81,11 +86,11 @@
 		<div class="inner">
 			<h2 class="h h2">Chosen charities</h2>
 			<ul>
-				<li><a href="http://justgiving.com/sparks">Sparks</a>, fund life-saving medical research into conditions affecting babies, children and mums-to-be. Phil is riding the 2014 l&#8217;Etape du Tour for Sparks. <a href="https://www.justgiving.com/etape-for-sparks/">Sponsor him here</a>.</li>
+				<li><a href="http://justgiving.com/sparks">Sparks</a>, fund life-saving medical research into conditions affecting babies, children and mums-to-be. Phil is riding the 2014 l&#8217;Ètape du Tour for Sparks. <a href="https://www.justgiving.com/etape-for-sparks/">Sponsor him here</a>.</li>
 				<li><a href="http://www.christie.nhs.uk/">The Christie</a>, a Manchester-based Cancer centre that treats over 40,000 patients a year. Phil currently donates £600 a year.</li>
 				<li><a href="http://www.woodstreetmission.org.uk/">Wood Street Mission</a>, a Manchester-based charity providing practical help to children and their families. Phil currently donates £180 a year.</li>
 				<li><a href="http://www.shelter.org.uk/">Shelter</a>, a national UK charity working with homeless people. Phil currently donates £180 a year.</li>
-				<li><a href="http://www.boothcentre.org.uk/">Booths Centre</a>, a day centre that offers advice, activities and support to homeless people in Manchester. Phil currently donates £180 a year.</li>
+				<li><a href="http://www.boothcentre.org.uk/">Booth Centre</a>, a day centre that offers advice, activities and support to homeless people in Manchester. Phil currently donates £180 a year.</li>
 			</ul>	
 		</div>
 	</div>	
@@ -123,7 +128,8 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-<script src="/js/philthompsoncouk.js"></script>
+<?php if(strpos($_SERVER['HTTP_HOST'], '.co.uk') !== false): ?>
+<script src="/js/philthompsoncouk.<?php echo $updated; ?>.min.js"></script>
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -132,5 +138,7 @@
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-418350-4');ga('send','pageview');
 </script>
-</body>
+<?php else: ?>
+<script src="/js/philthompsoncouk.js"></script>
+<?php endif; ?></body>
 </html>

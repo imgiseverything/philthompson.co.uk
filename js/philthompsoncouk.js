@@ -1973,10 +1973,15 @@ window.PT = window.PT || {};
 			
 			setHeight: function(winHeight){
 				var self = this,
-					$sections = self.$sections;
+					$sections = self.$sections,
+					winWidth = parseInt($(window).width(), 10);
 				
 				$sections.each(function(){
-					$sections.css('height', winHeight);
+					if(winWidth > 1024){
+						$sections.css('height', winHeight).css('min-height', '');
+					} else{
+						$sections.css('min-height', winHeight).css('height', '');
+					}
 				});
 			}
 			

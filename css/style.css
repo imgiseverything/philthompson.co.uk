@@ -592,13 +592,13 @@ a.icon:after {
  */
 .section {
   height: 100%;
-  padding-top: 5em; }
-  @media screen and (min-width: 768px) {
+  padding-top: 2em; }
+  @media screen and (min-width: 1025px) {
     .section {
       padding-top: 0; } }
   .section .inner {
     position: relative; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1025px) {
       .section .inner {
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -609,7 +609,11 @@ a.icon:after {
     content: 'scroll';
     font-size: 10px;
     position: absolute;
-    right: 20px; }
+    right: 0; }
+    @media screen and (min-width: 1025px) {
+      .section:after {
+        bottom: 20px;
+        right: 20px; } }
   .section:last-of-type:after {
     content: none; }
 
