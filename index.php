@@ -57,19 +57,22 @@
 		</div>
 	</div>			
 	<div class="group section">
-		<div class="inner">
+		<div class="inner vcard">
+			<h2 class="h h2">Get in touch</h2>
+			<p>Got a project you think Phil can help with? Email him: <a href="mailto:hello@philthompson.co.uk" class="email">hello@philthompson.co.uk</a></p>
+			
 			<h2 class="h h2">Elsewhere on the web</h2>
 			<ul class="block-list social-list">
-				<li><a href="http://last.fm/user/imgiseverything" class="icon ss-lastfm">Last FM</a></li>
-				<li><a href="http://linkedin.com/in/philt" class="icon ss-linkedin">LinkedIn</a></li>
-				<li><a href="http://twitter.com/imgiseverything" class="icon ss-twitter">Twitter</a></li>
-				<li><a href="http://open.spotify.com/user/imgiseverything" class="icon ss-spotify">Spotify</a></li>
-				<li><a href="http://instagram.com/imgiseverythin9" class="icon ss-instagram">Instagram</a></li>
-				<li><a href="http://www.strava.com/athletes/340958" class="icon ss-link">Strava</a></li>
-				<li><a href="https://pinboard.in/u:imgiseverything" class="icon ss-pinboard">Pinboard</a></li>
-				<li><a href="http://pinterest.com/imgiseverything" class="icon ss-pinterest">Pinterest</a></li>
-				<li><a href="http://github.com/imgiseverything" class="icon ss-github">Github</a></li>
-				<li><a href="https://soundcloud.com/imgiseverythin9" class="icon ss-soundcloud">Soundcloud</a></li>
+				<li><a href="http://last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"></a></li>
+				<li><a href="http://linkedin.com/in/philt" class="icon ss-linkedin" title="LinkedIn"></a></li>
+				<li><a href="http://twitter.com/imgiseverything" class="icon ss-twitter" title="Twitter"></a></li>
+				<li><a href="http://open.spotify.com/user/imgiseverything" class="icon ss-spotify" title="Spotify"></a></li>
+				<li><a href="http://instagram.com/imgiseverythin9" class="icon ss-instagram" title="Instagram"></a></li>
+				<li><a href="http://www.strava.com/athletes/340958" class="icon ss-link" title="Strava"></a></li>
+				<li><a href="https://pinboard.in/u:imgiseverything" class="icon ss-pinboard" title="Pinboard"></a></li>
+				<li><a href="http://pinterest.com/imgiseverything" class="icon ss-pinterest" title="Pinterest"></a></li>
+				<li><a href="http://github.com/imgiseverything" class="icon ss-github" title="Github"></a></li>
+				<li><a href="https://soundcloud.com/imgiseverythin9" class="icon ss-soundcloud" title="Soundcloud"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -80,7 +83,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-<script src="/js/philthompsoncouk.min.js"></script>
+<script src="/js/philthompsoncouk.js"></script>
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

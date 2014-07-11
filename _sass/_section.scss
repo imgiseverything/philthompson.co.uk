@@ -1,4 +1,29 @@
 .section{
 	height: 100%;
 	padding-top: 5em;
+	
+	@media screen and (min-width: $m+px) {
+		padding-top: 0;
+	}
+	
+	.inner{
+		position: relative;
+		@media screen and (min-width: $m+px) {
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+			
+	}
+	
+	&:after{
+		bottom: 20px;
+		content: 'v';
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+	
+	&:last-of-type:after{
+		content: none;
+	}
 }

@@ -128,16 +128,48 @@
  * Social icons
  */		
 .social-list{
+	padding: 0;
+	li{
+		float: left;
+		list-style: none;
+		text-align: center;
+		width: 20%;
+		
+		&:nth-of-type(5n+1){
+			clear: both;
+		}
+	}
 	
+	a{
+		background: rgba(white, 0.1);
+		display: block;
+		padding: 2em 0;
+		
+		// Hover effects - desktop only
+		@media screen and (min-width: $l+1+px) {
+			&:hover{
+				background-color: rgba(white, 0.2);
+				font-size: 105%;
+				padding: 1.85em 0;
+				@include transition(all, 300ms, linear);
+			}
+		}
+		
+		
+	}
 }
 
-.social-list li{
-	display: inline-block;
-	list-style: none;
-	margin-left: 10px;
-}
-
+/* Use the Best Available Ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/ */
 .amp, .ampersand{
 	font-family: Baskerville,Georgia,serif;
 	font-style: italic;
+}
+
+
+/* Icons */
+
+a.icon{
+	&:after{
+		content: none;
+	}
 }
