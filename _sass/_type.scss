@@ -4,38 +4,32 @@ body{
 
 .h{
 	font-family: $font-family-body;
+	line-height: 1.1;
 }
 
-.xl{ font-size: 28px; }
-.h1{ font-size: 20px; }
-.h2{ font-size: 18px; }
-.h3{ font-size: 16px; }
-.h4{ }
-.h5{ font: bold 12px $font-family-body; }
-.h5{  }
-.h6{  }
 
-
-.copy-block{
-	font-size: 14px;
-	line-height: 1.33;
+.h1{ 
+	font-size: 2.22em; 
+	line-height: 0.975;  
 }
 
-.facilities-list li{ 
-	font-weight: bold;
-	line-height: 1.2;
+.h2{
+	font-size: 1.5em;
+}
+
+
+li{
+	font-size: 0.8em;
 }
 
 @media screen and (min-width: $m+px) {
 
-	body{ font-size: 36px; }
-
-	.xl{ font-size: 42px; }
-	.h1{ font-size: 30px; }
-	.h2{ font-size: 24px; }
-	.h3{ font-size: 22px; }
-	.h4{ font-size: 18px; }
-	.h5{ font-size: 14px; }
-	.h6{  }
+	body{ 
+		font-size: 36px; 
+	}
+	
+	.h1{ 
+		font-size: 80px; 
+	}
 
 }

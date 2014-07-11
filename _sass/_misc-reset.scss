@@ -63,6 +63,10 @@ em, i{
 	font-style: italic;
 }
 
+html, body{
+	height: 100%;
+}
+
 
 body{
 	background: $c-yellow;
@@ -77,16 +81,40 @@ body{
 
 a{
 	color: inherit;
+	display: inline-block;
+	position: relative;
 	text-decoration: none;
-}
-
-	a:visited{
+	
+	
+	
+	&:after{
+		background: $c-black;
+		bottom: 0;
+		content: '';
+		height: 2px;
+		left: 0;
+		opacity: .25;
+		position: absolute;
+		@include transition(all, 300ms, linear);
+		@include transform(translateY(-3px));
+		width: 100%;
+	}
+	
+	&:visited{
 		color: rgba($c-black, 0.8);
 	}
 	
-	a:hover{
-		
+	// Hover effects - desktop only
+	@media screen and (min-width: $l+1+px) {
+		&:hover{
+			&:after{
+				opacity: .5;
+				@include transform(translateY(-10px));
+			}
+		}
 	}
+	
+}
 	
 img, iframe{
 	height: auto;
@@ -113,6 +141,6 @@ p, ul, ol, dl{
 }
 
 ul li, ol li{
-	margin-left: 2em;
+	margin-left: 1em;
 	padding-bottom: .25em;
 }

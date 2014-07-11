@@ -16,39 +16,30 @@
 <div id="site-container">
 	<div class="group section">
 		<div class="inner">
-			<h1><a href="http://imgiseverything.co.uk/">Phil Thompson</a> is a <a href="http://imgiseverything.co.uk/work/">freelance front-end developer</a> based in the South-west of England.</h1>
+			<h1 class="h h1"><a href="http://imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end developer based in the South-west of England.</h1>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2>What he does</h2>
-			<p>Phil specialises in Front-end web code and WordPress. For those of you who don’t speak geek, this means he converts web designs (usually from Photoshop) into fully-functioning websites built upon the incredibly easy-to-use WordPress platform.</p>
-
-			<p>His professional experience has enabled Phil to gain a very good understanding of how websites work, from how they initially attract people to how they convince those same people to purchase/read/subscribe and subsequently return. Phil has a proven record of improving the fortunes of websites, whether that means increasing profits or increasing their findability in search engines.</p>
+			<h2 class="h h2">Huh? Front-end developer? What does that mean?</h2>
+			<p>Description sits here</p>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2>Examples and work history</h2>
-
-			<p>Through his work with digital agencies, Phil has worked with some large global and national brands including Playstation, The Rolling Stones, Boots, EA Games. This work is usually as part of a team.</p>
-			
-			<p>For those interested in some of the projects Phil has been involved in, there is an online portfolio and for those interested in reading about what Phil has done in his career so far/his skills, there is an online CV. You can also see Phil’s Linkedin profile to see more about him work-wise.</p>
-			
-			<p>Phil is available for freelance/contract work. If you’re a digital/design agency why not get in touch to see what Phil can offer.</p>
+			<h2 class="h h2">Examples <span class="amp">&amp;</span> work history</h2>
+			<p>Description sits here</p>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2>Personal life</h2>
-			<p>Phil has lived in Manchester for over 12 years and currently resides in the Whalley Range area of Manchester with his two housemates with whom he likes to watch (terrible, but at the same time awesome) Jason Statham films.</p>			
-			<p>He cycles to work which keeps him fit and allows him to feel like an environmentally-aware superhero; on rainy days (of which there are many in Manchester) he wears some rather fetching waterproof cycling trousers and a bright yellow rain mac – so don’t worry about him.</p>		
+			<h2 class="h h2">Personal life</h2>
+			<p>Description sits here</p>	
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2>Chosen charities</h2>
-			<p>Currently Phil&#8217;s chosen charities are:</p>
+			<h2 class="h h2">Chosen charities</h2>
 			<ul>
 				<li><a href="http://justgiving.com/sparks">Sparks</a>, fund life-saving medical research into conditions affecting babies, children and mums-to-be. Phil is riding the 2014 l&#8217;Etape du Tour for Sparks. <a href="https://www.justgiving.com/etape-for-sparks/">Sponsor him here</a>.</li>
 				<li><a href="http://www.christie.nhs.uk/">The Christie</a>, a Manchester-based Cancer centre that treats over 40,000 patients a year. Phil currently donates £600 a year.</li>
@@ -60,13 +51,14 @@
 	</div>	
 	<div class="group section">
 		<div class="inner">
-			<h2>What’s with the yellow?</h2>
+			<h2 class="h h2">What’s with the yellow?</h2>
 			<p>The short answer is because Phil likes loves it; the longer answer is that it makes the website stand-out. It allows for a very simplistic, some may say, minimalist design that maintains some character.</p>			
 			<p>Some people like the yellow and some don’t.</p>			
 		</div>
 	</div>			
 	<div class="group section">
 		<div class="inner">
+			<h2 class="h h2">Elsewhere on the web</h2>
 			<ul class="block-list social-list">
 				<li><a href="http://last.fm/user/imgiseverything" class="icon ss-lastfm">Last FM</a></li>
 				<li><a href="http://linkedin.com/in/philt" class="icon ss-linkedin">LinkedIn</a></li>
