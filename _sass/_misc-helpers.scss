@@ -37,7 +37,12 @@
 
 .inner{
 	margin: 0 auto;
-	max-width: 1020px;
+	max-width: 960px;
+	
+	@media screen and (min-width: $l+1+px) {
+		max-width: 1020px;
+	}
+	
 }
 
 /* Clearfix */
@@ -173,5 +178,3 @@ a.icon{
 		content: none;
 	}
 }
-
-

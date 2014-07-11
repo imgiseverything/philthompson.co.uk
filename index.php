@@ -27,9 +27,15 @@
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2 class="h h2">Processes <span class="amp">&amp;</span> work history</h2>
+			<h2 class="h h2">Processes</h2>
 			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of SASS and Grunt; using BEM syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>
 			<p>As a freelancer, it's difficult to publish work and code snippets but <a href="//github.com/imgiseverything/philthompson.co.uk">this site's code</a> is completely available on GitHub for your perusal, appreciation and/or judgement.</p>
+		</div>
+	</div>
+	<div class="group section">
+		<div class="inner">
+			<h2 class="h h2">Clients</h2>
+			<p>Working with well established agencies like Area17, Code Computerlove, LOVE and Building Blocks has given Phil the opportunity to me hone his skills on top brands like Playstation, EA Games, Warburtons, Boots, The Rolling Stones and Manchester United.</p>
 		</div>
 	</div>
 	<div class="group section">
@@ -41,7 +47,7 @@
 						<p>Phil has great communication skills. We worked together on a redesign project across different timezones, which ran smoothly. Phil  brings strong dev skills and a fun personality to the table. I look forward to working together on future projects.</p>
 						<cite>Angela Bliumis, Project Manager, Area 17</cite>
 					</blockquote>
-					<p><a href="http://imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
+					<p class="quote__meta"><a href="http://imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
 				</div>
 				
 				<div class="quote" data-slide data-slide-number="2">
@@ -49,7 +55,7 @@
 						<p>Phil was an excellent front end developer to work with. He’s the hard-to-find type of person who pays close attention to every detail, and was willing to continually tweak spacing and interactions until the site felt as close to perfect as possible.</p>
 						<cite><cite><a href="http://philipdibello.com/">Philip DiBello</a>, Designer, Area 17</cite></cite>
 					</blockquote>
-					<p><a href="http://imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
+					<p class="quote__meta"><a href="http://imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
 				</div>
 				
 				<div class="quote" data-slide data-slide-number="3">
@@ -57,7 +63,7 @@
 						<p>For the Pimm’s project, we got Phil in nice and early in the process. He fitted in really well to our responsive UX and design workflow, creating some really quick and useful pattern libraries for us to iterate on through the development of the project.</p>
 						<cite>Graeme Rutherford, Creative UX Strategist, LOVE Creative (now freelance)</cite>
 					</blockquote>
-					<p><a href="http://imgiseverything.co.uk/work/love/">Read the case study <span class="visuallyhidden">for LOVE Creative</span></a></p>
+					<p class="quote__meta"><a href="http://imgiseverything.co.uk/work/love/">Read the case study <span class="visuallyhidden">for LOVE Creative</span></a></p>
 				</div>
 				
 				<div class="quote" data-slide data-slide-number="4">
@@ -65,14 +71,7 @@
 						<p>We were recommended Phil by our designer and never looked back, he brought the website to life exactly how we wanted and made the user experience fantastic on both desktop and mobile devices. If in the future we require further front end development we would definitely look to Phil as he delivered on time and to a high standard.</p>
 						<cite>Danny Nugent, Managing Director, NUCO Travel</cite>
 					</blockquote>
-					<p><a href="http://imgiseverything.co.uk/work/nuco-travel/">Read the case study <span class="visuallyhidden">NUCO Travel</span></a></p>
-				</div>
-				
-				<div class="quote" data-slide data-slide-number="5">
-					<blockquote>
-						<p>Phil has delivered great work for MEN Media. Managing 3rd party suppliers of bespoke software is often challenging, but when working with Phil it's a breeze. Phil has exceeded our expectations. Highly recommended.</p>
-						<cite><a href="http://uk.linkedin.com/in/solutioneer">Ian Carroll</a>, Head of Digital Development, MEN Media (Now at Solutioneers Ltd), 2008</cite>
-					</blockquote>
+					<p class="quote__meta"><a href="http://imgiseverything.co.uk/work/nuco-travel/">Read the case study <span class="visuallyhidden">NUCO Travel</span></a></p>
 				</div>
 				
 			</div>

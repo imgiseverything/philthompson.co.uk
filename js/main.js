@@ -32,16 +32,35 @@ window.PT = window.PT || {};
 			self.pageLinks.init();
 			self.socialShare();
 						
-			self.fullHeightSections();
+			self.fullHeightSections.init();
 		},
 		
-		fullHeightSections: function(){
-			var $sections = $('.section');
+		fullHeightSections: {
+		
+			$sections: $('.section'),
+			winHeight: parseInt($(window).height(), 10),
+
+			init: function(){
+				var self = this;
+				self.$sections = $('.section');
+				
+				self.setHeight(self.winHeight);
+				
+				$(window).resize(function(){
+					self.setHeight(parseInt($(window).height(), 10));
+				});
+				
+			},
 			
-			$sections.css('height', parseInt($(window).height(), 10));
-			$(window).resize(function(){
-				$sections.css('height', parseInt($(window).height(), 10));
-			});
+			setHeight: function(winHeight){
+				var self = this,
+					$sections = self.$sections;
+				
+				$sections.each(function(){
+					$sections.css('height', winHeight);
+				});
+			}
+			
 		},
 		
 		// Allow an element to be shown/hidden with the click of a button

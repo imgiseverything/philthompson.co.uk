@@ -385,7 +385,7 @@ li {
 .quotes blockquote {
   font-family: "MuseoSlab500italic", "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
   line-height: 1.33; }
-.quotes cite {
+.quotes cite, .quotes .quote__meta {
   display: block;
   font-family: "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
   font-size: .85em;
@@ -476,7 +476,10 @@ li {
 
 .inner {
   margin: 0 auto;
-  max-width: 1020px; }
+  max-width: 960px; }
+  @media screen and (min-width: 1025px) {
+    .inner {
+      max-width: 1020px; } }
 
 /* Clearfix */
 .clearfix:before,
@@ -626,7 +629,8 @@ div[data-slide] {
   top: 3em;
   width: 100%; }
   div[data-slide].active {
-    opacity: 1; }
+    opacity: 1;
+    z-index: 1000; }
   @media screen and (min-width: 1025px) {
     div[data-slide] {
       -webkit-transition: all 300ms linear;
@@ -638,7 +642,7 @@ div[data-slide] {
   left: 0;
   position: absolute;
   top: 1em;
-  z-index: 2; }
+  z-index: 1001; }
   .slides-nav li {
     display: inline-block;
     margin: 0;
