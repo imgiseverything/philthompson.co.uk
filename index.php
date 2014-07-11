@@ -22,18 +22,18 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Huh? Front-end developer? What does that mean?</h2>
-			<p>A front-end developer takes website designs (artwork) usually in Photoshop or Illustrator and converts that artowkr into HTML templates using CSS and JavaScript. Front-end development work is just one part of the process; other parts include back-end development, <abbr title="User Experience">UX</abbr>, Planning and Project Management and that's just for starters.</p>
+			<p>A front-end developer takes website designs (artwork) usually in Photoshop or Illustrator and converts that artwork into HTML templates using CSS and JavaScript. Front-end development work is just one part of the process; other parts include back-end development, <abbr title="User Experience">UX</abbr>, Planning and Project Management and that's just for starters.</p>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Processes <span class="amp">&amp;</span> work history</h2>
-			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of SASS and Grunt. Using BEM syntax for his CSS and making sure his JavaScript passes JSLint.</p>
-			<p>As a freelancer, it's difficult to publish work and code snippets but <a href="//github.com/imgiseverything/philthompson.co.uk">this site's code</a> is completely available on GitHub for your to look over, appreciate and/or judge.</p>
+			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of SASS and Grunt; using BEM syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>
+			<p>As a freelancer, it's difficult to publish work and code snippets but <a href="//github.com/imgiseverything/philthompson.co.uk">this site's code</a> is completely available on GitHub for your perusal, appreciation and/or judgement.</p>
 		</div>
 	</div>
-	<div class="group section" data-slides>
-		<div class="inner">
+	<div class="group section">
+		<div class="inner" data-slides>
 			<h2 class="h h2">Nice things people have said</h2>
 			<div class="quotes">
 				<div class="quote active" data-slide data-slide-number="1">
@@ -46,7 +46,7 @@
 				
 				<div class="quote" data-slide data-slide-number="2">
 					<blockquote>
-						<p>Phil was an excellent front end developer to work with. He’s the hard-to-find type of person who pays close attention to every detail, and was willing to continually tweak spacing and interactions until the site felt as close to perfect as possible. Although we were working in different time zones, we had almost daily Skype conversations about how things were turning out and how to continually improve the site. He worked diligently to meet our design standards and functionality while also keeping the site running smoothly, given the pages complex interactions.</p>
+						<p>Phil was an excellent front end developer to work with. He’s the hard-to-find type of person who pays close attention to every detail, and was willing to continually tweak spacing and interactions until the site felt as close to perfect as possible.</p>
 						<cite><cite><a href="http://philipdibello.com/">Philip DiBello</a>, Designer, Area 17</cite></cite>
 					</blockquote>
 					<p><a href="http://imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
@@ -93,7 +93,7 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">What’s with the yellow?</h2>
-			<p>The short answer is because Phil likes loves it; the longer answer is that it makes the website stand-out. It allows for a very simplistic, some may say, minimalist design that maintains some character.</p>			
+			<p>The short answer is because Phil <del>likes</del> loves it; the longer answer is that it makes the website stand-out. It allows for a very simplistic, some may say, minimalist design that maintains some character.</p>			
 			<p>Some people like the yellow and some don’t.</p>			
 		</div>
 	</div>			

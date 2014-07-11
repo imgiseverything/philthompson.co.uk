@@ -148,3 +148,19 @@ ul li, ol li{
 	margin-left: 1em;
 	padding-bottom: .25em;
 }
+blockquote{
+    margin: 1em 0 1em 30px;
+    position: relative;
+    
+    &:before{
+		content: "‘";
+	    font-size: 60px;
+	    left: -20px;
+	    position: absolute;
+	    top: -10px;
+	}
+	
+	@media screen and (min-width: $l+px) {
+		margin-left: 0;
+	}
+}
