@@ -137,6 +137,7 @@
 	li{
 		float: left;
 		list-style: none;
+		padding: 0 5px 10px;
 		text-align: center;
 		width: 20%;
 		
@@ -149,6 +150,7 @@
 		background: rgba(white, 0.1);
 		display: block;
 		padding: 2em 0;
+		@include transition(all, 300ms, linear);
 		
 		// Hover effects - desktop only
 		@media screen and (min-width: $l+1+px) {
@@ -156,7 +158,6 @@
 				background-color: rgba(white, 0.2);
 				font-size: 105%;
 				padding: 1.85em 0;
-				@include transition(all, 300ms, linear);
 			}
 		}
 		
