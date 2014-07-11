@@ -1,6 +1,7 @@
 .section{
 	height: 100%;
 	padding-top: 2em;
+	width: 100%;
 	
 	@media screen and (min-width: $l+1+px) {
 		padding-top: 0;
@@ -8,24 +9,39 @@
 	
 	.inner{
 		position: relative;
+		width: 100%;
 		@media screen and (min-width: $l+1+px) {
 			top: 50%;
 			@include transform(translateY(-50%));
-		}
-			
+		}			
+	}
+	
+	&:first-of-type .inner{
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		@include transform(translate(-50%, -50%));
 	}
 	
 	&:after{
 		bottom: 20px;
-		content: 'scroll';
 		font-size: 10px;
 		position: absolute;
 		right: 0;
+		
+		@media screen and (min-width: $m+px) {
+			content: 'scroll';
+			right: 20px;
+		}
 		
 		@media screen and (min-width: $l+1+px) {
 			bottom: 20px;
 			right: 20px;
 		}
+	}
+	
+	&:first-of-type:after{
+		content: 'scroll';
 	}
 	
 	&:last-of-type:after{
