@@ -1,0 +1,73 @@
+# Custom error files
+#ErrorDocument 300 /error.php?error=300
+#ErrorDocument 401 /error.php?error=401
+#ErrorDocument 403 /error.php?error=403
+#ErrorDocument 404 /error.php?error=404
+#ErrorDocument 500 /error.php?error=500
+
+
+
+
+# REWRITE RULES
+# 
+# 1.	Wilcard subdomains:
+# 		<subdomain>.demo.philthompson.co.uk/<path> to /subdomains/<subdomain>/<path>
+#
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Rewrite only if not already rewritten to /subdomains/
+RewriteCond $1 !subdomains/
+# Skip rewrite if subdomain is www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+# Extract (required) subdomain to %1
+RewriteCond %{HTTP_HOST} ^([^.]+)\.demo\.philthompson\.co\.uk(:80)?$
+# Rewrite to /subdomains/subdomain/URL-path
+RewriteRule (.*) /subdomains/%1/$1 [L] 
+</IfModule>
+
+
+# PERFORMANCE RULES
+
+# GZIP
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.0[678] no-gzip
+	BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+# EXPIRES HEADERS
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 1 year"
+	ExpiresByType text/html "access plus 7200 seconds"
+	ExpiresByType image/ico "access plus 2678400 seconds"
+	ExpiresByType image/gif "access plus 2678400 seconds"
+	ExpiresByType image/jpeg "access plus 2678400 seconds"
+	ExpiresByType image/png "access plus 2678400 seconds"
+	ExpiresByType text/css "access plus 518400 seconds"
+	ExpiresByType text/javascript "access plus 2678400 seconds"
+	ExpiresByType application/x-javascript "access plus 2678400 seconds"
+</IfModule>
+
+# CACHE HEADERS
+<IfModule mod_headers.c>
+	# Cache specified files for 31 days
+	<FilesMatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf)$">
+		Header set Cache-Control "max-age=2678400, public"
+		Header unset ETag
+		FileETag None
+	</FilesMatch>
+	# Cache HTML files for a couple hours
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=7200, private, must-revalidate"
+	</FilesMatch>
+	# Cache PDFs for a day
+	<FilesMatch "\.(pdf)$">
+		Header set Cache-Control "max-age=86400, public"
+	</filesmatch>
+	# Cache Javascripts for 31 days
+	<FilesMatch "\.(js)$">
+		Header set Cache-Control "max-age=2678400, private"
+	</filesmatch>
+</IfModule>
