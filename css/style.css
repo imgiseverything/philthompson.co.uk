@@ -326,11 +326,14 @@ a {
   a:visited {
     color: rgba(21, 21, 21, 0.8); }
   @media screen and (min-width: 1025px) {
-    a:hover:after {
-      opacity: .5;
-      -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-      transform: translateY(-10px); } }
+    a {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+      a:hover:after {
+        opacity: .5;
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px); } }
 
 img, iframe {
   height: auto;
