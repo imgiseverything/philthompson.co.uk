@@ -110,6 +110,9 @@ a{
 	
 	// Hover effects - desktop only
 	@media screen and (min-width: $l+1+px) {
+		-webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    
 		&:hover{
 			&:after{
 				opacity: .5;
