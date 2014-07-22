@@ -40,7 +40,7 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Clients</h2>
-			<p>Working with well established agencies like Area17, Code Computerlove, LOVE and Building Blocks has given Phil the opportunity to me hone his skills on top brands like Playstation, EA Games, Warburtons, Boots, The Rolling Stones and Manchester United.</p>
+			<p>Working with well established agencies like Area17, Code Computerlove, LOVE and Building Blocks has given Phil the opportunity to hone his skills on top brands like Playstation, EA Games, Warburtons, Boots, The Rolling Stones and Manchester United.</p>
 		</div>
 	</div>
 	<div class="group section">

@@ -295,7 +295,9 @@ body {
   background: #ffdd22;
   color: #151515;
   margin: 0 auto;
-  width: 87.5%; }
+  width: 87.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   @media screen and (min-width: 321px) {
     body {
       width: 93.75%; } }
@@ -326,14 +328,11 @@ a {
   a:visited {
     color: rgba(21, 21, 21, 0.8); }
   @media screen and (min-width: 1025px) {
-    a {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale; }
-      a:hover:after {
-        opacity: .5;
-        -webkit-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-        transform: translateY(-10px); } }
+    a:hover:after {
+      opacity: .5;
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px); } }
 
 img, iframe {
   height: auto;
@@ -360,7 +359,7 @@ blockquote {
       margin-left: 0; } }
 
 body {
-  font: 20px/1.6667 "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif; }
+  font: 16px/1.6667 "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif; }
 
 b, strong {
   font-family: "Museo700", "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
