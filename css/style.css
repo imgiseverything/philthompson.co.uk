@@ -234,10 +234,15 @@ html:hover [class^="ss-"] {
   font-weight: normal;
   font-style: normal; }
 /* Box sizing - reset to a nicer understanding of the box model */
-* {
+html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
 
 /**
  *	1 Resets/normalise
