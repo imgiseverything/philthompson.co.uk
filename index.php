@@ -1,4 +1,4 @@
-<?php $updated = '11072014'; ?>
+<?php $updated = '29072014'; ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -33,7 +33,8 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Processes</h2>
-			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of SASS and Grunt; using BEM syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>
+			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of SASS and Grunt; using BEM syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>			
+			<h3 class="h h3">Code samples</h3>
 			<p>As a freelancer, it's difficult to publish work and code snippets but <a href="//github.com/imgiseverything/philthompson.co.uk">this site's code</a> is completely available on GitHub for your perusal, appreciation and/or judgement.</p>
 		</div>
 	</div>
@@ -104,9 +105,8 @@
 	<div class="group section">
 		<div class="inner vcard">
 			<h2 class="h h2">Get in touch</h2>
-			<p>Got a project you think Phil can help with? Email him: <a href="mailto:hello@philthompson.co.uk" class="email">hello@philthompson.co.uk</a></p>
-			
-			<h2 class="h h2">Elsewhere on the web</h2>
+			<p>Got a project you think Phil can help with? Email him: <a href="mailto:hello@philthompson.co.uk" class="email">hello@philthompson.co.uk</a></p>			
+			<h3 class="h h3">Elsewhere on the web</h3>
 			<ul class="block-list social-list">
 				<li><a href="http://last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"></a></li>
 				<li><a href="http://linkedin.com/in/philt" class="icon ss-linkedin" title="LinkedIn"></a></li>

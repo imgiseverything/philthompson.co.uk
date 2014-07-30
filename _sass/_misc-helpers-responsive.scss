@@ -42,16 +42,14 @@ screen and (min-width: $m+px) and (max-width: $l+px){
 }
 
 /* Tablet landscape (give it desktop styles) and desktop */
-@media 
-screen and (min-width: $l+px) {
+@include breakpoint(ipad-landscape){
 	.desktop-hidden{
 		display: none !important;
 	}	
 }
 
 /* Desktop + */
-@media 
-screen and (min-width: $l+1+px) {
+@include breakpoint(desktop){
 	.mobile-only,
 	.tablet-only{
 		display: none !important;
