@@ -19,6 +19,11 @@ window.PT = window.PT || {};
 
 		config: {
 			smoothScrollSpeed: 1500,
+			breakpoints: {
+				desktop: 1025,
+				ipadLandscape: 1204,
+				ipadPortrait: 768
+			},
 			classes: {
 				active: 'active'
 			}
@@ -55,15 +60,30 @@ window.PT = window.PT || {};
 			setHeight: function(winHeight){
 				var self = this,
 					$sections = self.$sections,
+					$section = {},
 					winWidth = parseInt($(window).width(), 10);
+					
+				// On desktop, set the height of each section to be one screen
+				// On smaller screens we want them the height they are
+				if(winWidth >= window.PT.config.breakpoints.desktop){
+					$sections.css('height', winHeight).css('min-height', '');
+				} else{
+					//$sections.css('min-height', winHeight).css('height', '');
+					$sections.css('height', '');
+				}	
 				
-				$sections.each(function(){
-					if(winWidth > 1024){
-						$sections.css('height', winHeight).css('min-height', '');
-					} else{
-						$sections.css('min-height', winHeight).css('height', '');
+				// But if a section is longer than the window height - then justr left it be
+				$sections.each(function(){	
+					$section = $(this);
+					if(parseInt($section.height(), 10) > winHeight){
+						$section.css('min-height', '');
 					}
 				});
+				
+				// First section is always full height
+				$sections.eq(0).css('height', winHeight);
+				
+				
 			}
 			
 		},

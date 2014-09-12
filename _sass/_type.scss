@@ -16,6 +16,7 @@ em, i{
 .h{
 	font-family: $font-family-body;
 	line-height: 1.1;
+	text-rendering: optimizeLegibility;
 }
 
 .h1{ 
@@ -60,8 +61,21 @@ p, ul, ol{
 	margin-top: 2em;
 }
 
+.section h1:first-of-type,
 .section h2:first-of-type{
 	margin-top: 0;
+}
+
+@include breakpoint(mobile-landscape){
+	body{
+		font-size: 12px;
+	}
+}
+
+@include breakpoint(tablet){
+	body{
+		font-size: 14px;
+	}
 }
 
 @include breakpoint(ipad-portrait){

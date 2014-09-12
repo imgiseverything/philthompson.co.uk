@@ -1938,6 +1938,11 @@ window.PT = window.PT || {};
 
 		config: {
 			smoothScrollSpeed: 1500,
+			breakpoints: {
+				desktop: 1025,
+				ipadLandscape: 1204,
+				ipadPortrait: 768
+			},
 			classes: {
 				active: 'active'
 			}
@@ -1974,15 +1979,30 @@ window.PT = window.PT || {};
 			setHeight: function(winHeight){
 				var self = this,
 					$sections = self.$sections,
+					$section = {},
 					winWidth = parseInt($(window).width(), 10);
+					
+				// On desktop, set the height of each section to be one screen
+				// On smaller screens we want them the height they are
+				if(winWidth >= window.PT.config.breakpoints.desktop){
+					$sections.css('height', winHeight).css('min-height', '');
+				} else{
+					//$sections.css('min-height', winHeight).css('height', '');
+					$sections.css('height', '');
+				}	
 				
-				$sections.each(function(){
-					if(winWidth > 1024){
-						$sections.css('height', winHeight).css('min-height', '');
-					} else{
-						$sections.css('min-height', winHeight).css('height', '');
+				// But if a section is longer than the window height - then justr left it be
+				$sections.each(function(){	
+					$section = $(this);
+					if(parseInt($section.height(), 10) > winHeight){
+						$section.css('min-height', '');
 					}
 				});
+				
+				// First section is always full height
+				$sections.eq(0).css('height', winHeight);
+				
+				
 			}
 			
 		},
@@ -2126,6 +2146,11 @@ window.PT = window.PT || {};
 		$slides: 	$('[data-slide]'),
 		config: 	window.PT.config,
 		
+		resize: {
+			timer: null,
+			delay: 300
+		},
+		
 		init: function(){
 			var self = this;
 			if(self.$slides.length === 0){
@@ -2134,6 +2159,17 @@ window.PT = window.PT || {};
 			
 			self.buildNavigation();
 			self.navigate();
+			self.height();
+
+			
+			// After a window resize, reset the height of the menu. 
+			// Only do it after a timeout so it's not called too often
+			$(window).resize(function(){
+				clearTimeout(self.resize.timer);
+				self.resize.timer = setTimeout(function(){ 
+					self.height();
+				}, self.resize.delay);
+			});
 			
 		},
 		
@@ -2221,7 +2257,29 @@ window.PT = window.PT || {};
 			}
 			
 			$next.click();
-		}		
+		},		
+		
+		
+		// Ensure slides always take up the space they need
+		height: function(){
+			var self = this,
+				height = 0,
+				highest = 0,
+				winHeight = parseInt($(window).height(), 10);
+				
+			self.$slides.each(function(){
+				height = parseInt($(this).outerHeight(), 10);
+				console.log(height);
+				if(height > highest){
+					highest = height;
+				}
+			});
+			
+			highest = highest * 1.5;
+			
+			self.$container.closest('.inner').css('min-height', highest + 'px');
+				
+		}
 				
 	};
 	

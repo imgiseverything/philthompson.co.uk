@@ -21,6 +21,11 @@ window.PT = window.PT || {};
 		$slides: 	$('[data-slide]'),
 		config: 	window.PT.config,
 		
+		resize: {
+			timer: null,
+			delay: 300
+		},
+		
 		init: function(){
 			var self = this;
 			if(self.$slides.length === 0){
@@ -29,6 +34,17 @@ window.PT = window.PT || {};
 			
 			self.buildNavigation();
 			self.navigate();
+			self.height();
+
+			
+			// After a window resize, reset the height of the menu. 
+			// Only do it after a timeout so it's not called too often
+			$(window).resize(function(){
+				clearTimeout(self.resize.timer);
+				self.resize.timer = setTimeout(function(){ 
+					self.height();
+				}, self.resize.delay);
+			});
 			
 		},
 		
@@ -116,7 +132,29 @@ window.PT = window.PT || {};
 			}
 			
 			$next.click();
-		}		
+		},		
+		
+		
+		// Ensure slides always take up the space they need
+		height: function(){
+			var self = this,
+				height = 0,
+				highest = 0,
+				winHeight = parseInt($(window).height(), 10);
+				
+			self.$slides.each(function(){
+				height = parseInt($(this).outerHeight(), 10);
+				console.log(height);
+				if(height > highest){
+					highest = height;
+				}
+			});
+			
+			highest = highest * 1.5;
+			
+			self.$container.closest('.inner').css('min-height', highest + 'px');
+				
+		}
 				
 	};
 	

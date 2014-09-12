@@ -29,14 +29,12 @@
 		position: absolute;
 		right: 0;
 		
-		@media screen and (min-width: $m+px) {
-			content: 'scroll';
+		@include breakpoint(ipad-portrait){
 			right: 20px;
 		}
 		
-		@media screen and (min-width: $l+1+px) {
-			bottom: 20px;
-			right: 20px;
+		@include breakpoint(desktop){
+			content: 'scroll';
 		}
 	}
 	
