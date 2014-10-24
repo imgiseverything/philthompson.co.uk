@@ -87,7 +87,7 @@
 		<div class="inner">
 			<h2 class="h h2">Chosen charities</h2>
 			<ul>
-				<li><a href="http://justgiving.com/sparks">Sparks</a>, fund life-saving medical research into conditions affecting babies, children and mums-to-be. <a href="http://imgiseverything.co.uk/articles/long-bike-rides-broken-limbs-raising-money-charity/">Phil (almost) and friends rode the 2014 l&#8217;Ètape du Tour for Sparks</a>.</li>
+				<li><a href="http://justgiving.com/sparks">Sparks</a>, fund life-saving medical research into conditions affecting babies, children and mums-to-be. Phil (almost) and friends rode the 2014 <a href="http://imgiseverything.co.uk/articles/long-bike-rides-broken-limbs-raising-money-charity/">l&#8217;Ètape du Tour for Sparks</a>.</li>
 				<li><a href="http://www.christie.nhs.uk/">The Christie</a>, a Manchester-based Cancer centre that treats over 40,000 patients a year. Phil currently donates £600 a year.</li>
 				<li><a href="http://www.woodstreetmission.org.uk/">Wood Street Mission</a>, a Manchester-based charity providing practical help to children and their families. Phil currently donates £180 a year.</li>
 				<li><a href="http://www.shelter.org.uk/">Shelter</a>, a national UK charity working with homeless people. Phil currently donates £180 a year.</li>
