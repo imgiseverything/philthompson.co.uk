@@ -299,7 +299,7 @@ html, body {
   /*height: 100vh;*/ }
 
 body {
-  background: #ffdd22;
+  background: #fd2;
   color: #151515;
   margin: 0 auto;
   width: 87.5%;
@@ -704,7 +704,7 @@ Slides
     .slides-nav a:after {
       content: none; }
     .slides-nav a.active {
-      background: #ffdd22;
+      background: #fd2;
       border-color: #151515; }
     @media (min-width: 768px) {
       .slides-nav a {
@@ -749,3 +749,5 @@ Slides
   .mobile-only,
   .tablet-only {
     display: none !important; } }
+
+/*# sourceMappingURL=style.css.map */

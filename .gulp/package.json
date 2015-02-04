@@ -1,0 +1,9 @@
+{
+  "name": "philthompsoncouk",
+  "version": "0.1.0",
+  "author": "Phil Thompson",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
+}
