@@ -52,8 +52,8 @@
 		background: rgba(white, 0.1);
 		display: block;
 		padding: 2em 0;
-		@include transition(all, 150ms, ease-in);
-		@include transition-delay($animation-speed);
+		@include transition(all, $animation-speed, ease-out);
+		@include transition-delay(100ms);
 		
 		// Hover effects - desktop only
 		@include breakpoint(desktop){
