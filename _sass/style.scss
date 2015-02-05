@@ -2,26 +2,28 @@
 /**
  * 0 Misc
  */
-@import "mixins";
-@import "variables";
-@import "misc-fonts";
-@import "misc-reset";
-@import "type";
+@import "config/mixins";
+@import "config/variables";
+@import "config/fonts";
+@import "config/reset";
 
 /**
  *	2 Helper classes / Common modules
  */
-@import "misc-helpers";
+@import "helpers/misc";
+@import "helpers/layout";
+@import "helpers/accessibility";
+@import "helpers/lists";
 
 /**
  *	3 Global elements
  */
-@import "site-container";
+@import "type"; 
 @import "section"; 
 @import "slides"; 
  
 /**
  *	5 Mobile / RWD helper classes
  */
-@import "misc-helpers-responsive"; 
+@import "helpers/responsive"; 
 

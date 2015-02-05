@@ -326,12 +326,15 @@ a {
     left: 0;
     opacity: .25;
     position: absolute;
-    -webkit-transition: all 300ms linear;
-    -ms-transition: all 300ms linear;
-    transition: all 300ms linear;
-    -webkit-transform: translateY(0.25em);
-    -ms-transform: translateY(0.25em);
-    transform: translateY(0.25em);
+    -webkit-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    -webkit-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    -webkit-transform: translateY(0.15em);
+    -ms-transform: translateY(0.15em);
+    transform: translateY(0.15em);
     width: 100%; }
   a:visited {
     color: rgba(21, 21, 21, 0.8); }
@@ -379,6 +382,164 @@ blockquote {
     blockquote {
       margin-left: 0; } }
 
+/**
+ *	2 Helper classes / Common modules
+ */
+/**
+ * Misc helpers 
+ */
+/* Use the Best Available Ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/ */
+.amp, .ampersand {
+  font-family: Baskerville,Georgia,serif;
+  font-style: italic; }
+
+/* Icons */
+a.icon:after {
+  content: none; }
+
+/**
+ * Layout related helper classes 
+ */
+.group,
+.field {
+  clear: both;
+  float: left;
+  position: relative;
+  width: 100%; }
+
+.field {
+  margin: 0 0 20px; }
+
+.column {
+  float: left;
+  position: relative;
+  width: 50%; }
+
+.decoration {
+  display: block;
+  position: absolute; }
+
+.inner {
+  margin: 0 auto;
+  max-width: 960px; }
+  @media (min-width: 1025px) {
+    .inner {
+      max-width: 1020px; } }
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+/**
+ * Accessibility related helper classes
+ */
+/**
+ * Image replacement classes / show/hide classes
+ */
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+  *line-height: 0; }
+
+.ir br {
+  display: none; }
+
+.hidden,
+.js-hidden {
+  display: none;
+  visibility: hidden; }
+
+/* Hidden but visible to screenreaders */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+/**
+ * Lists 
+ */
+.block-list li {
+  list-style: none;
+  margin-left: 0; }
+
+.grid-list {
+  margin-left: -20px; }
+  .grid-list li {
+    float: left;
+    list-style: none;
+    margin: 0 0 20px 20px; }
+
+/**
+ * Social icons
+ */
+.social-list {
+  padding: 0; }
+  .social-list li {
+    float: left;
+    list-style: none;
+    padding: 0 5px 10px;
+    text-align: center;
+    width: 33%; }
+    @media (min-width: 600px) {
+      .social-list li {
+        width: 20%; }
+        .social-list li:nth-of-type(5n+1) {
+          clear: both; } }
+  .social-list a {
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+    padding: 2em 0;
+    -webkit-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear; }
+    @media (min-width: 1025px) {
+      .social-list a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        font-size: 105%;
+        padding: 1.85em 0; } }
+
+/**
+ *	3 Global elements
+ */
+/* 
+	Typography
+	Set font-sizes. To make it easier for responsive
+	Set a <h2> size by adding a .h2 and not by styling h2{font-size:20px;}
+	<h1-6> are for SEO and accessiblity, not for appearance
+*/
 body {
   font: 14px/1.6667 "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif; }
 
@@ -450,159 +611,7 @@ p, ul, ol {
   .h1 {
     font-size: 80px; } }
 /**
- *	2 Helper classes / Common modules
- */
-/**
- * Layout helper classes
-	Image replacement classes / show/hide classes
-	WordPress specific classes
-		Image alignment
-		Captions
-		Post classes
-		Post navigation
-		Pagenavi plugin styles (use the WP-Pagenavi plugin it's ace)
-	Search form
-	List classes
-	Social icons (uses symoblset.com - get a licence - it's really cheap. Be nice, do it)
- */
-.group,
-.field {
-  clear: both;
-  float: left;
-  position: relative;
-  width: 100%; }
-
-.field {
-  margin: 0 0 20px; }
-
-.column {
-  float: left;
-  position: relative;
-  width: 50%; }
-
-.decoration {
-  display: block;
-  position: absolute; }
-
-.inner {
-  margin: 0 auto;
-  max-width: 960px; }
-  @media (min-width: 1025px) {
-    .inner {
-      max-width: 1020px; } }
-
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden; }
-
-.clearfix:after {
-  clear: both; }
-
-.clearfix {
-  zoom: 1; }
-
-/**
- * Image replacement classes / show/hide classes
- */
-.ir {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: 0;
-  direction: ltr;
-  display: block;
-  overflow: hidden;
-  text-align: left;
-  text-indent: -999em;
-  *line-height: 0; }
-
-.ir br {
-  display: none; }
-
-.hidden,
-.js-hidden {
-  display: none;
-  visibility: hidden; }
-
-/* Hidden but visible to screenreaders */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
-
-.invisible {
-  visibility: hidden; }
-
-/* Lists */
-.block-list li {
-  list-style: none;
-  margin-left: 0; }
-
-.grid-list {
-  margin-left: -20px; }
-
-.grid-list li {
-  float: left;
-  list-style: none;
-  margin: 0 0 20px 20px; }
-
-/**
- * Social icons
- */
-.social-list {
-  padding: 0; }
-  .social-list li {
-    float: left;
-    list-style: none;
-    padding: 0 5px 10px;
-    text-align: center;
-    width: 33%; }
-    @media (min-width: 600px) {
-      .social-list li {
-        width: 20%; }
-        .social-list li:nth-of-type(5n+1) {
-          clear: both; } }
-  .social-list a {
-    background: rgba(255, 255, 255, 0.1);
-    display: block;
-    padding: 2em 0;
-    -webkit-transition: all 300ms linear;
-    -ms-transition: all 300ms linear;
-    transition: all 300ms linear; }
-    @media (min-width: 1025px) {
-      .social-list a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        font-size: 105%;
-        padding: 1.85em 0; } }
-
-/* Use the Best Available Ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/ */
-.amp, .ampersand {
-  font-family: Baskerville,Georgia,serif;
-  font-style: italic; }
-
-/* Icons */
-a.icon:after {
-  content: none; }
-
-/**
- *	3 Global elements
+ * Section module
  */
 .section {
   height: 100%;
@@ -644,11 +653,9 @@ a.icon:after {
   .section:last-of-type:after {
     content: none; }
 
-/* 
-
-Slides
-
-*/
+/**
+ * Slides module
+ */
 [data-slides] {
   height: 100%;
   /*height: 100vh;*/
@@ -718,7 +725,7 @@ Slides
  *	5 Mobile / RWD helper classes
  */
 /**
- *	5 Mobile/RWD helper classes
+ *	Mobile/RWD related helper classes
  */
 @media screen and (max-width: 1024px) {
   .desktop-only {

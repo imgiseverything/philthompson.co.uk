@@ -144,7 +144,7 @@ window.PT = window.PT || {};
 				
 			self.$slides.each(function(){
 				height = parseInt($(this).outerHeight(), 10);
-				console.log(height);
+				//console.log(height);
 				if(height > highest){
 					highest = height;
 				}

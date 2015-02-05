@@ -1,13 +1,10 @@
-/* Media list */
-.media-list{
-	
-}
+/**
+ * Media object: hearts to @stubbornella
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/ 
+ */
+ 
+$media-object-margin: 10px;
 
-	.media-list li{
-		
-	}
-	
-		
 .media{
 	text-align: left;
 }
@@ -20,8 +17,8 @@
 }
 
 	.media__object {
-		float:left; 
-		margin-right: 10px;
+		float: left; 
+		margin-right: $media-object-margin;
 		
 		img{
 			display: block;
@@ -31,7 +28,7 @@
 	
 	.media__object--alt{
 		float: right;
-		margin-left: 10px;
+		margin-left: $media-object-margin;
 		margin-right: 0;
 	}
 	

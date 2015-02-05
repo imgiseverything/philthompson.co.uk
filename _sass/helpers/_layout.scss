@@ -1,0 +1,52 @@
+/**
+ * Layout related helper classes 
+ */
+
+
+.group, 
+.field{
+	clear: both;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.field{
+	margin: 0 0 20px;
+}
+
+.column{
+	float: left;
+	position: relative;
+	width: 50%;
+}
+
+.decoration{
+	display: block;
+	position: absolute;
+}
+
+.inner{
+	margin: 0 auto;
+	max-width: 960px;
+	
+	@include breakpoint(desktop){
+		max-width: 1020px;
+	}
+	
+}
+
+
+
+/* Clearfix */
+.clearfix:before, 
+.clearfix:after { 
+	content: "\0020"; 
+	display: block; 
+	height: 0; 
+	overflow: hidden; 
+}
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }  

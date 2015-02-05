@@ -1,3 +1,10 @@
+/* 
+	Typography
+	Set font-sizes. To make it easier for responsive
+	Set a <h2> size by adding a .h2 and not by styling h2{font-size:20px;}
+	<h1-6> are for SEO and accessiblity, not for appearance
+*/
+
 
 body{
 	font: 14px/1.6667 $font-family-body;

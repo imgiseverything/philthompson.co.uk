@@ -106,8 +106,9 @@ a{
 		left: 0;
 		opacity: .25;
 		position: absolute;
-		@include transition(all, 300ms, linear);
-		@include transform(translateY(.25em));
+		@include transition(all, $animation-speed, ease-in-out);
+		@include transition-delay(($animation-speed /2));
+		@include transform(translateY(.15em));
 		width: 100%;
 	}
 	

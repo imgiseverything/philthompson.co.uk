@@ -1,0 +1,61 @@
+/**
+ * Lists 
+ */
+.block-list{
+	
+	li{
+		list-style: none;
+		margin-left: 0;
+	}
+}
+
+.grid-list{
+	margin-left: -20px; 
+	
+	li{
+		float: left;
+		list-style: none;
+		margin: 0 0 20px 20px;
+	}
+}
+
+/**
+ * Social icons
+ */		
+.social-list{
+	padding: 0;
+	
+	li{
+		float: left;
+		list-style: none;
+		padding: 0 5px 10px;
+		text-align: center;
+		width: 33%;
+		
+		@include breakpoint(tablet){
+			width: 20%;
+			
+			&:nth-of-type(5n+1){
+				clear: both;
+			}
+		}
+	}
+	
+	a{
+		background: rgba(white, 0.1);
+		display: block;
+		padding: 2em 0;
+		@include transition(all, $animation-speed, linear);
+		
+		// Hover effects - desktop only
+		@include breakpoint(desktop){
+			&:hover{
+				background-color: rgba(white, 0.2);
+				font-size: 105%;
+				padding: 1.85em 0;
+			}
+		}
+		
+		
+	}
+}
