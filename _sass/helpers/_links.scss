@@ -1,0 +1,59 @@
+/**
+ * Links
+ */
+
+a{
+	color: inherit;
+	display: inline-block;
+	line-height: 1;
+	position: relative;
+	text-decoration: none;	
+	
+	&:after{
+		background: $c-black;
+		bottom: 0;
+		content: '';
+		height: 2px;
+		left: 0;
+		opacity: .25;
+		position: absolute;
+		@include transition(all, $animation-speed, linear);
+		@include transition-delay(($animation-speed /2));
+		@include transform(translateY(.15em));
+		width: 100%;
+	}
+	
+	&:visited{
+		color: rgba($c-black, 0.8);
+	}
+	
+	// Hover effects - desktop only
+	@media screen and (min-width: $l+1+px) {
+	    
+		&:hover{
+			&:after{
+				opacity: .5;
+				@include transform(translateY(.05em));
+			}
+		}
+	}
+	
+}
+
+.h1 a{
+	&:after{
+		@include transform(translateY(0em));
+	}
+	
+	
+	// Hover effects - desktop only
+	@media screen and (min-width: $l+1+px) {
+	    
+		&:hover{
+			&:after{
+				@include transform(translateY(-.035em));
+			}
+		}
+	}
+	
+}

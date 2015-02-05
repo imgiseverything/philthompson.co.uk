@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Freelance Front-end (UI) Developer Bristol/Birmingham/London - Phil Thompson</title>
+	<title>Freelance Front-end (UI) Developer Bristol/London - Phil Thompson</title>
 	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
 	<!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 	<meta name="viewport" content="initial-scale=1">
@@ -24,7 +24,7 @@
 <div id="site-container">
 	<div class="group section">
 		<div class="inner">
-			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (UI) developer based in South West England.</h1>
+			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (UI) developer working in Bristol and London.</h1>
 		</div>
 	</div>
 	<div class="group section">
