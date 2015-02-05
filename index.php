@@ -11,14 +11,10 @@
 	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
 	<!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 	<meta name="viewport" content="initial-scale=1">
-	<?php 
-	// In production use a minified CSS file
-	if(strpos($_SERVER['HTTP_HOST'], '.co.uk') !== false): 
-	?>
-		<link rel="stylesheet" href="/css/style.<?php echo $updated; ?>.min.css">
-	<?php else: ?>
-		<link rel="stylesheet" href="/css/style.css">
-	<?php endif; ?>
+	<!-- Inline CSS as it's a one page website and the CSS is only 4.5Kb-->
+	<style>
+	<?php include('css/style.min.css'); ?>
+	</style>
 </head>
 <body>
 <div id="site-container">
@@ -111,16 +107,16 @@
 			<p>Got a project you think Phil can help with? Email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Hello via philthompson.co.uk" class="email">hello@imgiseverything.co.uk</a></p>			
 			<h3 class="h h3">Elsewhere on the web</h3>
 			<ul class="block-list social-list">
-				<li><a href="//last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"></a></li>
-				<li><a href="//linkedin.com/in/philt" class="icon ss-linkedin" title="LinkedIn"></a></li>
-				<li><a href="//twitter.com/imgiseverything" class="icon ss-twitter" title="Twitter"></a></li>
-				<li><a href="//open.spotify.com/user/imgiseverything" class="icon ss-spotify" title="Spotify"></a></li>
-				<li><a href="//instagram.com/imgiseverythin9" class="icon ss-instagram" title="Instagram"></a></li>
-				<li><a href="//www.strava.com/athletes/340958" class="icon ss-link" title="Strava"></a></li>
-				<li><a href="//pinboard.in/u:imgiseverything" class="icon ss-pinboard" title="Pinboard"></a></li>
-				<li><a href="//pinterest.com/imgiseverything" class="icon ss-pinterest" title="Pinterest"></a></li>
-				<li><a href="//github.com/imgiseverything" class="icon ss-github" title="Github"></a></li>
-				<li><a href="//soundcloud.com/imgiseverythin9" class="icon ss-soundcloud" title="Soundcloud"></a></li>
+				<li><a href="//last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"><?php include('images/svg/lastfm.svg'); ?></a></li>
+				<li><a href="//linkedin.com/in/philt" class="icon" title="LinkedIn"><?php include('images/svg/linkedin.svg'); ?></a></li>
+				<li><a href="//twitter.com/imgiseverything" class="icon" title="Twitter"><?php include('images/svg/twitter.svg'); ?></a></li>
+				<li><a href="//open.spotify.com/user/imgiseverything" class="icon ss-spotify" title="Spotify"><?php include('images/svg/spotify.svg'); ?></a></li>
+				<li><a href="//instagram.com/imgiseverythin9" class="icon ss-instagram" title="Instagram"><?php include('images/svg/instagram.svg'); ?></a></li>
+				<li><a href="//www.strava.com/athletes/340958" class="icon ss-link" title="Strava"><?php include('images/svg/strava.svg'); ?></a></li>
+				<li><a href="//pinboard.in/u:imgiseverything" class="icon ss-pinboard" title="Pinboard"><?php include('images/svg/pinboard.svg'); ?></a></li>
+				<li><a href="//pinterest.com/imgiseverything" class="icon ss-pinterest" title="Pinterest"><?php include('images/svg/pinterest.svg'); ?></a></li>
+				<li><a href="//github.com/imgiseverything" class="icon ss-github" title="Github"><?php include('images/svg/github.svg'); ?></a></li>
+				<li><a href="//soundcloud.com/imgiseverythin9" class="icon ss-soundcloud" title="Soundcloud"><?php include('images/svg/soundcloud.svg'); ?></a></li>
 			</ul>
 		</div>
 	</div>

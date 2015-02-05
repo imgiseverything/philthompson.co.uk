@@ -5,7 +5,7 @@
 
 /*jslint browser: true, devel: true, white: true, todo: true */
 
-/*global requestAnimationFrame: true, Modernizr: true, smoothScroll: true */
+/*global smoothScroll: true */
 
 
 // Create a global object we can reference

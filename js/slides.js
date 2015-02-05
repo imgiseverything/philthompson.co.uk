@@ -5,7 +5,7 @@
 
 /*jslint browser: true, devel: true, white: true, todo: true */
 
-/*global requestAnimationFrame: true, Modernizr: true, smoothScroll: true */
+/*global smoothScroll: true */
 
 
 // Create a global object we can reference
@@ -91,7 +91,7 @@ window.PT = window.PT || {};
 			});
 		},
 		
-		// Init the auto clicking of the sldies
+		// Init the auto clicking of the slides
 		autoInit: function(){
 			var self = this;
 			self.config.delay = 5000;

@@ -42,8 +42,8 @@ gulp.task('scripts', function() {
   		// Get all other top level JS files
   		'../js/*.js'
   		])
-    //.pipe(jshint('.jshintrc'))
-    //.pipe(jshint.reporter('default'))
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default'))
     .pipe(concat('philthompsoncouk.js'))
     .pipe(gulp.dest('../js'))
     .pipe(rename({suffix: '.min'}))

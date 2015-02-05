@@ -51,10 +51,6 @@ module.exports = function(grunt) {
 					unused: true,
 					predef: [
 						'jQuery',
-						'requestAnimationFrame',
-						'Modernizr',
-						'Hammer',
-						'hoverIntent',
 						'smoothScroll'
 					]
 				},

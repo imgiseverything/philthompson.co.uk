@@ -40,22 +40,30 @@
 			}
 		}
 	}
+
 	
 	a{
 		background: rgba(white, 0.1);
 		display: block;
 		padding: 2em 0;
-		@include transition(all, $animation-speed, linear);
+		@include transition(all, 150ms, ease-in);
+		@include transition-delay($animation-speed);
 		
 		// Hover effects - desktop only
 		@include breakpoint(desktop){
 			&:hover{
 				background-color: rgba(white, 0.2);
-				font-size: 105%;
-				padding: 1.85em 0;
+				
+				padding: 1.85em 0 2.15em;
 			}
 		}
 		
-		
 	}
+	
+	svg{
+		display: block;
+		fill: $c-black;
+		margin: 0 auto;	
+	}
+	
 }
