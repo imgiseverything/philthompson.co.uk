@@ -15,6 +15,14 @@
 	<style>
 	<?php include('css/style.min.css'); ?>
 	</style>
+	<script>
+	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	    e.src='//www.google-analytics.com/analytics.js';
+	    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	    ga('create','UA-418350-4');ga('send','pageview');
+	</script>
 </head>
 <body>
 <div id="site-container">
@@ -127,17 +135,9 @@
 	// In production use a minified JS file
 	if(strpos($_SERVER['HTTP_HOST'], '.co.uk') !== false): 
 ?>
-	<script src="/js/philthompsoncouk.<?php echo $updated; ?>.min.js"></script>
-	<script>
-	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-	    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-	    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-	    e.src='//www.google-analytics.com/analytics.js';
-	    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-	    ga('create','UA-418350-4');ga('send','pageview');
-	</script>
+	<script src="/js/philthompsoncouk.<?php echo $updated; ?>.min.js" async></script>
 <?php else: ?>
-	<script src="/js/philthompsoncouk.js"></script>
+	<script src="/js/philthompsoncouk.js" async></script>
 <?php endif; ?>
 </body>
 </html>
