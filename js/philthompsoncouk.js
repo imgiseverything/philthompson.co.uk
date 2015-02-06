@@ -34,7 +34,9 @@ var smoothScroll = function(xCoordParam, scrollSpeed){
 		jQuery(window).scrollTop(xCoord);
 	}
 	
-};;/**
+};;if(document.addEventListener){
+	document.addEventListener("touchstart", function() { "use strict"; console.log(''); },false);
+};/**
  *	Global scripting
  *	@author	Phil Thompson philthompson.co.uk / imgiseverything.co.uk
  */

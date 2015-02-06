@@ -52,6 +52,7 @@
 		background: rgba(white, 0.1);
 		display: block;
 		padding: 2em 0;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 		@include transition(all, $animation-speed, ease-out);
 		@include transition-delay(100ms);
 		
@@ -59,9 +60,12 @@
 		@include breakpoint(desktop){
 			&:hover{
 				background-color: rgba(white, 0.2);
-				
 				padding: 1.85em 0 2.15em;
 			}
+		}
+		
+		&:active{
+			background-color: rgba(white, 0.2);
 		}
 		
 	}

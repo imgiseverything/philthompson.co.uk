@@ -60,8 +60,9 @@
 		border: 2px solid $c-black;
 		display: block;
 		height: 24px;
-		@include transition(all, $animation-speed, linear);
 		width: 24px;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		@include transition(all, $animation-speed, linear);
 		
 		&:after{
 			content: none;
