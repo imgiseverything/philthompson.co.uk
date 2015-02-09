@@ -59,8 +59,8 @@
 		border-radius: 50%;
 		border: 2px solid $c-black;
 		display: block;
-		height: 24px;
-		width: 24px;
+		height: 30px;
+		width: 30px;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 		@include transition(all, $animation-speed, linear);
 		
@@ -73,12 +73,10 @@
 			border-color: $c-black;
 		}
 		
-		@include breakpoint(ipad-portrait){
+		@include breakpoint(desktop){
 			height: 18px;
 			width: 18px;
-		}
-		
-		@include breakpoint(desktop){
+			
 			&:hover{
 				background-color: rgba($c-black, 0.75);
 			}
