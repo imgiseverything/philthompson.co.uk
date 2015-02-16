@@ -4,7 +4,6 @@
  
 .section{
 	height: 100%;
-	/*height: 100vh;*/
 	padding-top: 2em;
 	width: 100%;
 	
@@ -31,20 +30,23 @@
 	&:after{
 		bottom: 20px;
 		font-size: 10px;
+		opacity: 0;
 		position: absolute;
 		right: 0;
+		
+		@include animation(fadeIn 1000ms linear forwards 1050ms);
 		
 		@include breakpoint(ipad-portrait){
 			right: 20px;
 		}
 		
 		@include breakpoint(desktop){
-			content: 'scroll';
+			content: 'scroll \25BE';
 		}
 	}
 	
 	&:first-of-type:after{
-		content: 'scroll';
+		content: 'scroll \25BE';
 	}
 	
 	&:last-of-type:after{

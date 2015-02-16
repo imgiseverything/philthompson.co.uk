@@ -136,6 +136,12 @@ blockquote {
     blockquote {
       margin-left: 0; } }
 
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
 /**
  *	2 Helper classes / Common modules
  */
@@ -429,7 +435,6 @@ p, ul, ol {
  */
 .section {
   height: 100%;
-  /*height: 100vh;*/
   padding-top: 2em;
   width: 100%; }
   @media screen and (min-width: 1025px) {
@@ -454,16 +459,19 @@ p, ul, ol {
   .section:after {
     bottom: 20px;
     font-size: 10px;
+    opacity: 0;
     position: absolute;
-    right: 0; }
+    right: 0;
+    -webkit-animation: fadeIn 1000ms linear forwards 1050ms;
+    animation: fadeIn 1000ms linear forwards 1050ms; }
     @media (min-width: 768px) {
       .section:after {
         right: 20px; } }
     @media (min-width: 1025px) {
       .section:after {
-        content: 'scroll'; } }
+        content: 'scroll \25BE'; } }
   .section:first-of-type:after {
-    content: 'scroll'; }
+    content: 'scroll \25BE'; }
   .section:last-of-type:after {
     content: none; }
 
@@ -517,8 +525,8 @@ p, ul, ol {
     border-radius: 50%;
     border: 2px solid #151515;
     display: block;
-    height: 24px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
     -webkit-tap-highlight-color: transparent;
     -webkit-transition: all 300ms linear;
     -ms-transition: all 300ms linear;
@@ -528,13 +536,12 @@ p, ul, ol {
     .slides-nav a.active {
       background: #fd2;
       border-color: #151515; }
-    @media (min-width: 768px) {
+    @media (min-width: 1025px) {
       .slides-nav a {
         height: 18px;
-        width: 18px; } }
-    @media (min-width: 1025px) {
-      .slides-nav a:hover {
-        background-color: rgba(21, 21, 21, 0.75); } }
+        width: 18px; }
+        .slides-nav a:hover {
+          background-color: rgba(21, 21, 21, 0.75); } }
 
 /**
  *	5 Mobile / RWD helper classes
