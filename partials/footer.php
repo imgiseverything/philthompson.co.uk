@@ -9,5 +9,7 @@
 <?php else: ?>
 	<script src="/js/philthompsoncouk.js" async></script>
 <?php endif; ?>
+
+	<progress class="progress-bar" data-js-progress-bar value="0" max="100"></progress>
 </body>
 </html>

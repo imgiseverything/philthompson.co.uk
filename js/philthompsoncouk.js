@@ -34,7 +34,28 @@ var smoothScroll = function(xCoordParam, scrollSpeed){
 		jQuery(window).scrollTop(xCoord);
 	}
 	
-};;if(document.addEventListener){
+};;function throttle(fn, threshhold, scope) {
+  threshhold || (threshhold = 250);
+  var last,
+      deferTimer;
+  return function () {
+    var context = scope || this;
+
+    var now = +new Date,
+        args = arguments;
+    if (last && now < last + threshhold) {
+      // hold on to it
+      clearTimeout(deferTimer);
+      deferTimer = setTimeout(function () {
+        last = now;
+        fn.apply(context, args);
+      }, threshhold);
+    } else {
+      last = now;
+      fn.apply(context, args);
+    }
+  };
+};if(document.addEventListener){
 	document.addEventListener("touchstart", function() { "use strict"; console.log(''); },false);
 };/**
  *	Global scripting
@@ -241,6 +262,62 @@ window.PT = window.PT || {};
 	};
 	
 	window.PT.init();
+
+}(jQuery));;/**
+ *	Progress bar on scroll scripting
+ *	@author	Phil Thompson
+ */
+
+/*jslint browser: true, devel: true, white: true, todo: true */
+
+/*global smoothScroll: true */
+
+
+// Create a global object we can reference
+window.PT = window.PT || {};
+
+(function ($) {
+
+	"use strict";
+
+	window.PT.progress = {
+		
+		config: window.PT.config,
+		
+		$progress: $('[data-js-progress-bar]'),
+		throttleSpeed: 100, // in ms
+		
+		init: function(){
+			
+			var self = this;
+			
+			if(self.$progress.length === 0){
+				return;	
+			}	
+			
+			$(window).scroll(
+				throttle(function (event) {
+					self.animate();
+				}, self.throttleSpeed)
+			);
+			
+		},
+		
+		animate: function(){
+			var self = this,
+				s = $(window).scrollTop(),
+		        d = $(document).height(),
+		        c = $(window).height(),
+		        scrollPercent = (s / (d-c)) * 100;
+		
+		   self.$progress.attr('value', scrollPercent);
+		}
+		
+		
+				
+	};
+	
+	window.PT.progress.init();
 
 }(jQuery));;/**
  *	Slides/Carousel scripting

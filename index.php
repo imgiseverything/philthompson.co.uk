@@ -7,8 +7,7 @@
 	$updated = '05022015'; // cache buster
 	
 	include('partials/header.php');	
-?>
-
+?>	
 	<div class="group section">
 		<div class="inner">
 			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (UI) developer working in Bristol and London.</h1>
