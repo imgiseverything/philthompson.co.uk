@@ -53,3 +53,20 @@
 		content: none;
 	}
 }
+
+.section--alt{
+	background: $c-black;
+	color: $c-yellow;
+	
+	a{
+		color: currentColor;
+		
+		&:after{
+			background: $c-yellow;
+		}
+		
+		&:visited{
+			color: rgba($c-yellow, .8);
+		}	
+	}	
+}

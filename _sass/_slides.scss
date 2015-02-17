@@ -55,6 +55,9 @@
 	}
 	
 	a{
+		
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 		background: $c-black;
 		border-radius: 50%;
 		border: 2px solid $c-black;
@@ -62,6 +65,8 @@
 		height: 30px;
 		width: 30px;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		
+		@include transform(translateZ(0));
 		@include transition(all, $animation-speed, linear);
 		
 		&:after{
@@ -69,8 +74,12 @@
 		}
 		
 		&.active{
-			background: $c-yellow;
+			background: transparent;
 			border-color: $c-black;
+			
+			&:hover{
+				background: transparent;
+			}
 		}
 		
 		@include breakpoint(desktop){
@@ -79,8 +88,43 @@
 			
 			&:hover{
 				background-color: rgba($c-black, 0.75);
+				
+				@include animation(hvr-pop $animation-speed linear 1 0ms);
 			}
 		}
 
 	}
+}
+
+.section--alt{
+	.slides-nav{
+		a{
+			background-color: $c-yellow;
+			border-color: $c-yellow;
+			
+			&.active{
+				background-color: transparent;
+				border-color: $c-yellow;
+			}
+			
+			
+		}
+	}
+}
+
+
+
+/* Pop */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 }

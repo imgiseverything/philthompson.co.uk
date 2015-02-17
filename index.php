@@ -4,7 +4,7 @@
 		philthompson.co.uk Home page	
 	*/
 	
-	$updated = '05022015'; // cache buster
+	$updated = '17022015'; // cache buster
 	
 	include('partials/header.php');	
 ?>	
@@ -30,16 +30,16 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Clients</h2>
-			<p>Working with well established agencies like e3 in Bristol, Area17 in Brooklyn, NY, Code Computerlove, LOVE and Building Blocks in Manchester has given Phil the opportunity to hone his skills on top brands like Playstation, EA Games, Warburtons, Boots, Bristol Airport, The Rolling Stones and Manchester United.</p>
+			<p>Working with well established agencies like e3 in Bristol, Area17 in Brooklyn, Code Computerlove, LOVE and Building Blocks in Manchester has given Phil the opportunity to hone his skills on top brands like Playstation, EA Games, Warburtons, Boots, Bristol Airport, The Rolling Stones and Manchester United.</p>
 		</div>
 	</div>
-	<div class="group section">
+	<div class="group section section--alt">
 		<div class="inner">
 			<h2 class="h h2">Nice things people have said</h2>
 			<div class="group quotes" data-slides>
 				<div class="quote active" data-slide data-slide-number="1">
 					<blockquote>
-						<p>Phil has great communication skills. We worked together on a redesign project across different timezones, which ran smoothly. Phil  brings strong dev skills and a fun personality to the table.</p>
+						<p>Phil has great communication skills. We worked together on a redesign project across different timezones, which ran smoothly. Phil brings strong dev skills and a fun personality to the table.</p>
 						<cite>Angela Bliumis, Project Manager, Area 17</cite>
 					</blockquote>
 					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
@@ -48,7 +48,7 @@
 				<div class="quote" data-slide data-slide-number="2">
 					<blockquote>
 						<p>Phil was an excellent front end developer to work with. He’s the hard-to-find type of person who pays close attention to every detail.</p>
-						<cite><cite><a href="//philipdibello.com/">Philip DiBello</a>, Designer, Area 17</cite></cite>
+						<cite><a href="//philipdibello.com/">Philip DiBello</a>, Freelance Designer, (formerly of Area 17)</cite>
 					</blockquote>
 					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
 				</div>
@@ -69,6 +69,13 @@
 					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/nuco-travel/">Read the case study <span class="visuallyhidden">NUCO Travel</span></a></p>
 				</div>
 				
+				<div class="quote" data-slide data-slide-number="5">
+					<blockquote>
+						<p>I recommend @imgiseverything. Has been a great WP dev partner for a project at <a href="//twitter.com/AmpersandHQ">@AmpersandHQ</a>. Hire him! (But not when I need him.) Thanks. :)</p>
+						<cite>Rachel Tonner, Brand Manager, Ampersand</cite>
+					</blockquote>
+					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/ampersand/">Read the case study <span class="visuallyhidden">Ampersand</span></a></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -94,7 +101,7 @@
 	<div class="group section">
 		<div class="inner vcard">
 			<h2 class="h h2">Get in touch</h2>
-			<p>Got a project you think Phil can help with? Email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Hello via philthompson.co.uk" class="email">hello@imgiseverything.co.uk</a></p>			
+			<p>Got a project you think Phil can help with? Email him: <a href="mailto:hello@imgiseverything.co.uk?subject=<?php echo urlencode('Hello via philthompson.co.uk'); ?>" class="email">hello@imgiseverything.co.uk</a></p>			
 			<h3 class="h h3">Elsewhere on the web</h3>
 			<ul class="block-list social-list">
 				<li><a href="//last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"><?php include('images/svg/lastfm.svg'); ?></a></li>

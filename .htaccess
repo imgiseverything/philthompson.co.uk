@@ -5,7 +5,13 @@ ErrorDocument 403 /error.php?error=403
 ErrorDocument 404 /error.php?error=404
 ErrorDocument 500 /error.php?error=500
 
-
+# IE use most recent IE engine or Chrome plugin if available
+<FilesMatch "\.(htm|html|php)$">
+    <IfModule mod_headers.c>
+        BrowserMatch MSIE ie
+        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+    </IfModule>
+</FilesMatch>
 
 
 # REWRITE RULES
