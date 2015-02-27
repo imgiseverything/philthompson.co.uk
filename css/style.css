@@ -325,6 +325,9 @@ a.icon:after {
 .progress-bar::-moz-progress-bar {
   background: #151515; }
 
+.progress-bar::-ms-progress-bar {
+  background: #151515; }
+
 /**
  *	3 Global elements
  */
@@ -469,13 +472,14 @@ p, ul, ol {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%); } }
-  .section:first-of-type .inner {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+  @media screen and (max-width: 481px) {
+    .section:first-of-type .inner {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); } }
   .section:after {
     bottom: 20px;
     font-size: 10px;
@@ -497,7 +501,15 @@ p, ul, ol {
 
 .section--alt {
   background: #151515;
-  color: #fd2; }
+  color: #fd2;
+  padding-left: 20px;
+  padding-right: 20px; }
+  @media (min-width: 1025px) {
+    .section--alt {
+      margin-bottom: 2em;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 2em; } }
   .section--alt a {
     color: currentColor; }
     .section--alt a:after {

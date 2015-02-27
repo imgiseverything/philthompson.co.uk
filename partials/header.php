@@ -5,12 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Freelance Front-end (UI) Developer Bristol/London - Phil Thompson</title>
 	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
 	<!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 	<meta name="viewport" content="initial-scale=1">
-	<!-- Inline CSS as it's a one page website and the CSS is only 4.5Kb-->
+	<!-- Inline CSS as it's a `one-page` website and the CSS is only 4.5Kb-->
 	<style>
 	<?php include('css/style.min.css'); ?>
 	</style>
@@ -24,4 +23,3 @@
 	</script>
 </head>
 <body>
-<div id="site-container">

@@ -21,10 +21,12 @@
 	}
 	
 	&:first-of-type .inner{
-		left: 50%;
-		position: absolute;
-		top: 50%;
-		@include transform(translate(-50%, -50%));
+		@media screen and (max-width: $s+1+px) {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			@include transform(translate(-50%, -50%));
+		}
 	}
 	
 	&:after{
@@ -57,6 +59,16 @@
 .section--alt{
 	background: $c-black;
 	color: $c-yellow;
+	
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	@include breakpoint(desktop){
+		margin-bottom: 2em;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 2em;
+	}
 	
 	a{
 		color: currentColor;

@@ -1,4 +1,5 @@
-</div>
+<progress class="progress-bar" data-js-progress-bar value="0" max="100"></progress>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.1.3.min.js"><\/script>')</script>
 <?php 
@@ -9,7 +10,5 @@
 <?php else: ?>
 	<script src="/js/philthompsoncouk.js" async></script>
 <?php endif; ?>
-
-	<progress class="progress-bar" data-js-progress-bar value="0" max="100"></progress>
 </body>
 </html>
