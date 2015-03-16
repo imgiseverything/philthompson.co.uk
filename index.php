@@ -4,7 +4,7 @@
 		philthompson.co.uk Home page	
 	*/
 	
-	$updated = '17022015'; // cache buster
+	$updated = '16032015'; // cache buster
 	
 	include('partials/header.php');	
 ?>	
@@ -29,7 +29,7 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Clients</h2>
-			<p>Working with well established agencies like e3 in Bristol, Area17 in Brooklyn, Code Computerlove, LOVE and Building Blocks in Manchester has given Phil the opportunity to hone his skills on top brands like Playstation, EA Games, Warburtons, Boots, Bristol Airport, The Rolling Stones and Manchester United.</p>
+			<p>Working with well established agencies like <a href="http://www.e3.co.uk/">e3</a> in Bristol, <a href="http://www.area17.com/">Area17</a> in Brooklyn, <a href="http://www.codecomputerlove.com/">Code Computerlove</a> and <a href="http://storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
 		</div>
 	</div>
 	<div class="group section section--alt">
@@ -93,7 +93,7 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">What’s with the yellow?</h2>
-			<p>The short answer is because Phil <del>likes</del> loves it; the longer answer is that it makes the website stand-out. It allows for a very simplistic, some may say, minimalist design that maintains some character.</p>			
+			<p>The short answer is because Phil <del>likes</del> loves it; the longer answer is that it makes the website stand-out by allowing for a flat design whilst retaining some personality.</p>			
 			<p>Some people like the yellow and some don’t.</p>			
 		</div>
 	</div>			
