@@ -23,8 +23,7 @@
 		<div class="inner">
 			<h2 class="h h2">Processes</h2>
 			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of Sass and Grunt; using BEM syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>			
-			<h3 class="h h3">Code samples</h3>
-			<p>As a freelancer, it’s difficult to publish work and code snippets but <a href="//github.com/imgiseverything/philthompson.co.uk">this site’s code</a> is completely available on GitHub for your perusal, appreciation and/or judgement.</p>
+			<p><a href="//github.com/imgiseverything/philthompson.co.uk">This site’s code</a> is available on GitHub for your perusal, appreciation and/or judgement.</p>
 		</div>
 	</div>
 	<div class="group section">
@@ -71,7 +70,7 @@
 				
 				<div class="quote" data-slide data-slide-number="5">
 					<blockquote>
-						<p>I recommend @imgiseverything. Has been a great WP dev partner for a project at <a href="//twitter.com/AmpersandHQ">@AmpersandHQ</a>. Hire him! (But not when I need him.) Thanks. :)</p>
+						<p>Phil is an excellent communicator. I am always confident that he will deliver what I've asked (and then some) on time and at the agreed price. He's a clever developer who cares about usability both from a front end and back office point of view. Oh, and he builds websites exactly how they've been designed!</p>
 						<cite>Rachel Tonner, Brand Manager, Ampersand</cite>
 					</blockquote>
 					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/ampersand/">Read the case study <span class="visuallyhidden">Ampersand</span></a></p>

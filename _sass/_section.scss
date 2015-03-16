@@ -4,6 +4,7 @@
  
 .section{
 	height: 100%;
+	overflow: visible;
 	padding-top: 2em;
 	width: 100%;
 	
@@ -21,12 +22,12 @@
 	}
 	
 	&:first-of-type .inner{
-		@media screen and (max-width: $s+1+px) {
+		//@media screen and (max-width: $s+1+px) {
 			left: 50%;
 			position: absolute;
 			top: 50%;
 			@include transform(translate(-50%, -50%));
-		}
+		//}
 	}
 	
 	&:after{
@@ -59,7 +60,7 @@
 .section--alt{
 	background: $c-black;
 	color: $c-yellow;
-	
+	margin-top: 2em;
 	padding-left: 20px;
 	padding-right: 20px;
 	
