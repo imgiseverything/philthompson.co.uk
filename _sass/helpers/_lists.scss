@@ -53,8 +53,8 @@
 		display: block;
 		padding: 2em 0;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		@include transition(all, $animation-speed, ease-out);
-		@include transition-delay(100ms);
+		transition: all, $animation-speed, ease-out;
+		transition-delay: 100ms;
 		
 		// Hover effects - desktop only
 		@include breakpoint(desktop){

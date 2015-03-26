@@ -10,18 +10,18 @@
 ?>	
 	<div class="group section">
 		<div class="inner">
-			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (UI) developer working in Bristol and London.</h1>
+			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (<abbr title="User Interface">UI</abbr>) developer working in Bristol and London.</h1>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2 class="h h2">Huh? What does that mean?</h2>
-			<p>A front-end developer (or a UI developer) takes website designs (artwork) usually in Photoshop or Illustrator and converts that artwork into HTML templates using CSS and JavaScript. Front-end development work is just one part of the process; other parts include back-end development, <abbr title="User Experience">UX</abbr>, Planning and Project Management and that's just for starters.</p>
+			<h2 class="h h2">Front-end? What does that mean?</h2>
+			<p>A front-end developer (or a UI developer) takes website designs (artwork) usually created with Photoshop or Illustrator and converts that artwork into HTML templates using CSS and JavaScript. Front-end development work is just one part of the process; other parts include back-end development, <abbr title="User Experience">UX</abbr>, Planning and Project Management and that’s just for starters.</p>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2 class="h h2">Processes</h2>
+			<h2 class="h h2">Development process</h2>
 			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of Sass and Grunt; using BEM syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>			
 			<p><a href="//github.com/imgiseverything/philthompson.co.uk">This site’s code</a> is available on GitHub for your perusal, appreciation and/or judgement.</p>
 		</div>

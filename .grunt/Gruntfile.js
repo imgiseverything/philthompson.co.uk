@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
+		// Combine JavaScript files into one big file
 		concat: {
 			options: {
 				separator: ';'
@@ -25,6 +26,7 @@ module.exports = function(grunt) {
 			}
 		},
 		
+		// Onfuscate and minfiy JavaScript to save filesize
 		uglify: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
@@ -36,6 +38,7 @@ module.exports = function(grunt) {
 			}
 		},
 		
+		// Run JavaScrit through JSLint to maintain coding standards
 		jslint: {
 			
 			client: {
@@ -60,6 +63,7 @@ module.exports = function(grunt) {
 			
 		},
 		
+		// Convert Sass to CSS
 		sass: {   // Task
 	        dist: {   // Target
 	            files: { // Dictionary of files
@@ -68,6 +72,8 @@ module.exports = function(grunt) {
 	        }
 	    },
 		
+		
+		// Minfiy CSS to save filesize
 		cssmin: {
 		  combine: {
 		    files: {
@@ -76,6 +82,7 @@ module.exports = function(grunt) {
 		  }
 		},
 		
+		// Optimise Images
 		imagemin: {
 			png: {
 		      options: {
@@ -113,18 +120,41 @@ module.exports = function(grunt) {
 		    }
 		},
 		
-		watch: {
-			files: [
-				'../_sass/*.scss', 
-				'../_sass/*/*.scss', 
-				'../js/*.js', 
-				'!../js/<%= pkg.name %>.js', 
-				'!../js/<%= pkg.name %>.min.js'
-			],
-			tasks: ['sass', 'cssmin', 'concat'/*, 'uglify'*/],
-			options: {
-		      livereload: true,
+		// Add browser prefixes to CSS
+		autoprefixer: {
+		    options: {
+		    	browsers: ['last 2 versions', 'ie 9']
+		    },
+		    // prefix all files
+		    multiple_files: {
+				expand: true,
+				flatten: true,
+				src: '../css/*.css',
+				dest: '../css/'
 		    }
+		},	
+		
+		// WATCH:
+		// Whenever a file is changed, run specific tasks
+		watch: {
+			css: {
+				files: [
+					'../_sass/**/*.scss',
+				],
+				tasks: ['sass', 'autoprefixer', 'cssmin'],
+				options: {
+					nospawn: true
+				}
+			},
+			js: {
+				files: [
+					'../**/*.js',
+					// Ignore these
+					'!../js/<%= pkg.name %>.js', 
+					'!../js/<%= pkg.name %>.min.js'
+				],
+				tasks: ['jslint', 'concat', 'uglify']
+			}
 		}
 	});
 	
@@ -133,10 +163,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-jslint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass', 'cssmin', 'concat', 'uglify', 'jslint', 'imagemin']);
+	grunt.registerTask('default', ['sass', 'autoprefix', 'cssmin', 'concat', 'uglify', 'jslint', 'imagemin']);
+	grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
+	grunt.registerTask('js', ['concat', 'uglify', 'jslint']);
 
 };

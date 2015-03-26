@@ -24,7 +24,7 @@
 	}
 	
 	@include breakpoint(desktop){
-		@include transition(all, $animation-speed, linear);
+		transition: all, $animation-speed, linear;
 	}
 }
 
@@ -55,7 +55,6 @@
 	}
 	
 	a{
-		
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 		background: $c-black;
@@ -63,11 +62,10 @@
 		border: 2px solid $c-black;
 		display: block;
 		height: 30px;
+		transform: translateZ(0);
+		transition: all, $animation-speed, linear;
 		width: 30px;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		
-		@include transform(translateZ(0));
-		@include transition(all, $animation-speed, linear);
 		
 		&:after{
 			content: none;
@@ -87,9 +85,8 @@
 			width: 18px;
 			
 			&:hover{
-				background-color: rgba($c-black, 0.75);
-				
-				@include animation(hvr-pop $animation-speed linear 1 0ms);
+				animation: hvr-pop $animation-speed linear 1 0ms;
+				background-color: rgba($c-black, 0.75);		
 			}
 		}
 
@@ -114,14 +111,7 @@
 
 
 
-/* Pop */
-@-webkit-keyframes hvr-pop {
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-}
-
+/* Pop animation */
 @keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.2);

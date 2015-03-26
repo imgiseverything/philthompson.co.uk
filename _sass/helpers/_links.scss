@@ -17,9 +17,9 @@ a{
 		left: 0;
 		opacity: .25;
 		position: absolute;
-		@include transition(all, $animation-speed, linear);
-		@include transition-delay(($animation-speed /2));
-		@include transform(translateY(.15em));
+		transition: all, $animation-speed, linear;
+		transition-delay: ($animation-speed / 2);
+		transform: translateY(.15em);
 		width: 100%;
 	}
 	
@@ -33,7 +33,7 @@ a{
 		&:hover{
 			&:after{
 				opacity: .5;
-				@include transform(translateY(.05em));
+				transform: translateY(.05em);
 			}
 		}
 	}
@@ -42,7 +42,7 @@ a{
 
 .h1 a{
 	&:after{
-		@include transform(translateY(0em));
+		transform: translateY(0em);
 	}
 	
 	
@@ -51,7 +51,7 @@ a{
 	    
 		&:hover{
 			&:after{
-				@include transform(translateY(-.035em));
+				transform: translateY(-.035em);
 			}
 		}
 	}
