@@ -98,15 +98,14 @@ blockquote{
     margin: 1em 0 1em 0;
     position: relative;
     
-    &:before{
-		content: "‘";
+   
+	&:before{
 	    font-size: 60px;
 	    left: -20px;
 	    position: absolute;
 	    top: -10px;
-	}
-	
-	@media screen and (min-width: $l+px) {
-		margin-left: 0;
+		@include breakpoint(ipad-landscape){
+			content: "‘";
+		}
 	}
 }

@@ -34,7 +34,7 @@
 	</div>
 	<div class="group section section--alt">
 		<div class="inner">
-			<h2 class="h h2">Nice things people have said</h2>
+			<h2 class="h h2">Nice things people have&nbsp;said</h2>
 			<div class="group quotes" data-slides>
 				<div class="quote active" data-slide data-slide-number="1">
 					<blockquote>

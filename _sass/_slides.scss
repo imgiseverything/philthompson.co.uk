@@ -23,7 +23,7 @@
 	}
 	
 	@include breakpoint(desktop){
-		transition: all, $animation-speed, linear;
+		transition: all $animation-speed linear;
 	}
 }
 

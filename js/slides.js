@@ -67,7 +67,7 @@ window.PT = window.PT || {};
 			$('[data-slide-nav]').eq(0).addClass(classes.active);
 			
 			// Begin auto slide
-			self.autoInit();
+			//self.autoInit();
 		},
 		
 		// Click a link and show the correct slide (use CSS to animate in the slide)
