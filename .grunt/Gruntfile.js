@@ -120,6 +120,24 @@ module.exports = function(grunt) {
 		    }
 		},
 		
+		// Optimise SVGs
+		svgmin: {
+	        options: {
+	            plugins: [
+	                {
+	                    removeViewBox: false
+	                }, {
+	                    removeUselessStrokeAndFill: false
+	                }
+	            ]
+	        },
+	        dist: {
+	            files: {
+	                '../images/svg/*.svg': '../images/svg/*.svg'
+	            }
+	        }
+	    },
+		
 		// Add browser prefixes to CSS
 		autoprefixer: {
 		    options: {
@@ -159,17 +177,18 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-jslint');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass', 'autoprefix', 'cssmin', 'concat', 'uglify', 'jslint', 'imagemin']);
+	grunt.registerTask('default', ['sass', 'autoprefix', 'cssmin', 'concat', 'uglify', 'jslint', 'imagemin', 'svgmin']);
 	grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
 	grunt.registerTask('js', ['concat', 'uglify', 'jslint']);
+	grunt.registerTask('images', ['imagemin', 'svgmin']);
 
 };
