@@ -24,8 +24,10 @@
 	display: none; 
 }    
 
+/* Hide elements based upon JavaScript presence */
 .hidden,
-.js-hidden { 
+.no-js .no-js-hidden,
+.js .js-hidden{ 
 	display: none; 
 	visibility: hidden; 
 } 

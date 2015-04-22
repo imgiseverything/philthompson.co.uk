@@ -1,14 +1,20 @@
 /**
  * Lists 
  */
-.block-list{
-	
+ 
+/* 
+ * Blocked list. Atomic style to get zero list styling
+ */
+.block-list{	
 	li{
 		list-style: none;
 		margin-left: 0;
 	}
 }
 
+/* 
+ * Grid list. Atomic style to get <li>s to sit enxt to each other in a line /grid
+ */  
 .grid-list{
 	margin-left: -20px; 
 	
@@ -36,9 +42,9 @@
 		list-style: none;
 		padding: 0 5px 10px;
 		text-align: center;
-		width: 33%;
+		width: 25%;
 		
-		@include breakpoint(tablet){
+		@include breakpoint(mobile-landscape){
 			width: 20%;
 			
 			&:nth-of-type(5n+1){
@@ -49,23 +55,24 @@
 
 	
 	a{
-		background: rgba(white, 0.1);
+		background: rgba(white, .1);
 		display: block;
-		padding: 2em 0;
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		transition: all, $animation-speed, ease-out;
+		padding: 1.5em 0;
+		-webkit-tap-highlight-color: rgba(black, 0);
+		transition: all $animation-speed ease-out;
 		transition-delay: 100ms;
 		
 		// Hover effects - desktop only
 		@include breakpoint(desktop){
 			&:hover{
-				background-color: rgba(white, 0.2);
-				padding: 1.85em 0 2.15em;
+				background-color: rgba(white, .2);
+				padding: 1.35em 0 1.65em;
 			}
 		}
 		
 		&:active{
-			background-color: rgba(white, 0.2);
+			background-color: rgba(white, .2);
+			padding: 1.35em 0 1.65em;
 		}
 		
 	}
@@ -73,7 +80,15 @@
 	svg{
 		display: block;
 		fill: $c-black;
+		height: 26px;
 		margin: 0 auto;	
+		width: 26px;
+		
+		
+		@include breakpoint(ipad-portrait){
+			height: auto;
+			width: auto;
+		}
 	}
 	
 }

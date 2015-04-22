@@ -23,7 +23,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
-figure, figcaption, .site-footer, header, hgroup, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	border: 0;
@@ -60,17 +60,8 @@ table {
 	overflow-y: scroll;
 }
 
-strong, b{
-	font-weight: bold;
-}
-
-em, i{
-	font-style: italic;
-}
-
 html, body{
 	height: 100%;
-	/*height: 100vh;*/
 }
 
 
@@ -78,19 +69,15 @@ body{
 	background: $c-yellow;
 	color: $c-black;
 	margin: 0 auto;
-	width: 87.5%;	
+	width: 100%;	
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	
-	@media screen and (min-width: $s+1+px) {
-		width: 93.75%;
-	}
-	
-	@media screen and (min-width: $l+px) {
-		width: 100%;
-	}
 }
 
+::selection {
+    background: $c-black;
+	color: $c-yellow;
+}
 
 	
 img{
@@ -100,25 +87,6 @@ img{
 
 iframe{
 	max-width: 100%;	
-}
-
-h1, h2, h3, h4, h5, h6, .h{
-	
-}
-
-h1, .h1,
-h2, .h2,
-h3, .h3{
-	
-}
-
-h1,
-.h1{
-	
-}
-
-p, ul, ol, dl{
-	padding: 10px 0 0;
 }
 
 ul li, ol li{

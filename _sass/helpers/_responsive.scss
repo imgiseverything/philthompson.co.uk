@@ -13,7 +13,7 @@ screen and (max-width: $l+px){
 @media 
 screen and (max-width: 568px),
 screen and (min-device-width: $s+px) and (max-device-width: 480px), 
-screen and (min-device-width: $s+px) and (max-device-width: 568px)  {
+screen and (min-device-width: $s+px) and (max-device-width: 568px){
 	.mobile-hidden,
 	.tablet-only,
 	.desktop-only{
@@ -24,7 +24,7 @@ screen and (min-device-width: $s+px) and (max-device-width: 568px)  {
 
 /* Tablet */
 @media
-screen and (min-device-width: $m+px)  and (max-device-width: $l+px) {
+screen and (min-device-width: $m+px)  and (max-device-width: $l+px){
 	.tablet-hidden,
 	.mobile-only,
 	.desktop-only{

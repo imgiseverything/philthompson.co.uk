@@ -2,6 +2,7 @@
 /**
  * 0 Misc
  */
+/* Mixins */
 /* Set different breakpoints */
 /* Fonts */
 /* Colours */
@@ -36,7 +37,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, .site-footer, header, hgroup,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
@@ -67,29 +68,24 @@ table {
   min-height: 100%;
   overflow-y: scroll; }
 
-strong, b {
-  font-weight: bold; }
-
-em, i {
-  font-style: italic; }
-
 html, body {
-  height: 100%;
-  /*height: 100vh;*/ }
+  height: 100%; }
 
 body {
   background: #fd2;
   color: #151515;
   margin: 0 auto;
-  width: 87.5%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  @media screen and (min-width: 481px) {
-    body {
-      width: 93.75%; } }
-  @media screen and (min-width: 1024px) {
-    body {
-      width: 100%; } }
+
+::-moz-selection {
+  background: #151515;
+  color: #fd2; }
+
+::selection {
+  background: #151515;
+  color: #fd2; }
 
 img {
   height: auto;
@@ -97,9 +93,6 @@ img {
 
 iframe {
   max-width: 100%; }
-
-p, ul, ol, dl {
-  padding: 10px 0 0; }
 
 ul li, ol li {
   margin-left: 1em;
@@ -118,12 +111,23 @@ blockquote {
     blockquote {
       margin-left: 0; } }
 
+/* Animation keyframes */
+/* Fade an item in */
 @-webkit-keyframes fadeIn {
   to {
     opacity: 1; } }
 @keyframes fadeIn {
   to {
     opacity: 1; } }
+/* Pop animation */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
 /**
  *	2 Helper classes / Common modules
  */
@@ -142,14 +146,20 @@ a.icon:after {
 /**
  * Layout related helper classes 
  */
+/**
+ * .group
+ * Used as part of the Float Nearly Everything method
+ * http://archive.orderedlist.com/blog/archives/clearing-floats-the-fne-method/
+ * Used instead of adding a clearfix to everything and/or getting caught out by floats
+ */
 .group,
-.field {
+.form-field {
   clear: both;
   float: left;
   position: relative;
   width: 100%; }
 
-.field {
+.form-field {
   margin: 0 0 20px; }
 
 .column {
@@ -161,26 +171,48 @@ a.icon:after {
   display: block;
   position: absolute; }
 
+/**
+ * .inner
+ * Internal container on elements.
+ * Allow background colours/images go full width but copy sits 
+ * in a set central zone
+ *
+ * 1. iPad landscape width with 30px either side
+ */
 .inner {
   margin: 0 auto;
-  max-width: 984px; }
+  position: relative;
+  width: 90.625%; }
+  @media (min-width: 480px) {
+    .inner {
+      max-width: 80%; } }
+  @media (min-width: 768px) {
+    .inner {
+      max-width: 964px; } }
+  @media (min-width: 1024px) {
+    .inner {
+      width: 100%; } }
   @media (min-width: 1280px) {
     .inner {
       max-width: 1024px; } }
 
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden; }
-
+/**
+ * .clearfix @see http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
 .clearfix:after {
   clear: both; }
-
-.clearfix {
-  zoom: 1; }
 
 /**
  * Accessibility related helper classes
@@ -202,8 +234,10 @@ a.icon:after {
 .ir br {
   display: none; }
 
+/* Hide elements based upon JavaScript presence */
 .hidden,
-.js-hidden {
+.no-js .no-js-hidden,
+.js .js-hidden {
   display: none;
   visibility: hidden; }
 
@@ -233,10 +267,16 @@ a.icon:after {
 /**
  * Lists 
  */
+/* 
+ * Blocked list. Atomic style to get zero list styling
+ */
 .block-list li {
   list-style: none;
   margin-left: 0; }
 
+/* 
+ * Grid list. Atomic style to get <li>s to sit enxt to each other in a line /grid
+ */
 .grid-list {
   margin-left: -20px; }
   .grid-list li {
@@ -259,8 +299,8 @@ a.icon:after {
     list-style: none;
     padding: 0 5px 10px;
     text-align: center;
-    width: 33%; }
-    @media (min-width: 600px) {
+    width: 25%; }
+    @media (min-width: 480px) {
       .social-list li {
         width: 20%; }
         .social-list li:nth-of-type(5n+1) {
@@ -268,20 +308,27 @@ a.icon:after {
   .social-list a {
     background: rgba(255, 255, 255, 0.1);
     display: block;
-    padding: 2em 0;
+    padding: 1.5em 0;
     -webkit-tap-highlight-color: transparent;
-    transition: all, 300ms, ease-out;
+    transition: all 300ms ease-out;
     transition-delay: 100ms; }
     @media (min-width: 1025px) {
       .social-list a:hover {
         background-color: rgba(255, 255, 255, 0.2);
-        padding: 1.85em 0 2.15em; } }
+        padding: 1.35em 0 1.65em; } }
     .social-list a:active {
-      background-color: rgba(255, 255, 255, 0.2); }
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 1.35em 0 1.65em; }
   .social-list svg {
     display: block;
     fill: #151515;
-    margin: 0 auto; }
+    height: 26px;
+    margin: 0 auto;
+    width: 26px; }
+    @media (min-width: 768px) {
+      .social-list svg {
+        height: auto;
+        width: auto; } }
 
 .progress-bar {
   background: transparent;
@@ -314,42 +361,36 @@ a.icon:after {
  */
 a {
   color: inherit;
-  display: inline-block;
   line-height: 1;
   position: relative;
   text-decoration: none; }
   a:after {
-    background: #151515;
+    background: rgba(21, 21, 21, 0.25);
     bottom: 0;
     content: '';
-    height: 2px;
+    height: 1px;
     left: 0;
-    opacity: .25;
     position: absolute;
-    transition: all, 300ms, linear;
-    transition-delay: 150ms;
-    -webkit-transform: translateY(0.15em);
-        -ms-transform: translateY(0.15em);
-            transform: translateY(0.15em);
+    transition: all 300ms linear;
     width: 100%; }
   a:visited {
     color: rgba(21, 21, 21, 0.8); }
-  @media screen and (min-width: 1025px) {
+  @media (min-width: 1025px) {
     a:hover:after {
-      opacity: .5;
-      -webkit-transform: translateY(0.05em);
-          -ms-transform: translateY(0.05em);
-              transform: translateY(0.05em); } }
+      background: rgba(21, 21, 21, 0.5); } }
 
 .h1 a:after {
-  -webkit-transform: translateY(0em);
-      -ms-transform: translateY(0em);
-          transform: translateY(0em); }
-@media screen and (min-width: 1025px) {
-  .h1 a:hover:after {
-    -webkit-transform: translateY(-0.035em);
-        -ms-transform: translateY(-0.035em);
-            transform: translateY(-0.035em); } }
+  bottom: 2px; }
+  @media (min-width: 480px) {
+    .h1 a:after {
+      bottom: 3px; } }
+  @media (min-width: 768px) {
+    .h1 a:after {
+      bottom: 5px; } }
+  @media (min-width: 1024px) {
+    .h1 a:after {
+      bottom: 7px;
+      height: 2px; } }
 
 /* 
 	Typography
@@ -361,11 +402,11 @@ body {
   font: 14px/1.6667 "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif; }
 
 b, strong {
-  font-family: "Museo700", "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
+  font-family: "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
   font-weight: normal; }
 
 em, i {
-  font-family: "MuseoSlab500italic", "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
+  font-family: "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
   font-style: normal; }
 
 .h {
@@ -374,26 +415,23 @@ em, i {
   text-rendering: optimizeLegibility; }
 
 .h1 {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 0.975; }
 
 .h2 {
-  font-size: 1.28em; }
+  font-size: 24px; }
 
 .h3 {
-  font-size: 1.1em; }
-
-li {
-  font-size: .8em; }
+  font-size: 18px; }
 
 /* Quotes */
 .quotes blockquote {
-  font-family: "MuseoSlab500italic", "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
+  font-family: "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
   line-height: 1.33; }
 .quotes cite, .quotes .quote__meta {
   display: block;
   font-family: "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
-  font-size: .85em;
+  font-size: .9rem;
   margin-top: 1em; }
 
 p, ul, ol {
@@ -407,8 +445,15 @@ p, ul, ol {
   margin-top: 0; }
 
 @media (min-width: 480px) {
-  body {
-    font-size: 12px; } }
+  .h1 {
+    font-size: 36px;
+    line-height: 1.07143; }
+
+  .h2 {
+    font-size: 28px; }
+
+  .h3 {
+    font-size: 20px; } }
 @media (min-width: 600px) {
   body {
     font-size: 14px; } }
@@ -420,53 +465,62 @@ p, ul, ol {
     font-size: 60px; }
 
   .h2 {
-    font-size: 1.5em; } }
+    font-size: 48px; }
+
+  .h3 {
+    font-size: 36px; } }
 @media (min-width: 1024px) {
   body {
     font-size: 36px; }
 
   .h1 {
-    font-size: 80px; } }
+    font-size: 80px; }
+
+  .h2 {
+    font-size: 48px; }
+
+  .h3 {
+    font-size: 40px; } }
 /**
  * Section module
  */
 .section {
-  height: 100%;
+  height: auto;
   overflow: visible;
-  padding-top: 2em;
+  padding: 2em 0;
   width: 100%; }
-  @media screen and (min-width: 1025px) {
-    .section {
-      padding-top: 0; } }
-  .section .inner {
-    position: relative;
-    width: 100%; }
-    @media screen and (min-width: 1025px) {
-      .section .inner {
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%); } }
-  .section:first-of-type .inner {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+  .section:first-of-type {
+    min-height: 100vh; }
+    .section:first-of-type .inner {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -62.5%);
+          -ms-transform: translate(-50%, -62.5%);
+              transform: translate(-50%, -62.5%); }
+      @media (min-width: 480px) {
+        .section:first-of-type .inner {
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); } }
   .section:after {
     -webkit-animation: fadeIn 1000ms linear forwards 1050ms;
             animation: fadeIn 1000ms linear forwards 1050ms;
-    bottom: 20px;
+    bottom: 80px;
     font-size: 10px;
     opacity: 0;
     position: absolute;
-    right: 0; }
+    right: 15px; }
+    @media (min-width: 480px) {
+      .section:after {
+        bottom: 20px; } }
     @media (min-width: 768px) {
       .section:after {
+        bottom: 40px;
         right: 20px; } }
     @media (min-width: 1025px) {
       .section:after {
+        bottom: 20px;
         content: 'scroll \25BE'; } }
   .section:first-of-type:after {
     content: 'scroll \25BE'; }
@@ -476,9 +530,8 @@ p, ul, ol {
 .section--alt {
   background: #151515;
   color: #fd2;
-  margin-top: 2em;
-  padding-left: 20px;
-  padding-right: 20px; }
+  margin-bottom: 2.5em;
+  margin-top: 2em; }
   @media (min-width: 1025px) {
     .section--alt {
       margin-bottom: 2em;
@@ -491,13 +544,18 @@ p, ul, ol {
       background: #fd2; }
     .section--alt a:visited {
       color: rgba(255, 221, 34, 0.8); }
+  .section--alt .h::-moz-selection, .section--alt p::-moz-selection, .section--alt cite::-moz-selection {
+    background: #fd2;
+    color: #151515; }
+  .section--alt .h::selection, .section--alt p::selection, .section--alt cite::selection {
+    background: #fd2;
+    color: #151515; }
 
 /**
  * Slides module
  */
 [data-slides] {
   height: 100%;
-  /*height: 100vh;*/
   position: relative; }
 
 [data-slide] {
@@ -519,7 +577,8 @@ p, ul, ol {
 /* Clickable dots to navigate */
 .slides-nav {
   left: 0;
-  margin: 0;
+  margin: .5em 0;
+  padding: 0;
   position: absolute;
   top: 10px;
   z-index: 1001; }
@@ -543,18 +602,19 @@ p, ul, ol {
     border: 2px solid #151515;
     display: block;
     height: 30px;
+    -webkit-tap-highlight-color: transparent;
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
     transition: all, 300ms, linear;
-    width: 30px;
-    -webkit-tap-highlight-color: transparent; }
+    width: 30px; }
     .slides-nav a:after {
       content: none; }
     .slides-nav a.active {
       background: transparent;
       border-color: #151515; }
-      .slides-nav a.active:hover {
-        background: transparent; }
+      @media (min-width: 1025px) {
+        .slides-nav a.active:hover {
+          background: transparent; } }
     @media (min-width: 1025px) {
       .slides-nav a {
         height: 18px;
@@ -571,15 +631,6 @@ p, ul, ol {
     background-color: transparent;
     border-color: #fd2; }
 
-/* Pop animation */
-@-webkit-keyframes hvr-pop {
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); } }
-@keyframes hvr-pop {
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); } }
 /**
  *	5 Mobile / RWD helper classes
  */

@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 			}
 		},
 		
-		// Onfuscate and minfiy JavaScript to save filesize
+		// Obfuscate and minfiy JavaScript to save filesize
 		uglify: {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
@@ -110,10 +110,10 @@ module.exports = function(grunt) {
 		          // Set to true to enable the following options…
 		          expand: true,
 		          // cwd is 'current working directory'
-		          cwd: 'images/',
+		          cwd: '../images/',
 		          src: ['**/*.jpg'],
 		          // Could also match cwd. i.e. project-directory/img/
-		          dest: 'images/',
+		          dest: '../images/',
 		          ext: '.jpg'
 		        }
 		      ]
@@ -126,15 +126,25 @@ module.exports = function(grunt) {
 	            plugins: [
 	                {
 	                    removeViewBox: false
-	                }, {
+	                }, 
+	                {
 	                    removeUselessStrokeAndFill: false
 	                }
 	            ]
 	        },
-	        dist: {
-	            files: {
-	                '../images/svg/*.svg': '../images/svg/*.svg'
-	            }
+			dist: {
+				files: [
+					{
+						// Set to true to enable the following options…
+						expand: true,
+						// cwd is 'current working directory'
+						cwd: '../images/',
+						src: ['*.svg', '**/*.svg'],
+						// Could also match cwd. i.e. project-directory/img/
+						dest: '../images/',
+						ext: '.svg'
+					}
+				]
 	        }
 	    },
 		

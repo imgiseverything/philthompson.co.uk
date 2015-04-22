@@ -27,20 +27,20 @@ em, i{
 }
 
 .h1{ 
-	font-size: 36px; 
+	font-size: 28px; 
 	line-height: 0.975;  
 }
 
 .h2{
-	font-size: 1.28em;
+	font-size: 24px;
 }
 
 .h3{
-	font-size: 1.1em;
+	font-size: 18px;
 }
 
 li{
-	font-size: .8em;
+	//font-size: 12px;
 }
 
 /* Quotes */
@@ -54,7 +54,7 @@ li{
 	cite, .quote__meta{
 		display: block;
 		font-family: $font-family-body;
-		font-size: .85em;
+		font-size: .9rem;
 		margin-top: 1em;
 	}
 }
@@ -75,7 +75,20 @@ p, ul, ol{
 
 @include breakpoint(mobile-landscape){
 	body{
-		font-size: 12px;
+		//font-size: 12px;
+	}
+	
+	.h1{
+		font-size: 36px;
+		line-height: (30/28);
+	}
+	
+	.h2{
+		font-size: 28px;
+	}
+	
+	.h3{
+		font-size: 20px;	
 	}
 }
 
@@ -96,7 +109,11 @@ p, ul, ol{
 	}
 	
 	.h2{
-		font-size: 1.5em;
+		font-size: 48px;
+	}
+
+	.h3{
+		font-size: 36px;	
 	}
 
 }
@@ -109,6 +126,14 @@ p, ul, ol{
 	
 	.h1{ 
 		font-size: 80px; 
+	}
+	
+	.h2{
+		font-size: 48px;
+	}
+
+	.h3{
+		font-size: 40px;	
 	}
 
 

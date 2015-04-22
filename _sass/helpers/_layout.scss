@@ -2,16 +2,21 @@
  * Layout related helper classes 
  */
 
-
+/**
+ * .group
+ * Used as part of the Float Nearly Everything method
+ * http://archive.orderedlist.com/blog/archives/clearing-floats-the-fne-method/
+ * Used instead of adding a clearfix to everything and/or getting caught out by floats
+ */
 .group, 
-.field{
+.form-field{
 	clear: both;
 	float: left;
 	position: relative;
 	width: 100%;
 }
 
-.field{
+.form-field{
 	margin: 0 0 20px;
 }
 
@@ -26,10 +31,33 @@
 	position: absolute;
 }
 
+// 
+//  
+// 
+/**
+ * .inner
+ * Internal container on elements.
+ * Allow background colours/images go full width but copy sits 
+ * in a set central zone
+ *
+ * 1. iPad landscape width with 30px either side
+ */
 .inner{
 	margin: 0 auto;
-	max-width: 984px; // iPad landscape width with 20px either side
-
+	position: relative;
+	width: (290/320)*100%;	
+	
+	@include breakpoint(mobile-landscape){
+		max-width: 80%;
+	}
+	
+	@include breakpoint(ipad-portrait){
+		max-width: (1024 - 60) + px; // 1
+	}
+	
+	@include breakpoint(ipad-landscape){
+		width: 100%;
+	}
 	
 	@include breakpoint(xl){
 		max-width: $l+px;
@@ -37,17 +65,24 @@
 	
 }
 
-
-
-/* Clearfix */
-.clearfix:before, 
-.clearfix:after { 
-	content: "\0020"; 
-	display: block; 
-	height: 0; 
-	overflow: hidden; 
+/**
+ * .clearfix @see http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix{
+	&:before,
+	&:after{
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+	
+	&:after {
+		clear: both;
+	}
 }
-
-.clearfix:after { clear: both; }
-
-.clearfix { zoom: 1; }  

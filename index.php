@@ -4,25 +4,25 @@
 		philthompson.co.uk Home page	
 	*/
 	
-	$updated = '16032015'; // cache buster
+	$updated = '22042015'; // cache buster
 	
 	include('partials/header.php');	
 ?>	
 	<div class="group section">
 		<div class="inner">
-			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (<abbr title="User Interface">UI</abbr>) developer working in Bristol and London.</h1>
+			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (<abbr title="User Interface">UI</abbr>) developer working in Bristol, Birmingham <span class="amp">&amp;</span> London.</h1>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2 class="h h2">Front-end? What does that mean?</h2>
-			<p>A front-end developer (or a UI developer) takes website designs (artwork) usually created with Photoshop or Illustrator and converts that artwork into HTML templates using CSS and JavaScript. Front-end development work is just one part of the process; other parts include back-end development, <abbr title="User Experience">UX</abbr>, Planning and Project Management and that’s just for starters.</p>
+			<h2 class="h h2">Services</h2>
+			<p>A front-end developer (or a UI developer) takes website designs (artwork) usually created with Photoshop or Illustrator and converts that artwork into HTML templates using CSS and JavaScript. Front-end development work is just one part of the process; other parts include Back-end development, <abbr title="User Experience">UX</abbr>, Planning and Project Management and that’s just for starters.</p>
 		</div>
 	</div>
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Development process</h2>
-			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of Sass and Grunt; using BEM syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>			
+			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of Sass and Grunt; using <abbr title="Block-Element-Modifier">BEM</abbr> syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes JSLint.</p>			
 			<p><a href="//github.com/imgiseverything/philthompson.co.uk">This site’s code</a> is available on GitHub for your perusal, appreciation and/or judgement.</p>
 		</div>
 	</div>
@@ -100,7 +100,7 @@
 	<div class="group section">
 		<div class="inner vcard">
 			<h2 class="h h2">Get in touch</h2>
-			<p>Got a project you think Phil can help with? Email him: <a href="mailto:hello@imgiseverything.co.uk?subject=<?php echo urlencode('Hello via philthompson.co.uk'); ?>" class="email">hello@imgiseverything.co.uk</a></p>			
+			<p>If you have project that you think would be suited to Phil then you can email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Let’s work together&amp;body=Hi Phil" class="email">hello@imgiseverything.co.uk</a></p>			
 			<h3 class="h h3">Elsewhere on the web</h3>
 			<ul class="block-list social-list">
 				<li><a href="//last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"><?php include('images/svg/lastfm.svg'); ?></a></li>

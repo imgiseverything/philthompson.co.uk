@@ -4,22 +4,27 @@
 
 a{
 	color: inherit;
-	display: inline-block;
+	//display: inline-block;
 	line-height: 1;
 	position: relative;
 	text-decoration: none;
 	
+	@media (orientation: landscape){
+		//display: inline;
+	}
+	
+	@include breakpoint(desktop){	
+		//display: inline-block;
+	}
+	
 	&:after{
-		background: $c-black;
+		background: rgba($c-black, .25);
 		bottom: 0;
 		content: '';
-		height: 2px;
+		height: 1px;
 		left: 0;
-		opacity: .25;
 		position: absolute;
-		transition: all, $animation-speed, linear;
-		transition-delay: ($animation-speed / 2);
-		transform: translateY(.15em);
+		transition: all $animation-speed linear;
 		width: 100%;
 	}
 	
@@ -28,31 +33,33 @@ a{
 	}
 	
 	// Hover effects - desktop only
-	@media screen and (min-width: $l+1+px) {
-	    
+	@include breakpoint(desktop){	    
 		&:hover{
 			&:after{
-				opacity: .5;
-				transform: translateY(.05em);
+				background: rgba($c-black, .5);
 			}
 		}
 	}
 	
 }
 
+
+// Links in <h1>s need slightly different treatment as they sit differently
 .h1 a{
 	&:after{
-		transform: translateY(0em);
-	}
-	
-	
-	// Hover effects - desktop only
-	@media screen and (min-width: $l+1+px) {
-	    
-		&:hover{
-			&:after{
-				transform: translateY(-.035em);
-			}
+		bottom: 2px;
+		
+		@include breakpoint(mobile-landscape){
+			bottom: 3px;	
+		}
+		
+		@include breakpoint(ipad-portrait){
+			bottom: 5px;	
+		}
+		
+		@include breakpoint(ipad-landscape){
+			bottom: 7px;
+			height: 2px;
 		}
 	}
 	
