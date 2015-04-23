@@ -11,7 +11,7 @@
 // Create a global object we can reference
 window.PT = window.PT || {};
 
-(function ($) {
+(function () {
 
 	"use strict";
 
@@ -19,39 +19,44 @@ window.PT = window.PT || {};
 		
 		config: window.PT.config,
 		
-		$progress: $('[data-js-progress-bar]'),
-		throttleSpeed: 100, // in ms
+		$progress: document.querySelector('.js-progress-bar'),// $('[data-js-progress-bar]'),
+		throttleSpeed: 150, // in ms
 		
 		init: function(){
 			
 			var self = this;
 			
-			if(self.$progress.length === 0){
-				return;	
-			}	
+			console.log(self.$progress);
 			
-			$(window).scroll(
-				throttle(function (event) {
-					self.animate();
-				}, self.throttleSpeed)
-			);
+			if(self.$progress === undefined || self.$progress === null){
+				return;	
+			}
+			
+			if(window.addEventListener){
+				window.addEventListener('scroll', throttle(function (event) {
+					self.animate(); 
+				}, self.throttleSpeed), false);
+			}
 			
 		},
 		
 		animate: function(){
+			
 			var self = this,
-				s = $(window).scrollTop(),
-		        d = $(document).height(),
-		        c = $(window).height(),
-		        scrollPercent = (s / (d-c)) * 100;
-		
-		   self.$progress.attr('value', scrollPercent);
+				// Offset(Scrolled position) from top of document
+				scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop, //jQuery = $(window).scrollTop(),
+				// Document height
+		        documentHeight = document.documentElement.scrollHeight,// jQuery = $(document).height(),
+		        // Viewport (screen) height
+		        viewportHeight = document.documentElement.clientHeight, // jQuery = $(window).height(),
+		        scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
+		        
+			self.$progress.setAttribute('value', scrollPercent);
+			
 		}
-		
-		
 				
 	};
 	
 	window.PT.progress.init();
 
-}(jQuery));
+}());
