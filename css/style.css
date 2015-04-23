@@ -364,32 +364,25 @@ a {
   position: relative;
   text-decoration: none; }
   a:after {
-    background: rgba(21, 21, 21, 0.25);
-    bottom: 0;
+    background: rgba(21, 21, 21, 0.5);
+    bottom: .1em;
     content: '';
-    height: 1px;
+    height: .05em;
     left: 0;
     position: absolute;
     transition: all 300ms linear;
     width: 100%; }
+    @media (min-width: 1025px) {
+      a:after {
+        background: rgba(21, 21, 21, 0.25); } }
   a:visited {
-    color: rgba(21, 21, 21, 0.8); }
+    color: rgba(21, 21, 21, 0.75); }
   @media (min-width: 1025px) {
     a:hover:after {
-      background: rgba(21, 21, 21, 0.5); } }
-
-.h1 a:after {
-  bottom: 2px; }
-  @media (min-width: 480px) {
-    .h1 a:after {
-      bottom: 3px; } }
-  @media (min-width: 768px) {
-    .h1 a:after {
-      bottom: 5px; } }
-  @media (min-width: 1024px) {
-    .h1 a:after {
-      bottom: 7px;
-      height: 2px; } }
+      background: rgba(21, 21, 21, 0.5);
+      height: .065em; } }
+  a:active:after, a:focus:after {
+    background: currentColor; }
 
 /* 
 	Typography
@@ -540,9 +533,12 @@ p, ul, ol {
   .section--alt a {
     color: currentColor; }
     .section--alt a:after {
-      background: #fd2; }
+      background: rgba(255, 221, 34, 0.5); }
     .section--alt a:visited {
       color: rgba(255, 221, 34, 0.8); }
+    @media (min-width: 1025px) {
+      .section--alt a:hover:after {
+        background: rgba(255, 221, 34, 0.75); } }
   .section--alt .h::-moz-selection, .section--alt p::-moz-selection, .section--alt cite::-moz-selection {
     background: #fd2;
     color: #151515; }
@@ -553,25 +549,25 @@ p, ul, ol {
 /**
  * Slides module
  */
-[data-slides] {
+.js-slides {
   height: 100%;
   position: relative; }
 
-[data-slide] {
+.js-slide {
   left: 0;
   opacity: 0;
   position: absolute;
   top: 50px;
   width: 100%; }
-  [data-slide].active {
+  @media (min-width: 768px) {
+    .js-slide {
+      top: 60px; } }
+  .js-slide.active {
     opacity: 1;
     z-index: 1000; }
-  @media (min-width: 768px) {
-    [data-slide] {
-      top: 60px; } }
-  @media (min-width: 1025px) {
-    [data-slide] {
-      transition: all 300ms linear; } }
+    @media (min-width: 1025px) {
+      .js-slide.active {
+        transition: all 1000ms linear; } }
 
 /* Clickable dots to navigate */
 .slides-nav {

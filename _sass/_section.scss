@@ -75,12 +75,22 @@
 		color: currentColor;
 		
 		&:after{
-			background: $c-yellow;
+			background: rgba($c-yellow, .5);
 		}
 		
 		&:visited{
 			color: rgba($c-yellow, .8);
 		}	
+		
+		// Hover effects - desktop only
+		@include breakpoint(desktop){	    
+			&:hover{
+				&:after{
+					background: rgba($c-yellow, .75);
+				}
+			}
+		}
+		
 	}	
 	
 	

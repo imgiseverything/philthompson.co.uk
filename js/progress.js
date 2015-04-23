@@ -26,8 +26,6 @@ window.PT = window.PT || {};
 			
 			var self = this;
 			
-			console.log(self.$progress);
-			
 			if(self.$progress === undefined || self.$progress === null){
 				return;	
 			}

@@ -10,7 +10,7 @@
 ?>	
 	<div class="group section">
 		<div class="inner">
-			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (<abbr title="User Interface">UI</abbr>) developer working in Bristol, Birmingham <span class="amp">&amp;</span> London.</h1>
+			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (<abbr title="User Interface">UI</abbr>) developer working in Bristol, Birmingham <span class="amp">&amp;</span>&nbsp;London.</h1>
 		</div>
 	</div>
 	<div class="group section">
@@ -35,45 +35,45 @@
 	<div class="group section section--alt">
 		<div class="inner">
 			<h2 class="h h2">Nice things people have&nbsp;said</h2>
-			<div class="group quotes" data-slides>
-				<div class="quote active" data-slide data-slide-number="1">
+			<div class="group quotes js-slides">
+				<div class="quote active js-slide" data-slide-number="1">
 					<blockquote>
 						<p>Phil has great communication skills. We worked together on a redesign project across different timezones, which ran smoothly. Phil brings strong dev skills and a fun personality to the table.</p>
 						<cite>Angela Bliumis, Project Manager, Area 17</cite>
 					</blockquote>
-					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
+					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/area17/">Read the case study<span class="visuallyhidden"> for Area17</span></a></p>
 				</div>
 				
-				<div class="quote" data-slide data-slide-number="2">
+				<div class="quote js-slide" data-slide-number="2">
 					<blockquote>
 						<p>Phil was an excellent front end developer to work with. He’s the hard-to-find type of person who pays close attention to every detail.</p>
 						<cite><a href="//philipdibello.com/">Philip DiBello</a>, Freelance Designer, (formerly of Area 17)</cite>
 					</blockquote>
-					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/area17/">Read the case study <span class="visuallyhidden">for Area17</span></a></p>
+					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/area17/">Read the case study<span class="visuallyhidden"> for Area17</span></a></p>
 				</div>
 				
-				<div class="quote" data-slide data-slide-number="3">
+				<div class="quote js-slide" data-slide-number="3">
 					<blockquote>
 						<p>Phil fitted in really well to our responsive UX and design workflow, creating some really quick and useful pattern libraries for us to iterate on through the development of the project.</p>
 						<cite>Graeme Rutherford, Creative UX Strategist, LOVE Creative (now freelance)</cite>
 					</blockquote>
-					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/love/">Read the case study <span class="visuallyhidden">for LOVE Creative</span></a></p>
+					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/love/">Read the case study<span class="visuallyhidden"> for LOVE Creative</span></a></p>
 				</div>
 				
-				<div class="quote" data-slide data-slide-number="4">
+				<div class="quote js-slide" data-slide-number="4">
 					<blockquote>
 						<p>We were recommended Phil by our designer and never looked back, he brought the website to life exactly how we wanted and made the user experience fantastic on both desktop and mobile devices. He delivered on time and to a high standard.</p>
 						<cite>Danny Nugent, Managing Director, NUCO Travel</cite>
 					</blockquote>
-					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/nuco-travel/">Read the case study <span class="visuallyhidden">NUCO Travel</span></a></p>
+					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/nuco-travel/">Read the case study<span class="visuallyhidden"> for NUCO Travel</span></a></p>
 				</div>
 				
-				<div class="quote" data-slide data-slide-number="5">
+				<div class="quote js-slide" data-slide-number="5">
 					<blockquote>
 						<p>Phil is an excellent communicator. I am always confident that he will deliver what I've asked (and then some) on time and at the agreed price. He's a clever developer who cares about usability both from a front end and back office point of view. Oh, and he builds websites exactly how they've been designed!</p>
 						<cite>Rachel Tonner, Brand Manager, Ampersand</cite>
 					</blockquote>
-					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/ampersand/">Read the case study <span class="visuallyhidden">Ampersand</span></a></p>
+					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/ampersand/">Read the case study<span class="visuallyhidden"> for Ampersand</span></a></p>
 				</div>
 			</div>
 		</div>
@@ -92,7 +92,7 @@
 	</div>	
 	<div class="group section">
 		<div class="inner">
-			<h2 class="h h2">What’s with the yellow?</h2>
+			<h2 class="h h2">What’s with the&nbsp;yellow?</h2>
 			<p>The short answer is because Phil <del>likes</del> loves it; the longer answer is that it makes the website stand-out by allowing for a flat design whilst retaining some personality.</p>			
 			<p>Some people like the yellow and some don’t.</p>			
 		</div>
@@ -101,7 +101,7 @@
 		<div class="inner vcard">
 			<h2 class="h h2">Get in touch</h2>
 			<p>If you have project that you think would be suited to Phil then you can email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Let’s work together&amp;body=Hi Phil" class="email">hello@imgiseverything.co.uk</a></p>			
-			<h3 class="h h3">Elsewhere on the web</h3>
+			<h3 class="h h3">Elsewhere on the&nbsp;web</h3>
 			<ul class="block-list social-list">
 				<li><a href="//last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"><?php include('images/svg/lastfm.svg'); ?></a></li>
 				<li><a href="//linkedin.com/in/philt" class="icon" title="LinkedIn"><?php include('images/svg/linkedin.svg'); ?></a></li>

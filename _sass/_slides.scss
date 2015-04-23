@@ -1,29 +1,29 @@
 /**
  * Slides module
  */
-[data-slides]{
+.js-slides{
 	height: 100%;
 	position: relative;
 }
 
-[data-slide]{
+.js-slide{
 	left: 0;
 	opacity: 0;
 	position: absolute;
 	top: 50px;
 	width: 100%;
 	
-	&.active{
-		opacity: 1;
-		z-index: 1000;
-	}
-	
 	@include breakpoint(ipad-portrait){
 		top: 60px;
 	}
 	
-	@include breakpoint(desktop){
-		transition: all $animation-speed linear;
+	&.active{
+		opacity: 1;
+		z-index: 1000;
+	
+		@include breakpoint(desktop){
+			transition: all 1000ms linear;
+		}
 	}
 }
 

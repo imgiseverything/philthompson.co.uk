@@ -240,8 +240,6 @@ window.PT = window.PT || {};
 			
 			var self = this;
 			
-			console.log(self.$progress);
-			
 			if(self.$progress === undefined || self.$progress === null){
 				return;	
 			}
@@ -292,17 +290,17 @@ window.PT = window.PT || {};
 
 	window.PT.slides = {
 		
-		$container:	$('[data-slides]'),
-		$slides: 	$('[data-slide]'),
+		$container:	$('.js-slides'),
+		$slides: 	$('.js-slide'),
 		config: 	window.PT.config,
 		
-		resize: {
-			timer: null,
-			delay: 300
-		},
+		throttleSpeed: 300,
 		
 		init: function(){
 			var self = this;
+			
+			console.log(self.$slides.length);
+			
 			if(self.$slides.length === 0){
 				return;
 			}
@@ -312,14 +310,13 @@ window.PT = window.PT || {};
 			self.height();
 
 			
-			// After a window resize, reset the height of the menu. 
-			// Only do it after a timeout so it's not called too often
-			$(window).resize(function(){
-				clearTimeout(self.resize.timer);
-				self.resize.timer = setTimeout(function(){ 
+			// After a window resize, reset the height of the slides. 
+			// Use a throttle so it's not called too often
+			if(window.addEventListener){
+				window.addEventListener('resize', throttle(function (event) {
 					self.height();
-				}, self.resize.delay);
-			});
+				}, self.throttleSpeed), false);
+			}
 			
 		},
 		
@@ -327,19 +324,20 @@ window.PT = window.PT || {};
 		buildNavigation: function(){
 			var self = this,
 				html = {
-					container: '<ul class="slides-nav">{{BODY}}</ul>',
+					container: '<ul class="slides-nav js-slides-nav">{{BODY}}</ul>',
 					body: ''
 				},
 				classes = self.config.classes,
 				i,
-				slidesLength = self.$slides.length;
+				slidesLength = self.$slides.length,
+				isActiveClass = '';
 			
 			for(i = 0; i < slidesLength; i++){
-				html.body += '<li><a href="#" data-slide-nav data-slide-id="' + (i + 1) + '" class="ir">Show slide ' + (i + 1) + '</a></li>';
+				isActiveClass = (i === 1) ? classes.active : '';
+				html.body += '<li><a href="#" class="ir js-slides-nav__link ' + isActiveClass + '" data-slide-id="' + (i + 1) + '">Show slide ' + (i + 1) + '</a></li>';
 			}
 			
 			self.$container.append(html.container.replace('{{BODY}}', html.body));			
-			$('[data-slide-nav]').eq(0).addClass(classes.active);
 			
 			// Begin auto slide
 			//self.autoInit();
@@ -352,11 +350,11 @@ window.PT = window.PT || {};
 				$activeNav,
 				classes = self.config.classes;
 			
-			$('[data-slide-nav]').click(function(e){
+			$(document).on('click', '.js-slides-nav__link', function(e){
 				e.preventDefault();
 				$activeNav = $(this);
 				if($activeNav.hasClass(classes.active) !== true){
-					// Rmeove active class from non-active sldies
+					// Remove active class from non-active sldies
 					self.$container.find('.' + classes.active).removeClass(classes.active);
 					$nav.find('.' + classes.active).removeClass(classes.active);
 					// Add active class to newly active slide
@@ -403,7 +401,7 @@ window.PT = window.PT || {};
 				$next = $activeNav.closest('li').next().find('a');
 				
 			if($next.length === 0){
-				$next = $('[data-slide-nav]').eq(0);
+				$next = $('.js-slides-nav__link').eq(0);
 			}
 			
 			$next.click();

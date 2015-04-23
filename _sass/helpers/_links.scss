@@ -12,24 +12,24 @@ a{
 	@media (orientation: landscape){
 		//display: inline;
 	}
-	
-	@include breakpoint(desktop){	
-		//display: inline-block;
-	}
-	
+
 	&:after{
-		background: rgba($c-black, .25);
-		bottom: 0;
+		background: rgba($c-black, .5);
+		bottom: .1em;
 		content: '';
-		height: 1px;
+		height: .05em;
 		left: 0;
 		position: absolute;
 		transition: all $animation-speed linear;
 		width: 100%;
+		
+		@include breakpoint(desktop){	
+			background: rgba($c-black, .25);
+		}	
 	}
 	
 	&:visited{
-		color: rgba($c-black, .8);
+		color: rgba($c-black, .75);
 	}
 	
 	// Hover effects - desktop only
@@ -37,29 +37,15 @@ a{
 		&:hover{
 			&:after{
 				background: rgba($c-black, .5);
+				height: .065em;
 			}
 		}
 	}
 	
-}
-
-
-// Links in <h1>s need slightly different treatment as they sit differently
-.h1 a{
-	&:after{
-		bottom: 2px;
-		
-		@include breakpoint(mobile-landscape){
-			bottom: 3px;	
-		}
-		
-		@include breakpoint(ipad-portrait){
-			bottom: 5px;	
-		}
-		
-		@include breakpoint(ipad-landscape){
-			bottom: 7px;
-			height: 2px;
+	&:active,
+	&:focus{
+		&:after{
+			background: currentColor;
 		}
 	}
 	
