@@ -4,7 +4,7 @@
 		philthompson.co.uk Home page	
 	*/
 	
-	$updated = '22042015'; // cache buster
+	$updated = '05012015'; // cache buster
 	
 	include('partials/header.php');	
 ?>	
@@ -70,36 +70,17 @@
 				
 				<div class="quote js-slide" data-slide-number="5">
 					<blockquote>
-						<p>Phil is an excellent communicator. I am always confident that he will deliver what I've asked (and then some) on time and at the agreed price. He's a clever developer who cares about usability both from a front end and back office point of view. Oh, and he builds websites exactly how they've been designed!</p>
+						<p>Phil is an excellent communicator. I am always confident that he will deliver what I’ve asked (and then some) on time and at the agreed price. He’s a clever developer who cares about usability both from a front end and back office point of view. Oh, and he builds websites exactly how they’ve been designed!</p>
 						<cite>Rachel Tonner, Brand Manager, Ampersand</cite>
 					</blockquote>
 					<p class="quote__meta"><a href="//imgiseverything.co.uk/work/ampersand/">Read the case study<span class="visuallyhidden"> for Ampersand</span></a></p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="group section">
-		<div class="inner">
-			<h2 class="h h2">Chosen charities</h2>
-			<ul>
-				<li><a href="//justgiving.com/sparks">Sparks</a>, fund life-saving medical research into conditions affecting babies, children and mums-to-be. Phil (almost) and friends rode the 2014 <a href="//imgiseverything.co.uk/articles/long-bike-rides-broken-limbs-raising-money-charity/">l&#8217;Ètape du Tour for Sparks</a>.</li>
-				<li><a href="//www.christie.nhs.uk/">The Christie</a>, a Manchester-based Cancer centre that treats over 40,000 patients a year. Phil currently donates £600 a year.</li>
-				<li><a href="//www.woodstreetmission.org.uk/">Wood Street Mission</a>, a Manchester-based charity providing practical help to children and their families. Phil currently donates £180 a year.</li>
-				<li><a href="//www.shelter.org.uk/">Shelter</a>, a national UK charity working with homeless people. Phil currently donates £180 a year.</li>
-				<li><a href="//www.boothcentre.org.uk/">Booth Centre</a>, a day centre that offers advice, activities and support to homeless people in Manchester. Phil currently donates £180 a year.</li>
-			</ul>	
-		</div>
-	</div>	
-	<div class="group section">
-		<div class="inner">
-			<h2 class="h h2">What’s with the&nbsp;yellow?</h2>
-			<p>The short answer is because Phil <del>likes</del> loves it; the longer answer is that it makes the website stand-out by allowing for a flat design whilst retaining some personality.</p>			
-			<p>Some people like the yellow and some don’t.</p>			
-		</div>
 	</div>			
 	<div class="group section">
 		<div class="inner vcard">
-			<h2 class="h h2">Get in touch</h2>
+			<h2 class="h h2">Let’s work together</h2>
 			<p>If you have project that you think would be suited to Phil then you can email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Let’s work together&amp;body=Hi Phil" class="email">hello@imgiseverything.co.uk</a></p>			
 			<h3 class="h h3">Elsewhere on the&nbsp;web</h3>
 			<ul class="block-list social-list">

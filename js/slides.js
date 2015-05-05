@@ -26,8 +26,6 @@ window.PT = window.PT || {};
 		init: function(){
 			var self = this;
 			
-			console.log(self.$slides.length);
-			
 			if(self.$slides.length === 0){
 				return;
 			}

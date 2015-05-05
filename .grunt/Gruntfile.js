@@ -145,8 +145,8 @@ module.exports = function(grunt) {
 						ext: '.svg'
 					}
 				]
-	        }
-	    },
+	    }
+	  },
 		
 		// Add browser prefixes to CSS
 		autoprefixer: {
