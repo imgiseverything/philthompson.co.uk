@@ -10,7 +10,7 @@
 ?>	
 	<div class="group section">
 		<div class="inner">
-			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (<abbr title="User Interface">UI</abbr>) developer working in Bristol, Birmingham <span class="amp">&amp;</span>&nbsp;London.</h1>
+			<h1 class="h h1"><a href="//imgiseverything.co.uk/">Phil Thompson</a> is a freelance front-end (<abbr title="User Interface">UI</abbr>) developer living <span class="amp">&amp;</span> working in London.</h1>
 		</div>
 	</div>
 	<div class="group section">
@@ -29,7 +29,7 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Clients</h2>
-			<p>Working with well established agencies like <a href="http://www.e3.co.uk/">e3</a> in Bristol, <a href="http://www.area17.com/">Area17</a> in Brooklyn, <a href="http://www.codecomputerlove.com/">Code Computerlove</a> and <a href="http://storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
+			<p>Working with well established agencies like <a href="//www.383project.com/">383 Project</a> in Birmingham, <a href="//www.cxpartners.co.uk/">CX Partners</a> in Bristol, <a href="//www.area17.com/">Area17</a> in Brooklyn, <a href="//www.codecomputerlove.com/">Code Computerlove</a> and <a href="//storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
 		</div>
 	</div>
 	<div class="group section section--alt">
