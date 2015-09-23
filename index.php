@@ -4,7 +4,7 @@
 		philthompson.co.uk Home page	
 	*/
 	
-	$updated = '05012015'; // cache buster
+	$updated = '02092015'; // cache buster
 	
 	include('partials/header.php');	
 ?>	
@@ -28,8 +28,15 @@
 	</div>
 	<div class="group section">
 		<div class="inner">
-			<h2 class="h h2">Clients</h2>
-			<p>Working with well established agencies like <a href="//www.383project.com/">383 Project</a> in Birmingham, <a href="//www.cxpartners.co.uk/">CX Partners</a> in Bristol, <a href="//www.area17.com/">Area17</a> in Brooklyn, <a href="//www.codecomputerlove.com/">Code Computerlove</a> and <a href="//storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
+			<h2 class="h h2">Clients</h2><!--
+			<ul class="client-logo-list">
+				<li class="client-logo-list__item"><a href="//www.topshop.com/"><?php include('images/logos/topshop.svg'); ?></a></li>
+				<li class="client-logo-list__item"><a href="//www.viacom.co.uk/"><?php include('images/logos/viacom.svg'); ?></a></li>
+				
+				<li class="client-logo-list__item"><a href="//www.economist.com/"><?php include('images/logos/economist.svg'); ?></a></li>
+			</ul>
+			<h3 class="h h3">Agencies</h3>-->
+			<p>Working with established agencies like <a href="//www.383project.com/">383 Project</a> in Birmingham, <a href="//www.cxpartners.co.uk/">CX Partners</a> in Bristol, <a href="//www.area17.com/">Area17</a> in Brooklyn, <a href="//www.codecomputerlove.com/">Code Computerlove</a> and <a href="//storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
 		</div>
 	</div>
 	<div class="group section section--alt">

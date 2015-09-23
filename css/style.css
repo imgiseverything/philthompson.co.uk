@@ -626,6 +626,30 @@ p, ul, ol {
     background-color: transparent;
     border-color: #fd2; }
 
+/* CLient logo list */
+.client-logo-list {
+  margin: 34px 0 0;
+  padding: 0;
+  text-align: justify; }
+
+.client-logo-list__item {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 300ms ease-out;
+  vertical-align: middle;
+  width: 24.5%; }
+  .client-logo-list__item a {
+    display: block; }
+    .client-logo-list__item a::after {
+      background: transparent; }
+  .client-logo-list__item svg {
+    display: block;
+    fill: currentColor; }
+  .client-logo-list__item:hover {
+    color: rgba(21, 21, 21, 0.75); }
+
 /**
  *	5 Mobile / RWD helper classes
  */

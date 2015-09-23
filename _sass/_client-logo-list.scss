@@ -1,0 +1,33 @@
+/* CLient logo list */
+.client-logo-list{
+	margin: 34px 0 0;
+	padding: 0;
+	text-align: justify;
+}
+
+.client-logo-list__item{
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	transition: all $animation-speed ease-out;
+	vertical-align: middle;
+	width: 24.5%;
+
+	a{
+		display: block;
+
+		&::after{
+			background: transparent;
+		}
+	}
+
+	svg{
+		display: block;
+		fill: currentColor;
+	}
+
+	&:hover{
+		color: rgba($c-black, .75);
+	}
+}
