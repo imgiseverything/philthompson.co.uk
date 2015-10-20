@@ -16,7 +16,7 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Services</h2>
-			<p>A front-end developer (or a UI developer) takes website designs (artwork) usually created with Photoshop or Illustrator and converts that artwork into HTML templates using CSS and JavaScript. Front-end development work is just one part of the process; other parts include Back-end development, <abbr title="User Experience">UX</abbr>, Planning and Project Management and that’s just for starters.</p>
+			<p>Creating responsive and accessible HTML/CSS templates which load quickly. WordPress bespoke themes and plugins that minimise SQL queries and front-end load times. CSS consultation for large projects.</p>
 		</div>
 	</div>
 	<div class="group section">
