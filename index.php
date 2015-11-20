@@ -32,8 +32,8 @@
 			<ul class="client-logo-list">
 				<li class="client-logo-list__item"><?php include('images/logos/topshop.svg'); ?></li>
 				<li class="client-logo-list__item"><?php include('images/logos/viacom.svg'); ?></li>
-				
 				<li class="client-logo-list__item"><?php include('images/logos/economist.svg'); ?></li>
+				<li class="client-logo-list__item"><?php include('images/logos/jaeger.svg'); ?></li>
 			</ul>
 			<h3 class="h h3">Agencies</h3>
 			<p>Working with established agencies like <a href="//www.383project.com/">383 Project</a> in Birmingham, <a href="//www.cxpartners.co.uk/">CX Partners</a> in Bristol, <a href="//www.area17.com/">Area17</a> in Brooklyn, <a href="//www.codecomputerlove.com/">Code Computerlove</a> and <a href="//storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>

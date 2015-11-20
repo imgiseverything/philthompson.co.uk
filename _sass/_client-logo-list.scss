@@ -1,4 +1,4 @@
-/* CLient logo list */
+/* Client logo list */
 .client-logo-list{
 	margin: 34px 0 0 -1%;
 	padding: 0;
@@ -12,7 +12,11 @@
 	padding: 0 1%;
 	transition: all $animation-speed ease-out;
 	vertical-align: middle;
-	width: 24.5%;
+	width: 49%;
+
+	@media screen and (min-width: $m){
+		width: 24%;
+	}
 
 	a{
 		display: block;
@@ -26,6 +30,7 @@
 		display: block;
 		fill: currentColor;
 		height: auto;
+		margin: 0 auto;
 		max-width: 100%;
 	}
 
