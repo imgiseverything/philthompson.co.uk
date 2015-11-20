@@ -635,13 +635,14 @@ p, ul, ol {
 .client-logo-list__item {
   display: inline-block;
   list-style: none;
-  margin: 0;
+  margin: 0 0 2em;
   padding: 0 1%;
   transition: all 300ms ease-out;
   vertical-align: middle;
   width: 49%; }
-  @media screen and (min-width: 768) {
+  @media screen and (min-width: 768px) {
     .client-logo-list__item {
+      margin-bottom: 0;
       width: 24%; } }
   .client-logo-list__item a {
     display: block; }
