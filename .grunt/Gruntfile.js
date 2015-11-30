@@ -63,6 +63,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		
+		// Karma
+		karma: {
+			unit: {
+				configFile: 'karma.conf.js'
+			}
+		},
 
 		// Convert Sass to CSS
 		sass: {	 // Task
@@ -177,6 +184,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-jslint');
+	grunt.loadNpmTasks('grunt-karma');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
+	grunt.loadNpmTasks('grunt-phantom');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-contrib-watch');
