@@ -15,14 +15,14 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				src: [
-					'!../js/vendor/*.js',
-					'!../js/plugins/respond.js',
-					'../js/plugins/*.js',
-					'../js/*.js',
-					'!../js/<%= pkg.name %>.js',
-					'!../js/<%= pkg.name %>.min.js'
+					'!../assets/js/vendor/*.js',
+					'!../assets/js/plugins/respond.js',
+					'../assets/js/plugins/*.js',
+					'../assets/js/*.js',
+					'!../assets/js/<%= pkg.name %>.js',
+					'!../assets/js/<%= pkg.name %>.min.js'
 				],
-				dest: '../js/<%= pkg.name %>.js'
+				dest: '../assets/js/<%= pkg.name %>.js'
 			}
 		},
 		
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'../js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+					'../assets/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
 				}
 			}
 		},
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 			
 			client: {
 				src: [
-					'../js/main.js'
+					'../assets/js/modules/*.js'
 				],
 				directives: {
 					browser: true,
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 		sass: {   // Task
 	        dist: {   // Target
 	            files: { // Dictionary of files
-	                '../css/style.css': '../_sass/style.scss'     // 'destination': 'source'
+	                '../assets/css/style.css': '../_sass/style.scss'     // 'destination': 'source'
 	            }
 	        }
 	    },
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 		cssmin: {
 		  combine: {
 		    files: {
-		      '../css/style.min.css': ['../css/style.css']
+		      '../assets/css/style.min.css': ['../assets/css/style.css']
 		    }
 		  }
 		},
@@ -93,10 +93,10 @@ module.exports = function(grunt) {
 		          // Set to true to enable the following options…
 		          expand: true,
 		          // cwd is 'current working directory'
-		          cwd: 'images/',
+		          cwd: '../assets/images/',
 		          src: ['**/*.png'],
 		          // Could also match cwd line above. i.e. project-directory/img/
-		          dest: 'images/',
+		          dest: '../assets/images/',
 		          ext: '.png'
 		        }
 		      ]
@@ -110,43 +110,18 @@ module.exports = function(grunt) {
 		          // Set to true to enable the following options…
 		          expand: true,
 		          // cwd is 'current working directory'
-		          cwd: '../images/',
+		          cwd: '../assets/images/',
 		          src: ['**/*.jpg'],
 		          // Could also match cwd. i.e. project-directory/img/
-		          dest: '../images/',
+		          dest: '../assets/images/',
 		          ext: '.jpg'
 		        }
 		      ]
 		    }
 		},
-		
-		// Optimise SVGs
-		svgmin: {
-	        options: {
-	            plugins: [
-	                {
-	                    removeViewBox: false
-	                }, 
-	                {
-	                    removeUselessStrokeAndFill: false
-	                }
-	            ]
-	        },
-			dist: {
-				files: [
-					{
-						// Set to true to enable the following options…
-						expand: true,
-						// cwd is 'current working directory'
-						cwd: '../images/',
-						src: ['*.svg', '**/*.svg'],
-						// Could also match cwd. i.e. project-directory/img/
-						dest: '../images/',
-						ext: '.svg'
-					}
-				]
-	    }
-	  },
+
+		// SVG Store
+		// combine SVGs into a sprite - make sure SVGs are optimised manually
 		
 		// Add browser prefixes to CSS
 		autoprefixer: {
@@ -157,8 +132,8 @@ module.exports = function(grunt) {
 		    multiple_files: {
 				expand: true,
 				flatten: true,
-				src: '../css/*.css',
-				dest: '../css/'
+				src: '../assets/css/*.css',
+				dest: '../assets/css/'
 		    }
 		},	
 		
@@ -193,12 +168,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-jslint');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-svgmin');
+	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass', 'autoprefix', 'cssmin', 'concat', 'uglify', 'jslint', 'imagemin', 'svgmin']);
+	grunt.registerTask('default', ['sass', 'autoprefix', 'cssmin', 'concat', 'uglify', 'jslint', 'imagemin', 'svgstore']);
 	grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
 	grunt.registerTask('js', ['concat', 'uglify', 'jslint']);
-	grunt.registerTask('images', ['imagemin', 'svgmin']);
+	grunt.registerTask('images', ['imagemin', 'svgstore']);
 
 };
