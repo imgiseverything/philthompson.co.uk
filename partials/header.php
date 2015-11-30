@@ -7,12 +7,14 @@
     <meta charset="utf-8">
 	<title>Freelance Front-end (UI) Developer London - Phil Thompson</title>
 	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
-	<!--[if lt IE 9]> <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 	<meta name="viewport" content="initial-scale=1">
 	<!-- Inline CSS as it's a `one-page` website and the CSS is only 4.5Kb-->
 	<style>
 	<?php include('assets/css/style.min.css'); ?>
 	</style>
+	<!--[if lt lte IE 11]><script src="/assets/js/vendor/svg4everybody.js"></script>
+	<script>svg4everybody(); // run it now or whenever you are ready</script><![endif]-->
 	<script>
 	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 	    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
