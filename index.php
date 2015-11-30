@@ -30,10 +30,10 @@
 		<div class="inner">
 			<h2 class="h h2">Clients</h2>
 			<ul class="client-logo-list">
-				<li class="client-logo-list__item"><?php include('images/logos/topshop.svg'); ?></li>
-				<li class="client-logo-list__item"><?php include('images/logos/viacom.svg'); ?></li>
-				<li class="client-logo-list__item"><?php include('images/logos/economist.svg'); ?></li>
-				<li class="client-logo-list__item"><?php include('images/logos/jaeger.svg'); ?></li>
+				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-topshop"></use></svg></li>
+				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-viacom"></use></svg></li>
+				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-economist"></use></svg></li>
+				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-jaeger"></use></svg></li>
 			</ul>
 			<h3 class="h h3">Agencies</h3>
 			<p>Working with established agencies like <a href="//www.383project.com/">383 Project</a> in Birmingham, <a href="//www.cxpartners.co.uk/">CX Partners</a> in Bristol, <a href="//www.area17.com/">Area17</a> in Brooklyn, <a href="//www.codecomputerlove.com/">Code Computerlove</a> and <a href="//storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
@@ -91,16 +91,16 @@
 			<p>If you have project that you think would be suited to Phil then you can email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Let’s work together&amp;body=Hi Phil" class="email">hello@imgiseverything.co.uk</a></p>			
 			<h3 class="h h3">Elsewhere on the&nbsp;web</h3>
 			<ul class="block-list social-list">
-				<li><a href="//last.fm/user/imgiseverything" class="icon ss-lastfm" title="Last FM"><?php include('images/svg/lastfm.svg'); ?></a></li>
-				<li><a href="//linkedin.com/in/philt" class="icon" title="LinkedIn"><?php include('images/svg/linkedin.svg'); ?></a></li>
-				<li><a href="//twitter.com/imgiseverything" class="icon" title="Twitter"><?php include('images/svg/twitter.svg'); ?></a></li>
-				<li><a href="//open.spotify.com/user/imgiseverything" class="icon ss-spotify" title="Spotify"><?php include('images/svg/spotify.svg'); ?></a></li>
-				<li><a href="//instagram.com/imgiseverythin9" class="icon ss-instagram" title="Instagram"><?php include('images/svg/instagram.svg'); ?></a></li>
-				<li><a href="//www.strava.com/athletes/340958" class="icon ss-link" title="Strava"><?php include('images/svg/strava.svg'); ?></a></li>
-				<li><a href="//pinboard.in/u:imgiseverything" class="icon ss-pinboard" title="Pinboard"><?php include('images/svg/pinboard.svg'); ?></a></li>
-				<li><a href="//pinterest.com/imgiseverything" class="icon ss-pinterest" title="Pinterest"><?php include('images/svg/pinterest.svg'); ?></a></li>
-				<li><a href="//github.com/imgiseverything" class="icon ss-github" title="Github"><?php include('images/svg/github.svg'); ?></a></li>
-				<li><a href="//soundcloud.com/imgiseverythin9" class="icon ss-soundcloud" title="Soundcloud"><?php include('images/svg/soundcloud.svg'); ?></a></li>
+				<li><a href="//last.fm/user/imgiseverything" class="icon icon--lastfm"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-lastfm"></use></svg></a></li>
+				<li><a href="//linkedin.com/in/philt" class="icon icon--linkedin"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-linkedin"></use></svg></a></li>
+				<li><a href="//twitter.com/imgiseverything" class="icon icon--twitter"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-twitter"></use></svg></a></li>
+				<li><a href="//open.spotify.com/user/imgiseverything" class="icon icon--spotify"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-spotify"></use></svg></a></li>
+				<li><a href="//instagram.com/imgiseverythin9" class="icon icon--instagram"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-instagram"></use></svg></a></li>
+				<li><a href="//www.strava.com/athletes/340958" class="icon icon--strava"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-strava"></use></svg></a></li>
+				<li><a href="//pinboard.in/u:imgiseverything" class="icon icon--pinboard"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-pinboard"></use></svg></a></li>
+				<li><a href="//pinterest.com/imgiseverything" class="icon icon--pinterest"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-pinterest"></use></svg></a></li>
+				<li><a href="//github.com/imgiseverything" class="icon icon--github"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-github"></use></svg></a></li>
+				<li><a href="//soundcloud.com/imgiseverythin9" class="icon icon--soundcloud"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-soundcloud"></use></svg></a></li>
 			</ul>
 		</div>
 	</div>

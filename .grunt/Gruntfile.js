@@ -64,77 +64,87 @@ module.exports = function(grunt) {
 		},
 		
 		// Convert Sass to CSS
-		sass: {   // Task
-	        dist: {   // Target
-	            files: { // Dictionary of files
-	                '../assets/css/style.css': '../_sass/style.scss'     // 'destination': 'source'
-	            }
-	        }
-	    },
+		sass: {	 // Task
+					dist: {	 // Target
+							files: { // Dictionary of files
+									'../assets/css/style.css': '../_sass/style.scss'		 // 'destination': 'source'
+							}
+					}
+			},
 		
 		
 		// Minfiy CSS to save filesize
 		cssmin: {
-		  combine: {
-		    files: {
-		      '../assets/css/style.min.css': ['../assets/css/style.css']
-		    }
-		  }
+			combine: {
+				files: {
+					'../assets/css/style.min.css': ['../assets/css/style.css']
+				}
+			}
 		},
 		
 		// Optimise Images
 		imagemin: {
 			png: {
-		      options: {
-		        optimizationLevel: 7
-		      },
-		      files: [
-		        {
-		          // Set to true to enable the following options…
-		          expand: true,
-		          // cwd is 'current working directory'
-		          cwd: '../assets/images/',
-		          src: ['**/*.png'],
-		          // Could also match cwd line above. i.e. project-directory/img/
-		          dest: '../assets/images/',
-		          ext: '.png'
-		        }
-		      ]
-		    },
-		    jpg: {
-		      options: {
-		        progressive: true
-		      },
-		      files: [
-		        {
-		          // Set to true to enable the following options…
-		          expand: true,
-		          // cwd is 'current working directory'
-		          cwd: '../assets/images/',
-		          src: ['**/*.jpg'],
-		          // Could also match cwd. i.e. project-directory/img/
-		          dest: '../assets/images/',
-		          ext: '.jpg'
-		        }
-		      ]
-		    }
+					options: {
+						optimizationLevel: 7
+					},
+					files: [
+						{
+							// Set to true to enable the following options…
+							expand: true,
+							// cwd is 'current working directory'
+							cwd: '../assets/images/',
+							src: ['**/*.png'],
+							// Could also match cwd line above. i.e. project-directory/img/
+							dest: '../assets/images/',
+							ext: '.png'
+						}
+					]
+				},
+				jpg: {
+					options: {
+						progressive: true
+					},
+					files: [
+						{
+							// Set to true to enable the following options…
+							expand: true,
+							// cwd is 'current working directory'
+							cwd: '../assets/images/',
+							src: ['**/*.jpg'],
+							// Could also match cwd. i.e. project-directory/img/
+							dest: '../assets/images/',
+							ext: '.jpg'
+						}
+					]
+				}
 		},
 
 		// SVG Store
 		// combine SVGs into a sprite - make sure SVGs are optimised manually
+		svgstore: {
+			options: {
+				prefix : 'symbol-', // This will prefix each <g> ID
+			},
+			default : {
+				files: {
+				'../assets/images/svg-sprite.svg': ['../assets/images/icons/*.svg', '../assets/images/logos/*.svg'],
+				}
+			}
+		},
 		
 		// Add browser prefixes to CSS
 		autoprefixer: {
-		    options: {
-		    	browsers: ['last 2 versions', 'ie 9']
-		    },
-		    // prefix all files
-		    multiple_files: {
+				options: {
+					browsers: ['last 2 versions', 'ie 9']
+				},
+				// prefix all files
+				multiple_files: {
 				expand: true,
 				flatten: true,
 				src: '../assets/css/*.css',
 				dest: '../assets/css/'
-		    }
+				}
 		},	
 		
 		// WATCH:

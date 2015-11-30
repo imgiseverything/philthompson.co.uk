@@ -11,7 +11,7 @@
 	<meta name="viewport" content="initial-scale=1">
 	<!-- Inline CSS as it's a `one-page` website and the CSS is only 4.5Kb-->
 	<style>
-	<?php include('css/style.min.css'); ?>
+	<?php include('assets/css/style.min.css'); ?>
 	</style>
 	<script>
 	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
