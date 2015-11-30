@@ -91,16 +91,16 @@
 			<p>If you have project that you think would be suited to Phil then you can email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Let’s work together&amp;body=Hi Phil" class="email">hello@imgiseverything.co.uk</a></p>			
 			<h3 class="h h3">Elsewhere on the&nbsp;web</h3>
 			<ul class="block-list social-list">
-				<li><a href="//last.fm/user/imgiseverything" class="icon icon--lastfm"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-lastfm"></use></svg></a></li>
-				<li><a href="//linkedin.com/in/philt" class="icon icon--linkedin"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-linkedin"></use></svg></a></li>
-				<li><a href="//twitter.com/imgiseverything" class="icon icon--twitter"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-twitter"></use></svg></a></li>
-				<li><a href="//open.spotify.com/user/imgiseverything" class="icon icon--spotify"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-spotify"></use></svg></a></li>
-				<li><a href="//instagram.com/imgiseverythin9" class="icon icon--instagram"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-instagram"></use></svg></a></li>
-				<li><a href="//www.strava.com/athletes/340958" class="icon icon--strava"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-strava"></use></svg></a></li>
-				<li><a href="//pinboard.in/u:imgiseverything" class="icon icon--pinboard"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-pinboard"></use></svg></a></li>
-				<li><a href="//pinterest.com/imgiseverything" class="icon icon--pinterest"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-pinterest"></use></svg></a></li>
-				<li><a href="//github.com/imgiseverything" class="icon icon--github"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-github"></use></svg></a></li>
-				<li><a href="//soundcloud.com/imgiseverythin9" class="icon icon--soundcloud"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-soundcloud"></use></svg></a></li>
+				<li class="social-list__item"><a href="//last.fm/user/imgiseverything" class="social-list__link social-list__link--lastfm"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-lastfm"></use></svg></a></li>
+				<li class="social-list__item"><a href="//linkedin.com/in/philt" class="social-list__link social-list__link--linkedin"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-linkedin"></use></svg></a></li>
+				<li class="social-list__item"><a href="//twitter.com/imgiseverything" class="social-list__link social-list__link--twitter"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-twitter"></use></svg></a></li>
+				<li class="social-list__item"><a href="//open.spotify.com/user/imgiseverything" class="social-list__link social-list__link--spotify"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-spotify"></use></svg></a></li>
+				<li class="social-list__item"><a href="//instagram.com/imgiseverythin9" class="social-list__link social-list__link--instagram"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-instagram"></use></svg></a></li>
+				<li class="social-list__item"><a href="//www.strava.com/athletes/340958" class="social-list__link social-list__link--strava"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-strava"></use></svg></a></li>
+				<li class="social-list__item"><a href="//pinboard.in/u:imgiseverything" class="social-list__link social-list__link--pinboard"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-pinboard"></use></svg></a></li>
+				<li class="social-list__item"><a href="//pinterest.com/imgiseverything" class="social-list__link social-list__link--pinterest"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-pinterest"></use></svg></a></li>
+				<li class="social-list__item"><a href="//github.com/imgiseverything" class="social-list__link social-list__link--github"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-github"></use></svg></a></li>
+				<li class="social-list__item"><a href="//soundcloud.com/imgiseverythin9" class="social-list__link social-list__link--soundcloud"><svg class="social-list__svg"><use xlink:href="assets/images/svg-sprite.svg#symbol-soundcloud"></use></svg></a></li>
 			</ul>
 		</div>
 	</div>
