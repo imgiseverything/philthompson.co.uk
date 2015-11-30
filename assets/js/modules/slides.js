@@ -61,20 +61,20 @@ window.PT = window.PT || {};
 				isActiveClass = (i === 1) ? classes.active : '';
 				html.body += '<li><a href="#" class="ir js-slides-nav__link ' + isActiveClass + '" data-slide-id="' + (i + 1) + '">Show slide ' + (i + 1) + '</a></li>';
 			}
-			
+
 			self.$container.append(html.container.replace('{{BODY}}', html.body));			
-			
+
 			// Begin auto slide
 			//self.autoInit();
 		},
-		
+
 		// Click a link and show the correct slide (use CSS to animate in the slide)
 		navigate: function(){
 			var self = this,
 				$nav = $('.slides-nav'),
 				$activeNav,
 				classes = self.config.classes;
-			
+
 			$(document).on('click', '.js-slides-nav__link', function(e){
 				e.preventDefault();
 				$activeNav = $(this);
@@ -88,7 +88,7 @@ window.PT = window.PT || {};
 				}								
 			});
 		},
-		
+
 		// Init the auto clicking of the slides
 		autoInit: function(){
 			var self = this;
@@ -96,17 +96,18 @@ window.PT = window.PT || {};
 			self.hoverPause();	
 			self.auto();
 		},
-		
+
 		// When user hovers over the slides pause them (as they will likely be looking to click (or read) something on them)
 		hoverPause: function(){
 			var self = this;
-				
+
 			self.$container.hover(function(){
 				clearInterval(self.slideInterval);
 			}, function(){
 				self.auto();
 			});
 		},
+
 		// Every x seconds click the next slide
 		auto: function(){
 			var self = this;
@@ -116,7 +117,7 @@ window.PT = window.PT || {};
 				}, self.config.delay
 			);		
 		},
-		
+
 		// Show the next slide (work out which is next and click the relevant nav link)
 		next: function(){
 			var self = this,
@@ -124,22 +125,20 @@ window.PT = window.PT || {};
 				classes = self.config.classes,
 				$activeNav = $nav.find('.' + classes.active),
 				$next = $activeNav.closest('li').next().find('a');
-				
+
 			if($next.length === 0){
 				$next = $('.js-slides-nav__link').eq(0);
 			}
-			
+
 			$next.click();
 		},		
-		
-		
+
 		// Ensure slides always take up the space they need
 		height: function(){
 			var self = this,
 				height = 0,
-				highest = 0,
-				winHeight = parseInt($(window).height(), 10);
-				
+				highest = 0;
+
 			self.$slides.each(function(){
 				height = parseInt($(this).outerHeight(), 10);
 				//console.log(height);
@@ -147,15 +146,13 @@ window.PT = window.PT || {};
 					highest = height;
 				}
 			});
-			
+
 			highest = highest * 1.5;
-			
-			self.$container.closest('.inner').css('min-height', highest + 'px');
-				
-		}
-				
+
+			self.$container.closest('.inner').css('min-height', highest + 'px');	
+		}			
 	};
-	
+
 	window.PT.slides.init();
 
 }(jQuery));

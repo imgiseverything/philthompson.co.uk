@@ -16,9 +16,8 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'!../assets/js/vendor/*.js',
-					'!../assets/js/plugins/respond.js',
 					'../assets/js/plugins/*.js',
-					'../assets/js/*.js',
+					'../assets/js/modules/*.js',
 					'!../assets/js/<%= pkg.name %>.js',
 					'!../assets/js/<%= pkg.name %>.min.js'
 				],
@@ -52,27 +51,28 @@ module.exports = function(grunt) {
 					todo: true,
 					unparam: true,
 					unused: true,
+					plusplus: true,
 					predef: [
+						'debounce',
 						'jQuery',
-						'smoothScroll'
+						'smoothScroll',
+						'throttle'
 					]
 				},
 				options: {
 				}
 			}
-			
 		},
-		
+
 		// Convert Sass to CSS
 		sass: {	 // Task
-					dist: {	 // Target
-							files: { // Dictionary of files
-									'../assets/css/style.css': '../_sass/style.scss'		 // 'destination': 'source'
-							}
-					}
-			},
-		
-		
+			dist: {	 // Target
+				files: { // Dictionary of files
+					'../assets/css/style.css': '../_sass/style.scss'		 // 'destination': 'source'
+				}
+			}
+		},
+
 		// Minfiy CSS to save filesize
 		cssmin: {
 			combine: {
@@ -81,43 +81,43 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		// Optimise Images
 		imagemin: {
 			png: {
-					options: {
-						optimizationLevel: 7
-					},
-					files: [
-						{
-							// Set to true to enable the following options…
-							expand: true,
-							// cwd is 'current working directory'
-							cwd: '../assets/images/',
-							src: ['**/*.png'],
-							// Could also match cwd line above. i.e. project-directory/img/
-							dest: '../assets/images/',
-							ext: '.png'
-						}
-					]
+				options: {
+					optimizationLevel: 7
 				},
-				jpg: {
-					options: {
-						progressive: true
-					},
-					files: [
-						{
-							// Set to true to enable the following options…
-							expand: true,
-							// cwd is 'current working directory'
-							cwd: '../assets/images/',
-							src: ['**/*.jpg'],
-							// Could also match cwd. i.e. project-directory/img/
-							dest: '../assets/images/',
-							ext: '.jpg'
-						}
-					]
-				}
+				files: [
+					{
+						// Set to true to enable the following options…
+						expand: true,
+						// cwd is 'current working directory'
+						cwd: '../assets/images/',
+						src: ['**/*.png'],
+						// Could also match cwd line above. i.e. project-directory/img/
+						dest: '../assets/images/',
+						ext: '.png'
+					}
+				]
+			},
+			jpg: {
+				options: {
+					progressive: true
+				},
+				files: [
+					{
+						// Set to true to enable the following options…
+						expand: true,
+						// cwd is 'current working directory'
+						cwd: '../assets/images/',
+						src: ['**/*.jpg'],
+						// Could also match cwd. i.e. project-directory/img/
+						dest: '../assets/images/',
+						ext: '.jpg'
+					}
+				]
+			}
 		},
 
 		// SVG Store
@@ -132,21 +132,21 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		// Add browser prefixes to CSS
 		autoprefixer: {
-				options: {
-					browsers: ['last 2 versions', 'ie 9']
-				},
-				// prefix all files
-				multiple_files: {
-				expand: true,
-				flatten: true,
-				src: '../assets/css/*.css',
-				dest: '../assets/css/'
-				}
+			options: {
+				browsers: ['last 2 versions', 'ie 9']
+			},
+			// prefix all files
+			multiple_files: {
+			expand: true,
+			flatten: true,
+			src: '../assets/css/*.css',
+			dest: '../assets/css/'
+			}
 		},	
-		
+
 		// WATCH:
 		// Whenever a file is changed, run specific tasks
 		watch: {
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
 			}
 		}
 	});
-	
+
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
