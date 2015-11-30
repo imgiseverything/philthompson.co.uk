@@ -1,5 +1,5 @@
 /*! svg4everybody v2.0.0 | github.com/jonathantneal/svg4everybody */
-
+LEGACY_SUPPORT = false;
 function embed(svg, g) {
 	if (g) {
 		var viewBox = !svg.getAttribute('viewBox') && g.getAttribute('viewBox');

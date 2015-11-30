@@ -10,5 +10,8 @@
 <?php else: ?>
 	<script src="/assets/js/philthompsoncouk.js" async></script>
 <?php endif; ?>
+
+	<script src="/assets/js/vendor/svg4everybody.js"></script>
+	<script>svg4everybody(); // run it now or whenever you are ready</script>
 </body>
 </html>
