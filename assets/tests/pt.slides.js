@@ -9,25 +9,25 @@ describe("pt.slides", function() {
 
 	// Add HTML to body and run slides script (to create carousel)
 	beforeAll(function() {
-    $slides.appendTo('body');
-    window.PT.slides.init();
-    $nav = jQuery('.slides-nav');
-  });
+		$slides.appendTo('body');
+		window.PT.slides.init();
+		$nav = jQuery('.slides-nav');
+	});
 
 	// Remove the slides HTML after the tests end
-  afterAll(function() {
-    $slides.remove();
-  });
+	afterAll(function() {
+		$slides.remove();
+	});
 
 	// Carousel Nav should be built
 	it("should be an object", function() {
-    expect(typeof $nav).toBe('object');
-  });
+		expect(typeof $nav).toBe('object');
+	});
 
-  // There should be X carousel Nav buttons for X slides. 5 slides = 5 buttons etc
-  it("should be the same as number of slides", function() {
-    var slidesLength = $slides.find('js-slide').length;
-    var buttonsLength = $nav.find('.slides-nav__link').length;
-    expect(buttonsLength).toBe(slidesLength);
-  });
+	// There should be X carousel Nav buttons for X slides. 5 slides = 5 buttons etc
+	it("should be the same as number of slides", function() {
+		var slidesLength = $slides.find('js-slide').length;
+		var buttonsLength = $nav.find('.slides-nav__link').length;
+		expect(buttonsLength).toBe(slidesLength);
+	});
 });
