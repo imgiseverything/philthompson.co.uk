@@ -16,7 +16,11 @@
 	<div class="group section">
 		<div class="inner">
 			<h2 class="h h2">Services</h2>
-			<p>Creating responsive and accessible HTML/CSS templates which load quickly. WordPress bespoke themes and plugins that minimise SQL queries and front-end load times. CSS consultation for large projects.</p>
+			<ul class="block-list">
+				<li>Creating responsive and accessible HTML/CSS templates (which load quickly)</li>
+				<li>WordPress bespoke themes and plugins that minimise SQL queries and front-end load times</li>
+				<li>CSS consultation for large projects</li>
+			</ul>
 		</div>
 	</div>
 	<div class="group section">
@@ -30,10 +34,10 @@
 		<div class="inner">
 			<h2 class="h h2">Clients</h2>
 			<ul class="client-logo-list">
-				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-topshop"></use></svg></li>
-				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-viacom"></use></svg></li>
-				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-economist"></use></svg></li>
-				<li class="client-logo-list__item"><svg><use xlink:href="assets/images/svg-sprite.svg#symbol-jaeger"></use></svg></li>
+				<li class="client-logo-list__item"><svg width="208" height="33"><use xlink:href="assets/images/svg-sprite.svg#symbol-topshop"></use></svg></li>
+				<li class="client-logo-list__item"><svg width="209" height="34"><use xlink:href="assets/images/svg-sprite.svg#symbol-viacom"></use></svg></li>
+				<li class="client-logo-list__item"><svg width="134" height="68"><use xlink:href="assets/images/svg-sprite.svg#symbol-economist"></use></svg></li>
+				<li class="client-logo-list__item"><svg width="209" height="38.56"><use xlink:href="assets/images/svg-sprite.svg#symbol-jaeger"></use></svg></li>
 			</ul>
 			<h3 class="h h3">Agencies</h3>
 			<p>Working with established agencies like <a href="//www.383project.com/">383 Project</a> in Birmingham, <a href="//www.cxpartners.co.uk/">CX Partners</a> in Bristol, <a href="//www.area17.com/">Area17</a> in Brooklyn, <a href="//www.codecomputerlove.com/">Code Computerlove</a> and <a href="//storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
