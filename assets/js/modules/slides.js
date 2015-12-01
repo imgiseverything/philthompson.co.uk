@@ -16,25 +16,24 @@ window.PT = window.PT || {};
 	"use strict";
 
 	window.PT.slides = {
-		
+
 		$container:	$('.js-slides'),
 		$slides: 	$('.js-slide'),
 		config: 	window.PT.config,
-		
+
 		throttleSpeed: 300,
-		
+
 		init: function(){
 			var self = this;
-			
+
 			if(self.$slides.length === 0){
 				return;
 			}
-			
+
 			self.buildNavigation();
 			self.navigate();
 			self.height();
 
-			
 			// After a window resize, reset the height of the slides. 
 			// Use a throttle so it's not called too often
 			if(window.addEventListener){
@@ -42,9 +41,8 @@ window.PT = window.PT || {};
 					self.height();
 				}, self.throttleSpeed), false);
 			}
-			
 		},
-		
+
 		// Create a clickable <ul> for the slides
 		buildNavigation: function(){
 			var self = this,
@@ -56,7 +54,7 @@ window.PT = window.PT || {};
 				i,
 				slidesLength = self.$slides.length,
 				isActiveClass = '';
-			
+
 			for(i = 0; i < slidesLength; i++){
 				isActiveClass = (i === 1) ? classes.active : '';
 				html.body += '<li><a href="#" class="ir js-slides-nav__link ' + isActiveClass + '" data-slide-id="' + (i + 1) + '">Show slide ' + (i + 1) + '</a></li>';
