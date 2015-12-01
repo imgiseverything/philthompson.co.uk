@@ -4,7 +4,7 @@
 		philthompson.co.uk Home page	
 	*/
 	
-	$updated = '02092015'; // cache buster
+	$updated = '01122015'; // cache buster
 	
 	include('partials/header.php');	
 ?>	
@@ -17,9 +17,10 @@
 		<div class="inner">
 			<h2 class="h h2">Services</h2>
 			<ul class="block-list">
-				<li>Creating responsive and accessible HTML/CSS templates (which load quickly)</li>
-				<li>WordPress bespoke themes and plugins that minimise SQL queries and front-end load times</li>
-				<li>CSS consultation for large projects</li>
+				<li>Creating responsive and accessible HTML/CSS templates (which load quickly).</li>
+				<li>WordPress bespoke themes and plugins that minimise SQL queries and front-end load times.</li>
+				<li>Responsive prototypes and style-guides/pattern libraries for
+				<li>CSS consultation for large projects.</li>
 			</ul>
 		</div>
 	</div>
