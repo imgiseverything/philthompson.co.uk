@@ -31,9 +31,6 @@
 	position: absolute;
 }
 
-// 
-//  
-// 
 /**
  * .inner
  * Internal container on elements.
@@ -46,23 +43,22 @@
 	margin: 0 auto;
 	position: relative;
 	width: (290/320)*100%;	
-	
+
 	@include breakpoint(mobile-landscape){
 		max-width: 80%;
 	}
-	
+
 	@include breakpoint(ipad-portrait){
 		max-width: (1024 - 60) + px; // 1
 	}
-	
+
 	@include breakpoint(ipad-landscape){
 		width: 100%;
 	}
-	
+
 	@include breakpoint(xl){
 		max-width: $l+px;
 	}
-	
 }
 
 /**
@@ -81,8 +77,8 @@
 	    content: " "; /* 1 */
 	    display: table; /* 2 */
 	}
-	
-	&:after {
+
+	&:after{
 		clear: both;
 	}
 }

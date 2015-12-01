@@ -19,13 +19,9 @@
   font-style: normal; }
 /* Box sizing - reset to a nicer understanding of the box model */
 html {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 *, *:before, *:after {
-  -moz-box-sizing: inherit;
-  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 /**
@@ -82,6 +78,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+::-moz-selection {
+  background: #151515;
+  color: #fd2; }
+
 ::selection {
   background: #151515;
   color: #fd2; }
@@ -111,13 +111,21 @@ blockquote {
 
 /* Animation keyframes */
 /* Fade an item in */
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1; } }
 @keyframes fadeIn {
   to {
     opacity: 1; } }
 /* Pop animation */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
 @keyframes hvr-pop {
   50% {
-    transform: scale(1.2); } }
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
 /**
  *	2 Helper classes / Common modules
  */
@@ -335,7 +343,8 @@ a {
 	<h1-6> are for SEO and accessiblity, not for appearance
 */
 body {
-  font: 14px/1.6667 "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif; }
+  font: 14px "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
+  line-height: 1.85714; }
 
 b, strong {
   font-family: "MuseoSlab500", "Museo Slab", Museo, Georgia, sans-serif;
@@ -392,7 +401,8 @@ p, ul, ol {
     font-size: 20px; } }
 @media (min-width: 600px) {
   body {
-    font-size: 14px; } }
+    font-size: 14px;
+    line-height: 1.6667; } }
 @media (min-width: 768px) {
   body {
     font-size: 28px; }
@@ -431,12 +441,17 @@ p, ul, ol {
       left: 50%;
       position: absolute;
       top: 50%;
-      transform: translate(-50%, -62.5%); }
+      -webkit-transform: translate(-50%, -62.5%);
+          -ms-transform: translate(-50%, -62.5%);
+              transform: translate(-50%, -62.5%); }
       @media (min-width: 480px) {
         .section:first-of-type .inner {
-          transform: translate(-50%, -50%); } }
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); } }
   .section:after {
-    animation: fadeIn 1000ms linear forwards 1050ms;
+    -webkit-animation: fadeIn 1000ms linear forwards 1050ms;
+            animation: fadeIn 1000ms linear forwards 1050ms;
     bottom: 80px;
     font-size: 10px;
     opacity: 0;
@@ -478,6 +493,9 @@ p, ul, ol {
     @media (min-width: 1025px) {
       .section--alt a:hover:after {
         background: rgba(255, 221, 34, 0.75); } }
+  .section--alt .h::-moz-selection, .section--alt p::-moz-selection, .section--alt cite::-moz-selection {
+    background: #fd2;
+    color: #151515; }
   .section--alt .h::selection, .section--alt p::selection, .section--alt cite::selection {
     background: #fd2;
     color: #151515; }
@@ -534,7 +552,8 @@ p, ul, ol {
     display: block;
     height: 30px;
     -webkit-tap-highlight-color: transparent;
-    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
     transition: all, 300ms, linear;
     width: 30px; }
     .slides-nav a:after {
@@ -550,7 +569,8 @@ p, ul, ol {
         height: 18px;
         width: 18px; }
         .slides-nav a:hover {
-          animation: hvr-pop 300ms linear 1 0ms;
+          -webkit-animation: hvr-pop 300ms linear 1 0ms;
+                  animation: hvr-pop 300ms linear 1 0ms;
           background-color: rgba(21, 21, 21, 0.75); } }
 
 .section--alt .slides-nav a {
@@ -686,5 +706,3 @@ p, ul, ol {
   .mobile-only,
   .tablet-only {
     display: none !important; } }
-
-/*# sourceMappingURL=style.css.map */

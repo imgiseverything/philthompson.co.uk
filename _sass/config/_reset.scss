@@ -64,29 +64,28 @@ html, body{
 	height: 100%;
 }
 
-
 body{
 	background: $c-yellow;
 	color: $c-black;
 	margin: 0 auto;
 	width: 100%;	
 	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-    background: $c-black;
+	background: $c-black;
 	color: $c-yellow;
 }
 
-	
+
 img{
 	height: auto;
 	max-width: 100%;
 }
 
 iframe{
-	max-width: 100%;	
+	max-width: 100%;
 }
 
 ul li, ol li{
@@ -95,15 +94,15 @@ ul li, ol li{
 }
 
 blockquote{
-    margin: 1em 0 1em 0;
-    position: relative;
-    
-   
+	margin: 1em 0 1em 0;
+	position: relative;
+
 	&:before{
-	    font-size: 60px;
-	    left: -20px;
-	    position: absolute;
-	    top: -10px;
+		font-size: 60px;
+		left: -20px;
+		position: absolute;
+		top: -10px;
+
 		@include breakpoint(ipad-landscape){
 			content: "‘";
 		}
