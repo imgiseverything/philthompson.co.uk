@@ -597,7 +597,7 @@ p, ul, ol {
   @media screen and (min-width: 768px) {
     .client-logo-list__item {
       margin-bottom: 0;
-      width: 24%; } }
+      width: 19%; } }
   .client-logo-list__item a {
     display: block; }
     .client-logo-list__item a::after {

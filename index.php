@@ -19,8 +19,7 @@
 			<ul class="block-list">
 				<li>Creating responsive and accessible HTML/CSS templates (which load quickly).</li>
 				<li>WordPress bespoke themes and plugins that minimise SQL queries and front-end load times.</li>
-				<li>Responsive prototypes and style-guides/pattern libraries for
-				<li>CSS consultation for large projects.</li>
+				<li>Responsive HTML prototypes and style-guides/pattern libraries for large projects.</li>
 			</ul>
 		</div>
 	</div>
@@ -35,6 +34,7 @@
 		<div class="inner">
 			<h2 class="h h2">Clients</h2>
 			<ul class="client-logo-list">
+				<li class="client-logo-list__item"><svg width="100.8" height="68"><use xlink:href="assets/images/svg-sprite.svg#symbol-mtv"></use></svg></li>
 				<li class="client-logo-list__item"><svg width="208" height="33"><use xlink:href="assets/images/svg-sprite.svg#symbol-topshop"></use></svg></li>
 				<li class="client-logo-list__item"><svg width="209" height="34"><use xlink:href="assets/images/svg-sprite.svg#symbol-viacom"></use></svg></li>
 				<li class="client-logo-list__item"><svg width="134" height="68"><use xlink:href="assets/images/svg-sprite.svg#symbol-economist"></use></svg></li>
