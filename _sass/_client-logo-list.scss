@@ -1,22 +1,28 @@
 /* Client logo list */
 .client-logo-list{
-	margin: 34px 0 0 -1%;
+	align-content: space-between;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 34px 0 -4em -1%;
 	padding: 0;
-	text-align: justify;
+
+	@media screen and (min-width: $m+px){
+		margin-bottom: -2em;
+	}
 }
 
 .client-logo-list__item{
 	display: inline-block;
 	list-style: none;
-	margin: 0 0 2em;
+	margin: 0 0 4em;
 	padding: 0 1%;
 	transition: all $animation-speed ease-out;
-	vertical-align: middle;
 	width: 49%;
 
 	@media screen and (min-width: $m+px){
-		margin-bottom: 0;
-		width: 19%;
+		margin-bottom: 2em;
+		width: (100/3)*1%;
 	}
 
 	a{

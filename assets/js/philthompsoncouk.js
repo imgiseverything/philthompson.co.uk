@@ -230,45 +230,42 @@ window.PT = window.PT || {};
 	"use strict";
 
 	window.PT.progress = {
-		
+
 		config: window.PT.config,
-		
+
 		$progress: document.querySelector('.js-progress-bar'),// $('[data-js-progress-bar]'),
 		throttleSpeed: 150, // in ms
-		
+
 		init: function(){
-			
+
 			var self = this;
-			
+
 			if(self.$progress === undefined || self.$progress === null){
 				return;	
 			}
-			
+
 			if(window.addEventListener){
 				window.addEventListener('scroll', throttle(function (event) {
 					self.animate(); 
 				}, self.throttleSpeed), false);
 			}
-			
 		},
-		
+
 		animate: function(){
-			
+
 			var self = this,
-				// Offset(Scrolled position) from top of document
-				scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop, //jQuery = $(window).scrollTop(),
-				// Document height
-		        documentHeight = document.documentElement.scrollHeight,// jQuery = $(document).height(),
-		        // Viewport (screen) height
-		        viewportHeight = document.documentElement.clientHeight, // jQuery = $(window).height(),
-		        scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
-		        
+					// Offset(Scrolled position) from top of document
+					scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop, //jQuery = $(window).scrollTop(),
+					// Document height
+		      documentHeight = document.documentElement.scrollHeight,// jQuery = $(document).height(),
+	        // Viewport (screen) height
+	        viewportHeight = document.documentElement.clientHeight, // jQuery = $(window).height(),
+	        scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
+
 			self.$progress.setAttribute('value', scrollPercent);
-			
-		}
-				
+		}		
 	};
-	
+
 	window.PT.progress.init();
 
 }());;/**
@@ -289,25 +286,24 @@ window.PT = window.PT || {};
 	"use strict";
 
 	window.PT.slides = {
-		
+
 		$container:	$('.js-slides'),
 		$slides: 	$('.js-slide'),
 		config: 	window.PT.config,
-		
+
 		throttleSpeed: 300,
-		
+
 		init: function(){
 			var self = this;
-			
+
 			if(self.$slides.length === 0){
 				return;
 			}
-			
+
 			self.buildNavigation();
 			self.navigate();
 			self.height();
 
-			
 			// After a window resize, reset the height of the slides. 
 			// Use a throttle so it's not called too often
 			if(window.addEventListener){
@@ -315,9 +311,8 @@ window.PT = window.PT || {};
 					self.height();
 				}, self.throttleSpeed), false);
 			}
-			
 		},
-		
+
 		// Create a clickable <ul> for the slides
 		buildNavigation: function(){
 			var self = this,
@@ -329,7 +324,7 @@ window.PT = window.PT || {};
 				i,
 				slidesLength = self.$slides.length,
 				isActiveClass = '';
-			
+
 			for(i = 0; i < slidesLength; i++){
 				isActiveClass = (i === 1) ? classes.active : '';
 				html.body += '<li><a href="#" class="ir js-slides-nav__link ' + isActiveClass + '" data-slide-id="' + (i + 1) + '">Show slide ' + (i + 1) + '</a></li>';

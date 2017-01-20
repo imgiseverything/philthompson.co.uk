@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		
+
 		// Combine JavaScript files into one big file
 		concat: {
 			options: {
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 				dest: '../assets/js/<%= pkg.name %>.js'
 			}
 		},
-		
+
 		// Obfuscate and minfiy JavaScript to save filesize
 		uglify: {
 			options: {
@@ -36,10 +36,10 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		// Run JavaScrit through JSLint to maintain coding standards
 		jslint: {
-			
+
 			client: {
 				src: [
 					'../assets/js/modules/*.js'
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+
 		// Karma
 		karma: {
 			unit: {
@@ -80,12 +80,17 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Minfiy CSS to save filesize
-		cssmin: {
-			combine: {
-				files: {
-					'../assets/css/style.min.css': ['../assets/css/style.css']
-				}
+		// Add browser prefixes to CSS and minify it
+		postcss: {
+			options: {
+				map: false, // don't inline sourcemaps
+				processors: [
+					require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+					require('cssnano')() // minify the result
+				]
+			},
+			dist: {
+				src: '../assets/css/*.css'
 			}
 		},
 
@@ -135,24 +140,10 @@ module.exports = function(grunt) {
 			},
 			default : {
 				files: {
-				'../assets/images/svg-sprite.svg': ['../assets/images/icons/*.svg', '../assets/images/logos/*.svg'],
+					'../assets/images/svg-sprite.svg': ['../assets/images/icons/*.svg', '../assets/images/logos/*.svg'],
 				}
 			}
 		},
-
-		// Add browser prefixes to CSS
-		autoprefixer: {
-			options: {
-				browsers: ['last 2 versions', 'ie 9']
-			},
-			// prefix all files
-			multiple_files: {
-			expand: true,
-			flatten: true,
-			src: '../assets/css/*.css',
-			dest: '../assets/css/'
-			}
-		},	
 
 		// WATCH:
 		// Whenever a file is changed, run specific tasks
@@ -161,7 +152,7 @@ module.exports = function(grunt) {
 				files: [
 					'../_sass/**/*.scss',
 				],
-				tasks: ['sass', 'autoprefixer', 'cssmin'],
+				tasks: ['sass', 'postcss'],
 				options: {
 					nospawn: true
 				}
@@ -170,7 +161,7 @@ module.exports = function(grunt) {
 				files: [
 					'../**/*.js',
 					// Ignore these
-					'!../js/<%= pkg.name %>.js', 
+					'!../js/<%= pkg.name %>.js',
 					'!../js/<%= pkg.name %>.min.js'
 				],
 				tasks: ['jslint', 'concat', 'uglify']
@@ -178,8 +169,9 @@ module.exports = function(grunt) {
 		}
 	});
 
+	// Load NPM modules
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -191,8 +183,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-svgstore');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass', 'autoprefix', 'cssmin', 'concat', 'uglify', 'jslint', 'imagemin', 'svgstore']);
-	grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
+	// Tasks
+	grunt.registerTask('default', ['sass', 'postcss', 'concat', 'uglify', 'jslint', 'imagemin', 'svgstore']);
+	grunt.registerTask('css', ['sass', 'postcss']);
 	grunt.registerTask('js', ['concat', 'uglify', 'jslint']);
 	grunt.registerTask('images', ['imagemin', 'svgstore']);
 
