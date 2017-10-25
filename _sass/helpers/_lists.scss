@@ -1,26 +1,54 @@
 /**
- * Lists 
+ * Lists
  */
- 
-/* 
+
+/*
  * Blocked list. Atomic style to get zero list styling
  */
-.block-list{	
+.block-list{
 	li{
 		list-style: none;
 		margin-left: 0;
 	}
 }
 
-/* 
- * Grid list. Atomic style to get <li>s to sit enxt to each other in a line /grid
- */  
+/*
+ * Grid list. Atomic style to get <li>s to sit next to each other in a line /grid
+ */
 .grid-list{
-	margin-left: -20px; 
-	
+	margin-left: -20px;
+
 	li{
 		float: left;
 		list-style: none;
 		margin: 0 0 20px 20px;
 	}
+}
+
+/*
+ * Arrow list. Nice little bullet style arrow on each <li>
+ */
+.arrow-list{
+  > li{
+    display: block;
+    list-style: none;
+		margin-left: 0;
+		padding-left: 1.5em;
+    position: relative;
+
+    @include breakpoint(ipad-landscape){
+      padding-left: 0;
+    }
+  }
+
+  > li::before{
+    content: '→';
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    @include breakpoint(ipad-landscape){
+      left: -1.5em;
+    }
+  }
 }

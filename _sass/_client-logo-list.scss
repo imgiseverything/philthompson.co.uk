@@ -7,8 +7,24 @@
 	margin: 34px 0 -4em -1%;
 	padding: 0;
 
+	@supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+		justify-content: center;
+
+    @include breakpoint(ipad-landscape){
+      grid-gap: 60px;
+    }
+  }
+
 	@media screen and (min-width: $m+px){
 		margin-bottom: -2em;
+
+		@supports (display: grid) {
+  		grid-template-columns: repeat(3, 1fr);
+  		margin-bottom: 0;
+    }
 	}
 }
 
@@ -25,21 +41,19 @@
 		width: (100/3)*1%;
 	}
 
-	a{
-		display: block;
+	@supports (display: grid) {
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+}
 
-		&::after{
-			background: transparent;
-		}
-	}
-
-	svg{
-		display: block;
-		fill: currentColor;
-		height: auto;
-		margin: 0 auto;
-		max-width: 100%;
-	}
+.client-logo-list__item	svg{
+	display: block;
+	fill: currentColor;
+	height: auto;
+	margin: 0 auto;
+	max-width: 100%;
 
 	&:hover{
 		color: rgba($c-black, .75);
