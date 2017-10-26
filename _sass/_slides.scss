@@ -7,104 +7,75 @@
 }
 
 .js-slide{
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	top: 50px;
-	width: 100%;
-	
-	@include breakpoint(ipad-portrait){
-		top: 60px;
-	}
-	
-	&.active{
-		opacity: 1;
-		z-index: 1000;
-	
-		@include breakpoint(desktop){
-			transition: all 1000ms linear;
-		}
-	}
+
+}
+
+.js-slide[aria-hidden="true"]{
+  display: none;
 }
 
 /* Clickable dots to navigate */
 .slides-nav{
-	left: 0;
-	margin: .5em 0;
+	margin: 1.5em 0 1em;
+	margin-bottom: calc(1em - 20px);
 	padding: 0;
-	position: absolute;
-	top: 10px;
-	z-index: 1001;
-	
-	@include breakpoint(ipad-portrait){
-		top: 0;
-	}
-	
-	li{
-		display: inline-block;
-		margin: 0;
-		vertical-align: middle;
-		
-		+ li{
-			margin-left: 20px;	
-			
-			@include breakpoint(ipad-portrait){
-				margin-left: 10px;	
-			}
-		}
-	}
-	
-	a{
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-		background: $c-black;
-		border-radius: 50%;
-		border: 2px solid $c-black;
-		display: block;
-		height: 30px;
-		-webkit-tap-highlight-color: rgba(black, 0);
-		transform: translateZ(0);
-		transition: all, $animation-speed, linear;
-		width: 30px;
-		
-		&:after{
-			content: none;
-		}
-		
-		&.active{
-			background: transparent;
-			border-color: $c-black;
-			
-			@include breakpoint(desktop){
-				&:hover{
-					background: transparent;
-				}
-			}
-		}
-		
-		@include breakpoint(desktop){
-			height: 18px;
-			width: 18px;
-			
-			&:hover{
-				animation: hvr-pop $animation-speed linear 1 0ms;
-				background-color: rgba($c-black, 0.75);		
-			}
-		}
 
+	@include breakpoint(desktop){
+  	margin: .5em 0;
+  }
+}
+
+.slides-nav__button{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background: $c-black;
+	border-radius: 50%;
+	border: 2px solid $c-yellow;
+	display: inline-block;
+	height: 44px;
+	margin: 0 20px 20px 0;
+	-webkit-tap-highlight-color: rgba(black, 0);
+	transform: translateZ(0);
+	transition: all, $animation-speed, linear;
+	width: 44px;
+
+	&::after{
+		content: none;
 	}
+
+	&.active{
+		background: transparent;
+		border-color: $c-yellow;
+
+		@include breakpoint(desktop){
+			&:hover{
+				background: transparent;
+			}
+		}
+	}
+
+	@include breakpoint(desktop){
+		height: 28px;
+		margin-bottom: 0;
+		margin-right: 20px;
+		width: 28px;
+
+		&:hover{
+			animation: hvr-pop $animation-speed linear 1 0ms;
+			background-color: rgba($c-black, 0.75);
+		}
+	}
+
 }
 
 .section--alt{
-	.slides-nav{
-		a{
-			background-color: $c-yellow;
+	.slides-nav__button{
+		background-color: $c-yellow;
+		border-color: $c-yellow;
+
+		&.active{
+			background-color: $c-black;
 			border-color: $c-yellow;
-			
-			&.active{
-				background-color: transparent;
-				border-color: $c-yellow;
-			}
 		}
 	}
 }

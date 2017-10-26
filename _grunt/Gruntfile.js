@@ -56,7 +56,8 @@ module.exports = function(grunt) {
 						'debounce',
 						'jQuery',
 						'smoothScroll',
-						'throttle'
+						'throttle',
+						'window'
 					]
 				},
 				options: {

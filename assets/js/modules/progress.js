@@ -3,10 +3,7 @@
  *	@author	Phil Thompson
  */
 
-/*jslint browser: true, devel: true, white: true, todo: true */
-
-/*global smoothScroll: true */
-
+/*jslint browser: true, devel: true, white: true */
 
 // Create a global object we can reference
 window.PT = window.PT || {};
@@ -19,7 +16,7 @@ window.PT = window.PT || {};
 
 		config: window.PT.config,
 
-		$progress: document.querySelector('.js-progress-bar'),// $('[data-js-progress-bar]'),
+		$progress: document.querySelector('.js-progress-bar'),
 		throttleSpeed: 150, // in ms
 
 		init: function(){
@@ -27,12 +24,12 @@ window.PT = window.PT || {};
 			var self = this;
 
 			if(self.$progress === undefined || self.$progress === null){
-				return;	
+				return;
 			}
 
 			if(window.addEventListener){
 				window.addEventListener('scroll', throttle(function (event) {
-					self.animate(); 
+					self.animate();
 				}, self.throttleSpeed), false);
 			}
 		},
@@ -41,15 +38,15 @@ window.PT = window.PT || {};
 
 			var self = this,
 					// Offset(Scrolled position) from top of document
-					scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop, //jQuery = $(window).scrollTop(),
+					scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop,
 					// Document height
-		      documentHeight = document.documentElement.scrollHeight,// jQuery = $(document).height(),
+		      documentHeight = document.documentElement.scrollHeight,
 	        // Viewport (screen) height
-	        viewportHeight = document.documentElement.clientHeight, // jQuery = $(window).height(),
+	        viewportHeight = document.documentElement.clientHeight,
 	        scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
 
 			self.$progress.setAttribute('value', scrollPercent);
-		}		
+		}
 	};
 
 	window.PT.progress.init();
