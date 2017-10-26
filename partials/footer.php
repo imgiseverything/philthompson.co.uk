@@ -9,7 +9,7 @@
 		var scriptSVG4everybody = document.createElement('script');
 
 		// Load main script
-		scriptPT.src = '/assets/js/philthompsoncouk.<?php echo $updated; ?>.js';
+		scriptPT.src = '/assets/js/philthompsoncouk.min.<?php echo $updated; ?>.js';
 		document.body.appendChild(scriptPT);
 
 		// SVG4everybody - get IE9-11 to allow external SVG sprites
