@@ -4,7 +4,7 @@
 		philthompson.co.uk Home page
 	*/
 
-	$updated = '26102017'; // cache buster
+	$updated = '27102017'; // cache buster
 
 	include('partials/header.php');
 ?>
@@ -92,7 +92,7 @@
 	</div>
 	<div class="group section">
 		<div class="inner vcard">
-			<h2 class="h h2">Let’s work together</h2>
+			<h2 class="h h2">Work together</h2>
 			<p>If you have project that you think would be suited to Phil then you can email him: <a href="mailto:hello@imgiseverything.co.uk?subject=Let’s work together&amp;body=Hi Phil" class="email">hello@imgiseverything.co.uk</a></p>
 			<h3 class="h h3">Elsewhere on the&nbsp;web</h3>
 			<ul class="block-list social-list">
