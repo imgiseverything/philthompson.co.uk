@@ -1,4 +1,5 @@
 .progress-bar{
+  appearance: none; /* Chrome / Safari need this */
 	background: transparent;
 	border: none;
 	border-radius: none;

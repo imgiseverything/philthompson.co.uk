@@ -5,6 +5,10 @@ ErrorDocument 403 /error.php?error=403
 ErrorDocument 404 /error.php?error=404
 ErrorDocument 500 /error.php?error=500
 
+<ifModule mod_headers.c>
+Header set Connection keep-alive
+</ifModule>
+
 # IE use most recent IE engine or Chrome plugin if available
 <FilesMatch "\.(htm|html|php)$">
     <IfModule mod_headers.c>
@@ -15,10 +19,10 @@ ErrorDocument 500 /error.php?error=500
 
 
 # REWRITE RULES
-# 
+#
 # 1.	Wilcard subdomains:
 # 		<subdomain>.demo.philthompson.co.uk/<path> to /subdomains/<subdomain>/<path>
-# 
+#
 # 2.	Cache busting
 #		Allow CSS and JS to be referenced like so style.ddmmyy.min.css
 #
@@ -33,14 +37,13 @@ RewriteCond %{HTTP_HOST} !^www\. [NC]
 # Extract (required) subdomain to %1
 RewriteCond %{HTTP_HOST} ^([^.]+)\.demo\.philthompson\.co\.uk(:80)?$
 # Rewrite to /subdomains/subdomain/URL-path
-RewriteRule (.*) /subdomains/%1/$1 [L] 
+RewriteRule (.*) /subdomains/%1/$1 [L]
 
 # 2.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)\.(\d+)\.min\.(js|css|png|jpg|gif)$ $1.min.$3 [L]
 RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
-
 
 </IfModule>
 
