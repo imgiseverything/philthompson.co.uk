@@ -14,38 +14,63 @@ window.PT = window.PT || {};
 
 	window.PT.progress = {
 
+		/**
+		 * @var {object}
+		 * Parent config object
+		 */
 		config: window.PT.config,
 
-		$progress: document.querySelector('.js-progress-bar'),
-		throttleSpeed: 150, // in ms
+		/**
+		 * @var {object}
+		 * The progress bar DOM element
+		 */
+		progressBar: document.querySelector('.js-progress-bar'),
 
+		/**
+		 * @var {int}
+		 * Every N milliseconds we will need to throttle one of our functions
+		 */
+		throttleSpeed: 300,
+
+		/**
+		 * animate
+		 *
+		 * @return {void}
+		 */
+		animate: function(){
+			var self = window.PT.progress;
+			// Offset(Scrolled position) from top of document
+			var topParent =(document.documentElement || document.body.parentNode || document.body);
+			var scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : topParent.scrollTop;
+			// Document height
+			var documentHeight = document.documentElement.scrollHeight;
+			// Viewport (screen) height
+			var viewportHeight = document.documentElement.clientHeight;
+			var scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
+
+			self.progressBar.setAttribute('value', scrollPercent);
+		},
+
+		/**
+		 * init
+		 * Function to run onload and call other functions
+		 *
+		 * @return {void}
+		 */
 		init: function(){
+			var self = window.PT.progress;
 
-			var self = this;
-
-			if(self.$progress === undefined || self.$progress === null){
+			if(self.progressBar === undefined || self.progressBar === null){
 				return;
 			}
 
+			// On the scroll event we apply our animation BUT we throttle this
+			// call otherwise it could be too slow/kill the browser
 			if(window.addEventListener){
-				window.addEventListener('scroll', throttle(function (event) {
+				window.addEventListener('scroll', throttle(function () {
 					self.animate();
 				}, self.throttleSpeed), false);
 			}
-		},
-
-		animate: function(){
-
-			var self = this,
-					// Offset(Scrolled position) from top of document
-					scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop,
-					// Document height
-		      documentHeight = document.documentElement.scrollHeight,
-	        // Viewport (screen) height
-	        viewportHeight = document.documentElement.clientHeight,
-	        scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
-
-			self.$progress.setAttribute('value', scrollPercent);
 		}
 	};
 

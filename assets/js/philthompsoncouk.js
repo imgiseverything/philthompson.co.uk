@@ -105,44 +105,70 @@ window.PT = window.PT || {};
 
 	window.PT.progress = {
 
+		/**
+		 * @var {object}
+		 * Parent config object
+		 */
 		config: window.PT.config,
 
-		$progress: document.querySelector('.js-progress-bar'),
-		throttleSpeed: 150, // in ms
+		/**
+		 * @var {object}
+		 * The progress bar DOM element
+		 */
+		progressBar: document.querySelector('.js-progress-bar'),
 
+		/**
+		 * @var {int}
+		 * Every N milliseconds we will need to throttle one of our functions
+		 */
+		throttleSpeed: 150,
+
+		/**
+		 * animate
+		 *
+		 * @return {void}
+		 */
+		animate: function(){
+			var self = window.PT.progress;
+			// Offset(Scrolled position) from top of document
+			var topParent =(document.documentElement || document.body.parentNode || document.body);
+			var scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : topParent.scrollTop;
+			// Document height
+			var documentHeight = document.documentElement.scrollHeight;
+			// Viewport (screen) height
+			var viewportHeight = document.documentElement.clientHeight;
+			var scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
+
+			self.progressBar.setAttribute('value', scrollPercent);
+		},
+
+		/**
+		 * init
+		 * Function to run onload and call other functions
+		 *
+		 * @return {void}
+		 */
 		init: function(){
+			var self = window.PT.progress;
 
-			var self = this;
-
-			if(self.$progress === undefined || self.$progress === null){
+			if(self.progressBar === undefined || self.progressBar === null){
 				return;
 			}
 
+			// On the scroll event we apply our animation BUT we throttle this
+			// call otherwise it could be too slow/kill the browser
 			if(window.addEventListener){
-				window.addEventListener('scroll', throttle(function (event) {
+				window.addEventListener('scroll', throttle(function () {
 					self.animate();
 				}, self.throttleSpeed), false);
 			}
-		},
-
-		animate: function(){
-
-			var self = this,
-					// Offset(Scrolled position) from top of document
-					scrollOffset = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop,
-					// Document height
-		      documentHeight = document.documentElement.scrollHeight,
-	        // Viewport (screen) height
-	        viewportHeight = document.documentElement.clientHeight,
-	        scrollPercent = (scrollOffset / (documentHeight - viewportHeight) ) * 100;
-
-			self.$progress.setAttribute('value', scrollPercent);
 		}
 	};
 
 	window.PT.progress.init();
 
-}());;/**
+}());
+;/**
  *	Slides/Carousel scripting
  *	@author	Phil Thompson
  */
@@ -161,89 +187,112 @@ window.PT = window.PT || {};
 
 	window.PT.slides = {
 
-		$container:	document.querySelector('.js-slides'),
-		$slides: document.querySelectorAll('.js-slide'),
+		/**
+		 * @param {object}
+		 * Parent config object
+		 */
 		config: window.PT.config,
 
-		throttleSpeed: 300,
+		/**
+		 * @param {object}
+		 * Parent/containing DOM element of the slides
+		 */
+		container:	document.querySelector('.js-slides'),
 
-		init: function(){
-			var self = this;
+		/**
+		 * @param {array}
+		 * DOM Element - each individual slide
+		 */
+		slides: document.querySelectorAll('.js-slide'),
 
-			if(self.$slides.length === 0){
-				return;
-			}
+		/**
+		 * navigate
+		 * Click a link and show the correct slide (use CSS to animate in the slide)
+		 *
+		 * @return {void}
+		 */
+		navigate: function(){
+			var self = window.PT.slides;
+			var $nav = self.container.querySelector('.slides-nav');
+			var $activeNav;
+			var $activeSlide;
+			var classes = self.config.classes;
 
-			self.buildNavigation();
+			self.container.querySelectorAll('.js-slides-nav__link').forEach(function(element){
+				element.addEventListener('click', function(e){
+					e.preventDefault();
+					$activeNav = e.currentTarget;
+					$activeSlide = self.container.querySelector('[data-slide-number="' + $activeNav.getAttribute('data-slide-id') + '"]');
 
+					if($activeNav.classList.contains(classes.active) !== true){
+
+						// Remove active class from non-active slides
+						self.container.querySelectorAll('.js-slide').forEach(function(element){
+							element.setAttribute('aria-hidden', 'true');
+							element.classList.remove(classes.active);
+						});
+
+						// Remove active class from non-active nav buttons
+						$nav.querySelectorAll('.' + classes.active).forEach(function(element){
+							element.setAttribute('aria-expanded', 'false');
+							element.classList.remove(classes.active);
+						});
+
+						// Add active class to newly active slide
+						$activeNav.classList.add(classes.active);
+						$activeNav.setAttribute('aria-expanded', 'true');
+
+						$activeSlide.setAttribute('aria-hidden', 'false');
+
+						$activeSlide.classList.add(classes.active);
+					}
+
+				});
+			});
 		},
 
-		// Create a clickable <ul> for the slides
+		/**
+		 * buildNavigation
+		 * Create a clickable <ul> for the slides
+		 *
+		 * @return {void}
+		 */
 		buildNavigation: function(){
-			var self = this;
+			var self = window.PT.slides;
 			var html = {
-					container: '<nav class="slides-nav js-slides-nav">{{BODY}}</nav>',
-					body: ''
-		  };
+				container: '<nav class="slides-nav js-slides-nav">{{BODY}}</nav>',
+				body: ''
+			};
 			var classes = self.config.classes;
-			var i;
-			var slidesLength = self.$slides.length;
 			var isActiveClass = '';
 			var isAriaExpanded = '';
 
-			for(i = 0; i < slidesLength; i++){
-				isActiveClass = (i === 0) ? classes.active : '';
-				isAriaExpanded =  (i === 0) ? 'true' : 'false';
-				html.body += '<button type="button" class="ir js-slides-nav__link slides-nav__button ' + isActiveClass + '" aria-expanded="' + isAriaExpanded + '" aria-controls="slide' + (i + 1) + '" data-slide-id="' + (i + 1) + '">Show slide ' + (i + 1) + '</button>';
-			}
+			self.slides.forEach(function(ignore, index){
+				isActiveClass = (index === 0) ? classes.active : '';
+				isAriaExpanded = (index === 0) ? 'true' : 'false';
+				html.body += '<button type="button" class="ir js-slides-nav__link slides-nav__button ' + isActiveClass + '" aria-expanded="' + isAriaExpanded + '" aria-controls="slide' + (index + 1) + '" data-slide-id="' + (index + 1) + '">Show slide ' + (index + 1) + '</button>';
+			});
 
-			self.$container.innerHTML =  html.container.replace('{{BODY}}', html.body) + self.$container.innerHTML;
+			self.container.innerHTML = html.container.replace('{{BODY}}', html.body) + self.container.innerHTML;
 
 			// Now make them clickable
 			self.navigate();
 		},
 
-		// Click a link and show the correct slide (use CSS to animate in the slide)
-		navigate: function(){
-			var self = this;
-			var $nav = self.$container.querySelector('.slides-nav');
-			var $activeLinks = {};
-			var $activeNav;
-			var $activeSlide;
-			var classes = self.config.classes;
+		/**
+		 * init
+		 * Function to run onload and call other functions
+		 *
+		 * @return {void}
+		 */
+		init: function(){
+			var self = window.PT.slides;
 
-      self.$container.querySelectorAll('.js-slides-nav__link').forEach(function(element){
-        element.addEventListener('click', function(e){
-  				e.preventDefault();
-  				$activeNav = e.currentTarget;
-  				$activeSlide = self.$container.querySelector('[data-slide-number="' + $activeNav.getAttribute('data-slide-id') + '"]');
+			if(self.slides.length === 0){
+				return;
+			}
 
-  				if($activeNav.classList.contains(classes.active) !== true){
-
-  					// Remove active class from non-active slides
-  					self.$container.querySelectorAll('.js-slide').forEach(function(element){
-  					  element.setAttribute('aria-hidden', 'true');
-    					element.classList.remove(classes.active);
-    				});
-
-            // Remove active class from non-active nav buttons
-            $nav.querySelectorAll('.' + classes.active).forEach(function(element){
-    					element.setAttribute('aria-expanded', 'false');
-    					element.classList.remove(classes.active);
-    				});
-
-  					// Add active class to newly active slide
-  					$activeNav.classList.add(classes.active);
-  					$activeNav.setAttribute('aria-expanded', 'true');
-
-  					$activeSlide.setAttribute('aria-hidden', 'false');
-
-  					$activeSlide.classList.add(classes.active);
-  				}
-
-  			});
-			});
-
+			self.buildNavigation();
 		}
 	};
 
