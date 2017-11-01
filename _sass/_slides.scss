@@ -1,14 +1,12 @@
 /**
  * Slides module
  */
+
 .js-slides{
 	height: 100%;
 	position: relative;
 }
 
-.js-slide{
-
-}
 
 .js-slide[aria-hidden="true"]{
   display: none;
@@ -28,9 +26,10 @@
 .slides-nav__button{
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	background: $c-black;
-	border-radius: 50%;
+	background-color: $c-black;
 	border: 2px solid $c-yellow;
+	border-radius: 50%;
+	appearance: none;
 	display: inline-block;
 	height: 44px;
 	margin: 0 20px 20px 0;
@@ -39,19 +38,34 @@
 	transition: all, $animation-speed, linear;
 	width: 44px;
 
+	&::-moz-focus-inner {
+	  border: 0;
+	}
+
 	&::after{
 		content: none;
 	}
 
+	&:focus{
+		background-color: $c-white;
+		border-color: $c-white;
+		outline: none;
+		transform: scale(1.2);
+	}
+
 	&.active{
-		background: transparent;
+		background-color: transparent;
 		border-color: $c-yellow;
 
 		@include breakpoint(desktop){
 			&:hover{
-				background: transparent;
+				background-color: transparent;
 			}
 		}
+	}
+
+	&.active:focus{
+		border-color: $c-white;
 	}
 
 	@include breakpoint(desktop){
@@ -73,9 +87,19 @@
 		background-color: $c-yellow;
 		border-color: $c-yellow;
 
+		&:focus{
+			background-color: $c-white;
+			border-color: $c-white;
+			outline: none;
+		}
+
 		&.active{
 			background-color: $c-black;
 			border-color: $c-yellow;
+		}
+
+		&.active:focus{
+			border-color: $c-white;
 		}
 	}
 }

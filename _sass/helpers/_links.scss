@@ -4,17 +4,12 @@
 
 a{
 	color: inherit;
-	//display: inline-block;
 	line-height: 1;
 	position: relative;
 	text-decoration: none;
-	
-	@media (orientation: landscape){
-		//display: inline;
-	}
 
-	&:after{
-		background: rgba($c-black, .5);
+	&::after{
+		background-color: rgba($c-black, .5);
 		bottom: .1em;
 		content: '';
 		height: .05em;
@@ -22,31 +17,54 @@ a{
 		position: absolute;
 		transition: all $animation-speed linear;
 		width: 100%;
-		
-		@include breakpoint(desktop){	
-			background: rgba($c-black, .25);
-		}	
+
+		@include breakpoint(desktop){
+			background-color: rgba($c-black, .25);
+		}
 	}
-	
+
 	&:visited{
 		color: rgba($c-black, .75);
 	}
-	
+
 	// Hover effects - desktop only
-	@include breakpoint(desktop){	    
+	@include breakpoint(desktop){
 		&:hover{
-			&:after{
-				background: rgba($c-black, .5);
+			&::after{
+				background-color: rgba($c-black, .5);
 				height: .065em;
 			}
 		}
 	}
-	
+
 	&:active,
 	&:focus{
-		&:after{
-			background: currentColor;
+		&::after{
+			background-color: currentColor;
 		}
 	}
-	
+
+	&:focus{
+		background-color: rgba($c-white, .5);
+		outline: none;
+	}
+
+}
+
+/**
+ * Hidden skip link
+ */
+.skip-link{
+	left: 50%;
+	opacity: 0;
+	padding: 5px 10px;
+	position: absolute;
+	transform: translateX(-50%);
+	top: 0;
+	z-index: -1;
+
+	&:focus{
+		opacity: 1;
+	z-index: 999;
+	}
 }

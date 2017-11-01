@@ -1,5 +1,10 @@
 <progress class="progress-bar js-progress-bar" value="0" max="100"></progress>
 
+<?php
+
+	$updated_js = filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/philthompsoncouk.min.js');
+
+?>
 <script>
 	// Request and load scripts after page load (IE9+)
 	function loadPTScripts(){
@@ -9,7 +14,7 @@
 		var scriptSVG4everybody = document.createElement('script');
 
 		// Load main script
-		scriptPT.src = '/assets/js/philthompsoncouk.min.<?php echo $updated; ?>.js';
+		scriptPT.src = '/assets/js/philthompsoncouk.min.<?php echo $updated_js; ?>.js';
 		document.body.appendChild(scriptPT);
 
 		// SVG4everybody - get IE9-11 to allow external SVG sprites

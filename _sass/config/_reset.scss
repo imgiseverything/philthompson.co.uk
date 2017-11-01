@@ -1,29 +1,27 @@
-/* Box sizing - reset to a nicer understanding of the box model */
-html{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-*, *:before, *:after{
-	-moz-box-sizing: inherit;
-	-webkit-box-sizing: inherit;
- 	box-sizing: inherit;
-}
-
 /**
  *	1 Resets/normalise
  */
+
+html{
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+ 	box-sizing: inherit;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym,  cite, code, em, img, q, 
-small,  strong, sub, sup, 
+a, abbr, acronym,  cite, code, em, img, q,
+small,  strong, sub, sup,
 b, u, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	border: 0;
@@ -34,9 +32,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers: HTML5 shim (CDN) script tag is in header.php for older browsers */
-article, aside, details, figcaption, figure, 
-.site-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
@@ -68,16 +65,13 @@ body{
 	background: $c-yellow;
 	color: $c-black;
 	margin: 0 auto;
-	width: 100%;	
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	width: 100%;
 }
 
 ::selection {
 	background: $c-black;
 	color: $c-yellow;
 }
-
 
 img{
 	height: auto;
@@ -88,7 +82,8 @@ iframe{
 	max-width: 100%;
 }
 
-ul li, ol li{
+ul li,
+ol li{
 	margin-left: 1em;
 	padding-bottom: .25em;
 }
