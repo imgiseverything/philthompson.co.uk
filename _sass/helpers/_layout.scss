@@ -8,19 +8,20 @@
  * Allow background colours/images go full width but copy sits
  * in a set central zone
  *
- * 1. iPad landscape width with 30px either side
+ * 1. Smallest iPhone in portrait mode with 15px either side
+ * 2. iPad in landscape mode with 30px either side
  */
 .inner{
 	margin: 0 auto;
 	position: relative;
-	width: (290/320)*100%;
+	width: (290/320)*100%; /* 1 */
 
 	@include breakpoint(mobile-landscape){
 		max-width: 80%;
 	}
 
 	@include breakpoint(ipad-portrait){
-		max-width: (#{$l} - 60) + px; /* 1 */
+		max-width: (#{$l} - 60) + px; /* 2 */
 	}
 
 	@include breakpoint(ipad-landscape){

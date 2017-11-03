@@ -19,16 +19,18 @@
 			<ul class="arrow-list">
 				<li>Creating responsive and accessible HTML/CSS templates (which load quickly).</li>
 				<li>Writing bespoke WordPress <span class="amp">&amp;</span> Shopify themes.</li>
-				<li>Writing framework-free JavaScript (with jQuery or <em>vanilla</em> JS)</li>
+				<li>Coding framework-free JavaScript (with jQuery or <em>vanilla</em>).</li>
 				<li>Building responsive HTML prototypes and style-guides/pattern libraries.</li>
+				<li>Leading dev teams to stay motivated, meet deadlines, and deliver quality code.</li>
 			</ul>
 		</div>
 	</div>
 	<div class="section">
 		<div class="inner">
 			<h2 class="h h2">Development process</h2>
-			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of Sass and Grunt/Gulp; using <abbr title="Block-Element-Modifier">BEM</abbr> syntax for his CSS as well as alphabetising his attributes and making sure his JavaScript passes ESLint.</p>
-			<p><a href="//github.com/imgiseverything/philthompson.co.uk">This site’s code</a> is available on GitHub for your perusal.</p>
+			<p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of Sass and Grunt/Gulp; using <abbr title="Block-Element-Modifier">BEM</abbr> syntax for his CSS (as well as alphabetising his CSS declarations) and making sure his JavaScript passes linting.</p>
+			<p>CSS/HTML/JavaScript are also split into components for ease of maintenance.</p>
+			<p><a href="//github.com/imgiseverything/philthompson.co.uk">The code for this site</a> is available on GitHub for your perusal.</p>
 		</div>
 	</div>
 	<div class="section">

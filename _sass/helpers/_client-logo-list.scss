@@ -1,4 +1,8 @@
-/* Client logo list */
+/**
+ * Client logo list
+ * Use grid where possible then fallback to flexbox
+ */
+
 .client-logo-list{
 	align-content: space-between;
 	align-items: center;

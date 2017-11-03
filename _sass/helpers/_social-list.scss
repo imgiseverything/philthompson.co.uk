@@ -8,12 +8,13 @@
  *    </a>
  *  </li>
  * </ul>
- */		
+ */
+
 .social-list{
 	float: left;
 	padding: 0 0 20px;
 	width: 100%;
-	
+
 	@include breakpoint(tablet){
 		padding-bottom: 60px;
 	}
@@ -26,7 +27,7 @@
 	padding: 0 5px 10px;
 	text-align: center;
 	width: 25%;
-	
+
 	@include breakpoint(mobile-landscape){
 		width: 20%;
 
@@ -58,16 +59,16 @@
 }
 
 .social-list__link::after{
-	content: none;	
+	content: none;
 }
 
 .social-list__svg{
 	display: block;
 	fill: $c-black;
 	height: 26px;
-	margin: 0 auto;	
+	margin: 0 auto;
 	width: 26px;
-	
+
 	@include breakpoint(ipad-portrait){
 		height: 42px;
 		width: 42px;
