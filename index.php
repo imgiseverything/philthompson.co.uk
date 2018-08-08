@@ -57,7 +57,7 @@
 				</li>
 			</ul>
 			<h3 class="h h3">Agencies</h3>
-			<p>Working with established agencies like <a href="//fluxx.uk.com/">Fluxx</a> and <a href="//www.tribalworldwide.co.uk/">Tribal Worldwide</a> in London, <a href="//www.383project.com/">383 Project</a> in Birmingham, <a href="//www.cxpartners.co.uk/">cxpartners</a> in Bristol, <a href="//www.area17.com/">AREA 17</a> in New York/Paris, <a href="//www.codecomputerlove.com/">Code Computerlove</a> and <a href="//storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like Playstation, EA Games, Diageo, The Rolling Stones and Manchester United.</p>
+			<p>Working with established agencies like <a href="https://www.wearefriday.com/">Friday</a>, <a href="https://fluxx.uk.com/">Fluxx</a> and <a href="https://www.tribalworldwide.co.uk/">Tribal Worldwide</a> in London, <a href="https://www.383project.com/">383 Project</a> in Birmingham, <a href="https://www.cxpartners.co.uk/">cxpartners</a> in Bristol, <a href="https://www.area17.com/">AREA 17</a> in New York/Paris, <a href="https://www.codecomputerlove.com/">Code Computerlove</a> and <a href="https://storiesbylove.com/">LOVE</a> in Manchester has given Phil the opportunity to perfect his skills on global brands like HSBC, Playstation, EA Games, Diageo, The Rolling Stones, and Manchester United.</p>
 		</div>
 	</div>
 	<div class="section section--alt" id="slides">
