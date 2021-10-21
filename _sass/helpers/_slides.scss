@@ -2,31 +2,31 @@
  * Slides module
  */
 
-.js-slides{
+.js-slides {
 	height: 100%;
 	position: relative;
 }
 
-.js-slide[aria-hidden="true"]{
-  display: none;
+.js-slide[aria-hidden="true"] {
+	display: none;
 }
 
 /* Clickable dots to navigate */
-.slides-nav{
+.slides-nav {
 	margin: 1.5em 0 1em;
 	margin-bottom: calc(1em - 20px);
 	padding: 0;
 
-	@include breakpoint(desktop){
-  	margin: .5em 0;
-  }
+	@include breakpoint(desktop) {
+		margin: 0.5em 0;
+	}
 }
 
-.slides-nav__button{
+.slides-nav__button {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	background-color: $c-black;
-	border: 2px solid $c-yellow;
+	background-color: var(--color-body-text);
+	border: 2px solid var(--color-body-background);
 	border-radius: 50%;
 	appearance: none;
 	display: inline-block;
@@ -38,67 +38,66 @@
 	width: 44px;
 
 	&::-moz-focus-inner {
-	  border: 0;
+		border: 0;
 	}
 
-	&::after{
+	&::after {
 		content: none;
 	}
 
-	&:focus{
-		background-color: $c-white;
-		border-color: $c-white;
+	&:focus {
+		background-color: var(--color-highlight);
+		border-color: var(--color-highlight);
 		outline: none;
 		transform: scale(1.2);
 	}
 
-	&.active{
+	&.active {
 		background-color: transparent;
-		border-color: $c-yellow;
+		border-color: var(--color-body-background);
 
-		@include breakpoint(desktop){
-			&:hover{
+		@include breakpoint(desktop) {
+			&:hover {
 				background-color: transparent;
 			}
 		}
 	}
 
-	&.active:focus{
-		border-color: $c-white;
+	&.active:focus {
+		border-color: var(--color-highlight);
 	}
 
-	@include breakpoint(desktop){
+	@include breakpoint(desktop) {
 		height: 28px;
 		margin-bottom: 0;
 		margin-right: 20px;
 		width: 28px;
 
-		&:hover{
+		&:hover {
 			animation: hvr-pop $animation-speed linear 1 0ms;
-			background-color: rgba($c-black, 0.75);
+			background-color: rgba(var(--color-body-text-rgb), 0.75);
 		}
 	}
-
 }
 
-.section--alt{
-	.slides-nav__button{
-		background-color: $c-yellow;
-		border-color: $c-yellow;
+.section--alt {
+	.slides-nav__button {
+		background-color: var(--color-body-background);
+		border-color: var(--color-body-background);
 
-		&:focus{
-			background-color: $c-white;
-			border-color: $c-white;
+		&:focus {
+			background-color: var(--color-highlight);
+			border-color: var(--color-highlight);
 			outline: none;
 		}
 
-		&.active{
-			background-color: $c-black;
-			border-color: $c-yellow;
+		&.active {
+			background-color: var(--color-body-text);
+			border-color: var(--color-body-background);
 		}
 
-		&.active:focus{
-			border-color: $c-white;
+		&.active:focus {
+			border-color: var(--color-highlight);
 		}
 	}
 }

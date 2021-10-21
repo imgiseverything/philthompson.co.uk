@@ -5,97 +5,93 @@
 	<h1-6> are for SEO and accessiblity, not for appearance
 */
 
-
-body{
+body {
 	font: 14px $font-family-body;
-	line-height: (26/14);
+	line-height: calc(26 / 14);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	@include breakpoint(mobile-landscape){
+	@include breakpoint(mobile-landscape) {
 		@include fluidType(16, 36, 480, 1279);
 		line-height: 1.6667;
 	}
 
-	@include breakpoint(xl){
+	@include breakpoint(xl) {
 		font-size: 36px;
 	}
-
 }
 
 b,
-strong{
+strong {
 	font-weight: 500;
 }
 
 em,
-i{
+i {
 	font-style: italic;
 }
 
 /* Use the Best Available Ampersand: http://simplebits.com/notebook/2008/08/14/ampersands-2/ */
-.amp, .ampersand{
-	font-family: Baskerville,Georgia,serif;
+.amp,
+.ampersand {
 	font-style: italic;
 }
 
 /* Headings */
-.h{
+.h {
 	line-height: 1.1;
 	text-rendering: optimizeLegibility;
 }
 
-.h1{
+.h1 {
 	font-size: 28px;
-	line-height: 0.975;
+	line-height: calc(32 / 28);
 
 	/*  */
-	@include breakpoint(mobile-landscape){
+	@include breakpoint(mobile-landscape) {
 		@include fluidType(36, 80, 480, 1279);
-		line-height: (30/28);
+		line-height: calc(30 / 28);
 	}
 
-	@include breakpoint(xl){
-		font-size: 80px;
+	@include breakpoint(xl) {
+		font-size: clamp(2.8rem, 5vw + 1rem, 8rem);
 	}
-
 }
 
-.h2{
+.h2 {
 	font-size: 24px;
 
-	@include breakpoint(mobile-landscape){
+	@include breakpoint(mobile-landscape) {
 		@include fluidType(28, 48, 480, 1279);
 	}
 
-	@include breakpoint(xl){
+	@include breakpoint(xl) {
 		font-size: 48px;
 	}
 }
 
-.h3{
+.h3 {
 	font-size: 18px;
 
-	@include breakpoint(mobile-landscape){
+	@include breakpoint(mobile-landscape) {
 		@include fluidType(20, 40, 480, 1279);
 	}
 
-	@include breakpoint(xl){
+	@include breakpoint(xl) {
 		font-size: 40px;
 	}
 }
 
 /* Quotes */
-.quotes{
-
-	blockquote{
+.quotes {
+	blockquote {
 		font-style: italic;
 		line-height: 1.33;
 	}
 
-	cite{
+	cite {
 		display: block;
-		font-size: .9rem;
+		font-size: 0.9rem;
 		font-style: none;
 		margin-top: 1em;
 	}
@@ -103,16 +99,15 @@ i{
 
 p,
 ul,
-ol{
+ol {
 	margin-top: 1em;
 }
 
-.h{
+.h {
 	margin-top: 2em;
 }
 
 .section h1:first-of-type,
-.section h2:first-of-type{
+.section h2:first-of-type {
 	margin-top: 0;
 }
-

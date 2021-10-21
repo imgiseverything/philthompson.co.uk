@@ -3,69 +3,70 @@
  * For splitting blocks of the page
  */
 
-.section{
+.section {
 	height: auto;
 	overflow: hidden;
 	padding: 2em 0;
 	width: 100%;
 
 	// First section is full screen no matter the screen size
-	&:first-of-type{
+	&:first-of-type {
+		display: grid;
 		min-height: 100vh;
-		 .inner{
-			left: 50%;
-			position: absolute;
-			top: 50%;
-			transform: translate(-50%, -62.5%);
+		place-content: center;
+		place-items: center;
 
-			@include breakpoint(mobile-landscape){
-				transform: translate(-50%, -50%);
+		.inner {
+			max-width: 90vw;
+
+			@include breakpoint(mobile-landscape) {
+				max-width: 80%;
 			}
 		}
 	}
 
 	// Scroll the site message (hopefully subtle)
-	&::after{
+	&::after {
 		animation: fadeIn 1000ms linear forwards 1050ms;
 		bottom: 80px;
-		font-size: 10px;
+		font-size: 12px;
 		opacity: 0;
 		position: absolute;
 		right: 15px;
 
-		@include breakpoint(mobile-landscape){
+		@include breakpoint(mobile-landscape) {
 			bottom: 20px;
 		}
 
-		@include breakpoint(ipad-portrait){
+		@include breakpoint(ipad-portrait) {
 			bottom: 40px;
 			right: 20px;
 		}
 
-		@include breakpoint(desktop){
+		@include breakpoint(desktop) {
 			bottom: 20px;
-			content: 'scroll \25BE';
+			content: "scroll \25BE";
+			font-size: 16px;
 		}
 	}
 
-	&:first-of-type:after{
-		content: 'scroll \25BE';
+	&:first-of-type:after {
+		content: "scroll \25BE";
 	}
 
-	&:last-of-type:after{
+	&:last-of-type:after {
 		content: none;
 	}
 }
 
-
 // Darker (alternative) style
-.section--alt{
-	background: $c-black;
-	color: $c-yellow;
+.section--alt {
+	background: var(--color-body-text);
+	color: var(--color-body-background);
 	margin-bottom: 2.5em;
 	margin-top: 2em;
 
-	@include breakpoint(desktop){
+	@include breakpoint(desktop) {
 		margin-bottom: 2em;
 		padding-left: 0;
 		padding-right: 0;
@@ -73,42 +74,51 @@
 	}
 }
 
-.section--alt a{
+.section--alt a {
 	color: currentColor;
 
-	&::after{
-		background-color: rgba($c-yellow, .5);
+	&::after {
+		background-color: rgba(var(--color-body-background-rgb), 0.5);
 	}
 
-	&:visited{
-		color: rgba($c-yellow, .8);
+	&:visited {
+		color: rgba(var(--color-body-background-rgb), 0.8);
 	}
 
 	// Hover effects - desktop only
-	@include breakpoint(desktop){
-		&:hover{
-			&::after{
-				background-color: rgba($c-yellow, .75);
+	@include breakpoint(desktop) {
+		&:hover {
+			&::after {
+				background-color: rgba(var(--color-body-background-rgb), 0.75);
 			}
 		}
 	}
 
-	&:focus{
-		background-color: $c-white;
-		color: $c-black;
+	&:focus {
+		background-color: var(--color-highlight);
+		color: var(--color-body-text);
 	}
 
-	&:focus::after{
+	&:focus::after {
 		background-color: currentColor;
 	}
 }
 
 /* Selected text */
-.section--alt	.h,
+.section--alt .h,
 .section--alt p,
-.section--alt cite{
-	&::selection{
-		background-color: $c-yellow;
-		color: $c-black;
+.section--alt cite {
+	&::selection {
+		background-color: var(--color-body-background);
+		color: var(--color-body-text);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

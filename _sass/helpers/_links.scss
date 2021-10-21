@@ -3,59 +3,37 @@
  * Custom underline all links and add a nice little hover effect
  */
 
-a{
+a {
+	background-color: transparent;
 	color: inherit;
 	line-height: 1;
 	position: relative;
-	text-decoration: none;
+	text-decoration: underline;
+	transition: 300ms ease background-color;
 
-	&::after{
-		background-color: rgba($c-black, .5);
-		bottom: .1em;
-		content: '';
-		height: .05em;
-		left: 0;
-		position: absolute;
-		transition: all $animation-speed linear;
-		width: 100%;
+	&:visited {
+		color: rgba(var(--color-body-text-rgb), 0.75);
+	}
 
-		@include breakpoint(desktop){
-			background-color: rgba($c-black, .25);
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			background: rgab(var(--color-highlight-rgb), 0.25);
+			text-decoration: none;
 		}
 	}
 
-	&:visited{
-		color: rgba($c-black, .75);
-	}
-
-	// Hover effects - desktop only
-	@include breakpoint(desktop){
-		&:hover{
-			&::after{
-				background-color: rgba($c-black, .5);
-				height: .065em;
-			}
-		}
-	}
-
-	&:active,
-	&:focus{
-		&::after{
-			background-color: currentColor;
-		}
-	}
-
-	&:focus{
-		background-color: rgba($c-white, .5);
+	&:focus {
+		color: inherit;
 		outline: none;
+		text-decoration: underline;
+		text-decoration-color: var(--color-highlight);
 	}
-
 }
 
 /**
  * Hidden skip link
  */
-.skip-link{
+.skip-link {
 	left: 50%;
 	opacity: 0;
 	padding: 5px 10px;
@@ -64,8 +42,8 @@ a{
 	top: 0;
 	z-index: -1;
 
-	&:focus{
+	&:focus {
 		opacity: 1;
-	z-index: 999;
+		z-index: 999;
 	}
 }

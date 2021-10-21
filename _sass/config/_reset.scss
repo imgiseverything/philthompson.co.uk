@@ -2,28 +2,85 @@
  *	1 Resets/normalise
  */
 
-html{
+html {
 	box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after{
- 	box-sizing: inherit;
+*:after {
+	box-sizing: inherit;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym,  cite, code, em, img, q,
-small,  strong, sub, sup,
-b, u, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+cite,
+code,
+em,
+img,
+q,
+small,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -32,18 +89,30 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
 	content: none;
 }
 
@@ -52,53 +121,54 @@ table {
 	border-spacing: 0;
 }
 
-:root{
+:root {
 	min-height: 100%;
 	overflow-y: scroll;
 }
 
-html, body{
+html,
+body {
 	height: 100%;
 }
 
-body{
-	background: $c-yellow;
-	color: $c-black;
+body {
+	background: var(--color-body-background);
+	color: var(--color-body-text);
 	margin: 0 auto;
 	width: 100%;
 }
 
 ::selection {
-	background: $c-black;
-	color: $c-yellow;
+	background: var(--color-body-text);
+	color: var(--color-body-background);
 }
 
-img{
+img {
 	height: auto;
 	max-width: 100%;
 }
 
-iframe{
+iframe {
 	max-width: 100%;
 }
 
 ul li,
-ol li{
+ol li {
 	margin-left: 1em;
-	padding-bottom: .25em;
+	padding-bottom: 0.25em;
 }
 
-blockquote{
+blockquote {
 	margin: 1em 0 1em 0;
 	position: relative;
 
-	&:before{
+	&:before {
 		font-size: 60px;
 		left: -20px;
 		position: absolute;
 		top: -10px;
 
-		@include breakpoint(ipad-landscape){
+		@include breakpoint(ipad-landscape) {
 			content: "‘";
 		}
 	}
