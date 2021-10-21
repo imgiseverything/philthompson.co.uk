@@ -1,3 +1,11 @@
+# Compiled assets #
+###################
+assets/js/philthompsoncouk.js
+assets/js/philthompsoncouk.min.js
+assets/css/*
+assets/fonts/*
+assets/images/svg-sprite.svg
+
 # Compiled source #
 ###################
 *.com
