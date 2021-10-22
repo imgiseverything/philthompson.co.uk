@@ -62,6 +62,14 @@
   ga('send', 'pageview');
   </script>
   <?php endif; ?>
+  <?php
+
+	// timestamp of when the Javascript was last updated.
+	// we'll sue this to cache bust the js files
+	$updated_js = filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/philthompsoncouk.min.js');
+
+	?>
+  <script defer src="/assets/js/philthompsoncouk.min.<?php echo $updated_js; ?>.js"></script>
 </head>
 
 <body>
