@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>London Front-end Developer - Phil Thompson</title>
+  <title>London Lead Front-end Developer - Phil Thompson</title>
   <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,
     'js');
@@ -65,7 +65,7 @@
   <?php
 
 	// timestamp of when the Javascript was last updated.
-	// we'll sue this to cache bust the js files
+	// we'll use this to cache bust the js files
 	$updated_js = filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/philthompsoncouk.min.js');
 
 	?>

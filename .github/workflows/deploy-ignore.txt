@@ -1,0 +1,8 @@
+./subdomains
+.git/*
+.vscode
+_grunt
+_sass
+*.test.js
+*.test.ts
+.editorconfig
