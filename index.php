@@ -24,13 +24,13 @@
         <li>Building responsive HTML prototypes and style-guides/pattern libraries.</li>
         <li>Leading dev teams to stay motivated, meet deadlines, and deliver quality code.</li>
         <li>Writing bespoke WordPress <span class="amp">&amp;</span> Shopify themes.</li>
-        <li>Coding framework-free JavaScript (with jQuery or <em>vanilla</em>).</li>
+        <li>Coding framework-free JavaScript.</li>
       </ul>
     </div>
   </div>
   <div class="section">
     <div class="inner">
-      <h2 class="h h2">Development process</h2>
+      <h2 class="h h2">Development process (vanilla)</h2>
       <p>Phil Thompson builds HTML templates along with CSS and JavaScript making use of Sass; using
         <abbr title="Block-Element-Modifier">BEM</abbr> syntax for his CSS (as well as alphabetising
         his CSS declarations).
@@ -39,6 +39,13 @@
       <p><a href="//github.com/imgiseverything/philthompson.co.uk">The code for this site</a> is
         available on GitHub for your perusal.</p>
       <p>Also happy using the latest JavaScript frameworks and learning new ones on the job.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="inner">
+      <h2 class="h h2">Development process (ReactJS)</h2>
+      <p>Phil Thompson builds ReactJS single-page apps (SPAs) with Create React App and TypeScript.
+        Using either Sass or CSS-in-JS (either emotion of styled-components) for styling.</p>
     </div>
   </div>
   <div class="section">
