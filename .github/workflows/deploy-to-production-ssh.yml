@@ -10,7 +10,6 @@ jobs:
       # 1 TODO lint/test before we deploy
       # 2 List files
       - name: List files
-      - uses: actions/checkout@v1
         run: ls
       # 3 Deploy to production with SSH/Rsync
       - name: Install SSH Key
