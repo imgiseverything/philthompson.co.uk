@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 1 TODO lint/test before we deploy
-      # 2 List files
+      # 2 Checkout and list files
+      - uses: actions/checkout@v3
       - name: List files
         run: ls
       # 3 Deploy to production with SSH/Rsync
