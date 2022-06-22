@@ -8,7 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 1 TODO lint/test before we deploy
-      # 2 Deploy to production with SSH/Rsync
+      # 2 List files
+      - name: List files
+        run: ls
+      # 3 Deploy to production with SSH/Rsync
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
         with:
