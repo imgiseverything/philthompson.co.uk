@@ -24,7 +24,7 @@
 		}
 	}
 
-	@media screen and (min-width: $m+px) {
+	@media screen and (min-width: #{$m}px) {
 		margin-bottom: -2em;
 
 		@supports (display: grid) {
@@ -42,7 +42,7 @@
 	transition: all $animation-speed ease-out;
 	width: 49%;
 
-	@media screen and (min-width: $m+px) {
+	@media screen and (min-width: #{$m}px) {
 		margin-bottom: 2em;
 		width: calc((100 / 3) * 1%);
 	}

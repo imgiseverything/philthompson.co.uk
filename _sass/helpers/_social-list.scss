@@ -11,7 +11,9 @@
  */
 
 .social-list {
-	float: left;
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
 	padding: 0 0 20px;
 	width: 100%;
 
@@ -22,14 +24,14 @@
 
 .social-list__item {
 	border: none;
-	float: left;
+	display: inline-block;
 	list-style: none;
-	padding: 0 5px 10px;
+	padding: 0;
 	text-align: center;
-	width: 25%;
+	width: calc(25% - 10px);
 
 	@include breakpoint(mobile-landscape) {
-		width: 20%;
+		width: calc(20% - 10px);
 
 		&:nth-of-type(5n + 1) {
 			clear: both;
