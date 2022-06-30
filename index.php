@@ -10,7 +10,8 @@
 <main>
   <div class="section">
     <div class="inner">
-      <h1 class="h h1"><a href="https://imgiseverything.co.uk/">Phil Thompson</a> is a front-end
+      <h1 class="h h1"><a href="https://imgiseverything.co.uk/">Phil Thompson</a> is a senior
+        sfront-end
         developer living <span class="amp">&amp;</span> working in London.</h1>
     </div>
   </div>
@@ -37,7 +38,9 @@
       </p>
       <p>CSS/HTML/JavaScript are also split into components for ease of maintenance.</p>
       <p><a href="//github.com/imgiseverything/philthompson.co.uk">The code for this site</a> is
-        available on GitHub for your perusal.</p>
+        available on GitHub for your perusal. It is a simple PHP template (for easy header/footer
+        includes) thta makes use of Github actions to deploy to a virtual private server with
+        Continous Interation (CI).</p>
       <p>Also happy using the latest JavaScript frameworks and learning new ones on the job.</p>
     </div>
   </div>
