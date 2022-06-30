@@ -45,7 +45,7 @@
     <div class="inner">
       <h2 class="h h2">Development process (ReactJS)</h2>
       <p>Phil Thompson builds ReactJS single-page apps (SPAs) with Create React App and TypeScript.
-        Using either Sass or CSS-in-JS (either emotion of styled-components) for styling.</p>
+        Using either Sass or CSS-in-JS (either emotion or styled-components) for styling.</p>
     </div>
   </div>
   <div class="section">
