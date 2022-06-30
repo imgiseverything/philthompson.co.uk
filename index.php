@@ -11,8 +11,7 @@
   <div class="section">
     <div class="inner">
       <h1 class="h h1"><a href="https://imgiseverything.co.uk/">Phil Thompson</a> is a senior
-        sfront-end
-        developer living <span class="amp">&amp;</span> working in London.</h1>
+        front-end developer living <span class="amp">&amp;</span> working in London.</h1>
     </div>
   </div>
   <div class="section">
