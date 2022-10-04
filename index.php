@@ -71,32 +71,32 @@
       <ul class="client-logo-list">
         <li class="client-logo-list__item">
           <svg width="209" height="89.15">
-            <use xlink:href="assets/images/svg-sprite.svg#symbol-home-office"></use>
+            <use xlink:href="assets/images/logos/home-office.svg"></use>
           </svg>
         </li>
         <li class="client-logo-list__item">
           <svg width="100.8" height="68">
-            <use xlink:href="assets/images/svg-sprite.svg#symbol-mtv"></use>
+            <use xlink:href="assets/images/logos/mtv.svg"></use>
           </svg>
         </li>
         <li class="client-logo-list__item">
           <svg width="208" height="33">
-            <use xlink:href="assets/images/svg-sprite.svg#symbol-topshop"></use>
+            <use xlink:href="assets/images/logos/topshop.svg"></use>
           </svg>
         </li>
         <li class="client-logo-list__item">
           <svg width="209" height="34">
-            <use xlink:href="assets/images/svg-sprite.svg#symbol-viacom"></use>
+            <use xlink:href="assets/images/logos/viacom.svg"></use>
           </svg>
         </li>
         <li class="client-logo-list__item">
           <svg width="146" height="40">
-            <use xlink:href="assets/images/svg-sprite.svg#symbol-eurostar"></use>
+            <use xlink:href="assets/images/logos/eurostar.svg"></use>
           </svg>
         </li>
         <li class="client-logo-list__item">
           <svg width="134" height="68">
-            <use xlink:href="assets/images/svg-sprite.svg#symbol-economist"></use>
+            <use xlink:href="assets/images/logos/economist.svg"></use>
           </svg>
         </li>
       </ul>
