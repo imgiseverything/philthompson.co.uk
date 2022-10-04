@@ -9,15 +9,6 @@ ErrorDocument 500 /error.php?error=500
 Header set Connection keep-alive
 </ifModule>
 
-# IE use most recent IE engine or Chrome plugin if available
-<FilesMatch "\.(htm|html|php)$">
-    <IfModule mod_headers.c>
-        BrowserMatch MSIE ie
-        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
-    </IfModule>
-</FilesMatch>
-
-
 # REWRITE RULES
 #
 # 1.	Wilcard subdomains:

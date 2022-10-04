@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-GB">
-
-<head>
-  <meta charset="utf-8">
-  <title>London Lead Front-end Developer - Phil Thompson</title>
-  <script>
+  <head>
+    <meta charset="utf-8">
+    <title>Not found - Phil Thompson</title>
+    <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,
     'js');
   </script>
-  <meta name="viewport" content="initial-scale=1">
-  <!-- Inline CSS as it's a `one-page` website and the CSS is only 4.5Kb-->
-  <style>
+    <meta content="initial-scale=1" name="viewport">
+    <meta content="noindex" name="robots">
+    <style>
   /**
-		 * Variables
-		 */
+   * Variables
+   */
   :root {
     accent-color: #151515;
     --color-yellow: #fd2;
@@ -40,12 +39,9 @@
       --color-body-text-rgb: var(--color-yellow-rgb);
     }
   }
-
-  <?php include('assets/css/style.css');
-  ?>
   </style>
-  <?php if(strpos($_SERVER['HTTP_HOST'], '.co.uk') !== false): ?>
-  <script>
+    <!--
+		<temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><script>
   (function(b, o, i, l, e, r) {
     b.GoogleAnalyticsObject = l;
     b[l] || (b[l] =
@@ -60,16 +56,21 @@
   }(window, document, 'script', 'ga'));
   ga('create', 'UA-418350-4');
   ga('send', 'pageview');
-  </script>
-  <?php endif; ?>
-  <?php
+  </script></temp></temp></temp></temp></temp></temp></temp>
+ 	-->
+  </head>
 
-	// timestamp of when the Javascript was last updated.
-	// we'll use this to cache bust the js files
-	$updated_js = filemtime($_SERVER['DOCUMENT_ROOT'] . '/assets/js/philthompsoncouk.min.js');
+  <body>
+    <main>
+      <div class="group section">
+        <div class="inner">
+          <h1 class="h h1">Oh wow, this is awkward.</h1>
+          <p>Whatever it was you were looking for, could not be found&hellip;'; maybe try the
+            <a href="/">home page</a>.</p>
+        </div>
+      </div>
+    </main>
 
-	?>
-  <script defer src="/assets/js/philthompsoncouk.min.<?php echo $updated_js; ?>.js"></script>
-</head>
-
-<body>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>
