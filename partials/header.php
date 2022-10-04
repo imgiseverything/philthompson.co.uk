@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>London Lead Front-end Developer - Phil Thompson</title>
+  <title>London Lead Front-end Developer / Web Accessibility Consultant - Phil Thompson</title>
   <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,
     'js');
