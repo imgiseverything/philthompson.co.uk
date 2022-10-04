@@ -150,7 +150,7 @@
             <cite>Angela Bliumis, Production Director, AREA 17</cite>
           </blockquote>
           <p class="quote__meta"><a href="//imgiseverything.co.uk/work/area17/"
-              aria-labelledby="slide4">Read the case study</a></p>
+              aria-labelledby="slide4" tabindex="-1">Read the case study</a></p>
         </div>
       </div>
     </div>
