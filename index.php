@@ -45,7 +45,7 @@
   <div class="section">
     <div class="inner">
       <h2 class="h h2">Development process (vanilla)</h2>
-      <p>Phil Thompson builds HTML templates along with CSS and JavaScript<del> making use of
+      <p>Phil Thompson builds HTML templates along with CSS and JavaScript <del>making use of
           Sass</del>; using
         <abbr title="Block-Element-Modifier">BEM</abbr> syntax for his CSS (as well as alphabetising
         his CSS declarations).
@@ -54,7 +54,7 @@
       <p><a href="//github.com/imgiseverything/philthompson.co.uk">The code for this site</a> is
         available on GitHub for your perusal. It is a simple PHP template (for easy header/footer
         includes) that makes use of Github actions to deploy to a virtual private server with
-        Continous Interation (CI).</p>
+        Continuous Integration (CI).</p>
       <p>Also happy using the latest JavaScript frameworks and learning new ones on the job.</p>
     </div>
   </div>
@@ -67,7 +67,7 @@
   </div>
   <div class="section">
     <div class="inner">
-      <h2 class="h h2">Clients</h2>
+      <h2 class="h h2">Direct clients</h2>
       <ul class="client-logo-list">
         <li class="client-logo-list__item">
           <svg xmlns="http://www.w3.org/2000/svg" width="480.6" height="205.5"
