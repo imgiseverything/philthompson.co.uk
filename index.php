@@ -10,8 +10,8 @@
 <main>
   <div class="section">
     <div class="inner">
-      <h1 class="h h1"><a href="https://imgiseverything.co.uk/">Phil Thompson</a> is a web
-        accessibility consultant and front-end engineer living <span class="amp">&amp;</span>
+      <h1 class="h h1">Phil Thompson is a <a href="https://www.a11yiseverything.com/">web
+        accessibility consultant</a> and front-end engineer living <span class="amp">&amp;</span>
         working in London.</h1>
     </div>
   </div>
@@ -227,29 +227,11 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a href="//twitter.com/imgiseverything"
-            class="social-list__link social-list__link--twitter">
-            <svg class="social-list__svg" role="img" aria-labelledby="svg-title-Twitter">
-              <title id="svg-title-Twitter">Twitter</title>
-              <use xlink:href="assets/images/svg-sprite.svg#symbol-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
           <a href="//open.spotify.com/user/imgiseverything"
             class="social-list__link social-list__link--spotify">
             <svg class="social-list__svg" role="img" aria-labelledby="svg-title-Spotify">
               <title id="svg-title-Spotify">Spotify</title>
               <use xlink:href="assets/images/svg-sprite.svg#symbol-spotify"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="//instagram.com/imgiseverythin9"
-            class="social-list__link social-list__link--instagram">
-            <svg class="social-list__svg" role="img" aria-labelledby="svg-title-Instagram">
-              <title id="svg-title-Instagram">Instagram</title>
-              <use xlink:href="assets/images/svg-sprite.svg#symbol-instagram"></use>
             </svg>
           </a>
         </li>
