@@ -4,7 +4,8 @@ on:
     branches:
       - master
 jobs:
-  write-to-console:
+  deploy:
+    name: Deploy static site
     runs-on: ubuntu-latest
     steps:
       # 1 TODO lint/test before we deploy
