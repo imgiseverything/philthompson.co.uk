@@ -1,5 +1,6 @@
 ./subdomains
 .git/*
+.github/*
 .vscode
 _grunt
 _sass
