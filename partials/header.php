@@ -57,13 +57,13 @@
     font-style: normal;
   }
 
-  @font-face {
+  /* @font-face {
     font-family: F37Bobby;
     font-display: swap;
     src: url(/assets/fonts/f37bobby/F37Bobby-RegularIt.woff2) format("woff2");
     font-weight: 400;
     font-style: italic;
-  }
+  } */
 
   @font-face {
     font-family: F37Bobby;
