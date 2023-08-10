@@ -9,26 +9,26 @@ layout: layouts/default.njk
 <style>
 
  main h1 {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-heading);
     line-height: calc(32 / 28);
     text-rendering: optimizeLegibility;
   }
   /*  */
-  @media (min-width: 480px) {
+  @media (min-width: 30em) {
     main h1 {
-      font-size: calc(36px + (80px - 36px) * ((100vw - 480}px) / (1279px - 480px)));
+      font-size: calc(2.25rem + (5rem - 2.25rem) * ((100vw - 30em) / (79.9375em - 30em)));
       line-height: calc(30 / 28);
     }
   }
 
   @media (min-width: 1279px) {
     main h1 {
-      font-size: clamp(2.8rem, 5vw + 1rem, 8rem);
+      font-size: clamp(2.8rem, 5vw + 1rem, 5.2rem);
     }
   }
 
-  .x {
+  .splash {
     display: grid;
     height: 100dvh;
     place-items: center;
@@ -36,7 +36,7 @@ layout: layouts/default.njk
 
 </style>{% endblock %}
 
-<div class="x">
+<div class="splash">
 
 # Phil Thompson is a 'front of the front-end' engineer living <span class="amp">&amp;</span> working in London.
 
