@@ -7,4 +7,4 @@ layout: layouts/default.njk
 
 # {{ title }}
 
-This site has no cookies. I don't track anything. How many people have visited today? No idea. Who cares ¯\_(ツ)\_/¯
+This site has no cookies. I don't track anything. How many people have visited today? No idea. Who cares ¯\\\_(ツ)\_/¯
