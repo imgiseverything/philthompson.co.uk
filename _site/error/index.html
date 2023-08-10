@@ -153,41 +153,65 @@ body {
     
     <div class="page-container">
       <main class="main">
-      <script> console.log(/error/);</script>
+      <script> console.log();</script>
         
+
 <style>
-  body {
+  .x {
     display: grid;
+		min-height: 100dvh;
     place-items: center;
   }
-
-
 </style>
 
-## Oh wow, this is awkward.
+<div class="x">
+	<h1>Oh wow, this is awkward.</h1>
+	<p><span id="message"></span>maybe try the <a href="/">home page</a>.</p>
+</div>
 
-<?php
-				switch($_GET['error']):
+	<script>
+		/**
+		 * @var {HTMLElement | null} elMessage
+		 */
+		const elMessage = document.querySelector('#message');
 
-					case '401':
-					case '403':
-						echo 'You are not authorised to see this content&hellip;';
-						break;
+		/**
+		 * @var {URLSearchParams} params
+		 */
+		const params = (new URL(document.location)).searchParams;
 
-					default:
-					case '404':
-						echo 'Whatever it was you were looking for, could not be found&hellip;';
-						break;
+		/**
+		 * Set the message and applies it to the DOM
+     *
+		 * @return {void}
+		 */
+		const setErrorMessage = () => {
+			if(!elMessage) {
+				return;
+			}
 
-					case '500':
-						echo 'An unexpected server error occurred&hellip;';
-						break;
+			let message = '';
+			const error = params?.get("error");
 
-				endswitch;
-			?>
+			switch(error) {
+				case '401':
+				case '403':
+					message = 'You are not authorised to see this content… ';
+					break;
+				case '500':
+					message = 'An unexpected server error occurred… ';
+					break;
+				default:
+				case '404':
+					message = 'Whatever it was you were looking for, could not be found… ';
+			}
 
-    		maybe try the <a href="/">home page</a>.
-    		</p>
+			elMessage.innerText = message;
+		}
+
+		setErrorMessage();
+	</script>
+
 
       </main>
       <footer class="footer">
