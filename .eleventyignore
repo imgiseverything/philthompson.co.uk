@@ -1,0 +1,5 @@
+# Files we don't want 11ty to copy to \_site
+
+README
+README.md
+\_drafts

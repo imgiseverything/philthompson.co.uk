@@ -1,0 +1,35 @@
+name: Deploy
+
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy:
+    name: Deploy static site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install Project Dependencies
+        run: npm clean-install
+
+      - name: Build with 11ty
+        run: npm run build
+
+      # Deploy to production with SSH/Rsync
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: "just-a-placeholder-so-we-dont-get-errors"
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy with rsync
+        run: rsync -avz -O --exclude-from='.github/workflows/deploy-ignore.txt' ./_site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/philthompson.co.uk/

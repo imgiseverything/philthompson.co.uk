@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js" dir="ltr" lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}{% if page.url != '/' %} - Phil Thompson{% endif %}</title>
+    <link rel="canonical" href="https://www.a11yiseverything.com{{ page.url }}">
+    <meta name="theme-color" content="#FFDD22">
+    <meta
+      name="description"
+      content="{{ meta_description }}"
+    />
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/, "js");
+    </script>
+
+    <style>
+    {% include "critical-path.css" %}
+    </style>
+    <link href="{{ '/assets/styles/global.css' | url | bust }}" rel="stylesheet">
+    {% block styles %}{% endblock %}
+  </head>
+  <body>
+    <!-- <a href="#contact" class="skip-link">Skip to contact details</a> -->
+    {% if page.url != '/' %}
+    <header class="header page-container">
+      <span class="logo">Phil Thompson</span>
+      <nav aria-label="Main menu">
+        <a href="/" class="back">Back</a>
+      </nav>
+    </header>
+    {% endif %}
+    <div class="page-container">
+      <main class="main">
+      <script> console.log({{ page.url }});</script>
+        {{ content | safe }}
+      </main>
+      <footer class="footer">
+        <nav aria-label="Site links">
+          <a
+            href="/terms/"
+            {% if page.url == '/terms/' %}
+              aria-current="page"
+            {% endif %}
+          >
+          Terms
+          </a>
+          <a
+            href="/privacy/"
+            {% if page.url == '/privacy/' %}
+              aria-current="page"
+            {% endif %}
+          >
+          Privacy policy
+          </a>
+          <a
+            href="/cookies/"
+            {% if page.url == '/cookies/' %}
+              aria-current="page"
+            {% endif %}
+          >
+          Cookies policy
+          </a>
+        </nav>
+        <div>Copyright &copy; 2023 - PT Digital Services Limited.</div>
+        <div>Company number: 10542201.</div><div>Registered address: 153 Boundary Road, London, N22 6AR.</div>
+      </footer>
+    </div>
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

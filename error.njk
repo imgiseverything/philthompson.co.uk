@@ -1,0 +1,38 @@
+---
+title: Oh wow, this is awkward.
+layout: layouts/default.njk
+---
+
+<style>
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+
+</style>
+
+## {{ title }}
+
+<?php
+				switch($_GET['error']):
+
+					case '401':
+					case '403':
+						echo 'You are not authorised to see this content&hellip;';
+						break;
+
+					default:
+					case '404':
+						echo 'Whatever it was you were looking for, could not be found&hellip;';
+						break;
+
+					case '500':
+						echo 'An unexpected server error occurred&hellip;';
+						break;
+
+				endswitch;
+			?>
+
+    		maybe try the <a href="/">home page</a>.
+    		</p>

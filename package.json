@@ -1,0 +1,28 @@
+{
+  "name": "philthompson-dot-co-do-uk",
+  "version": "2.0.0",
+  "private": true,
+  "description": "An 11ty based website for Phil Thompson - a London-based web 'front of the front-end' developer",
+  "author": "Phil Thompson <phil@safralondon.com>",
+  "licence": "none",
+  "devDependencies": {
+    "@11ty/eleventy": "2.0.1"
+  },
+  "scripts": {
+    "build": "npx @11ty/eleventy --input=./",
+    "start": "npx @11ty/eleventy --input=./ --serve --port=1983",
+    "watch": "npx @11ty/eleventy --input=./ --watch",
+    "debug": "DEBUG=* npx @11ty/eleventy --input=./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imgiseverything/philthompson.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/imgiseverything/philthompson.co.uk/issues",
+    "email": "bugs+philthompson@philthompson.co.uk"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
