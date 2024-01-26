@@ -25,6 +25,7 @@ layout: layouts/default.njk
   @media (min-width: 1279px) {
     main h1 {
       font-size: clamp(2.8rem, 5vw + 1rem, 5.2rem);
+      margin-top: 0;
     }
   }
 
@@ -72,7 +73,7 @@ Phil provides web accessibility consultancy services under the name [A11y is Eve
 Phil provides ecommerce (Shopify) consultancy services under the name [Safra](https://www.safralondon.com/).
 
 <ul class="arrow-list">
-  <li>Writing Shopify themes.</li>
+  <li>Writing bespoke Shopify themes.</li>
 </ul>
 
 ## Development process (vanilla)
@@ -200,7 +201,7 @@ Working with established agencies like <a href="https://www.wearefriday.com/">Fr
 
 ## Nice things people have said
 
-<div class="group quotes js-slides">
+<div class="group quotes js-slides" tabIndex="0" role="region" aria-label="Client recommendations">
   <div class="quote js-slide active" id="slide1" data-slide-number="1" aria-hidden="false">
     <blockquote>
 
