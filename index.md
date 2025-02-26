@@ -9,22 +9,21 @@ layout: layouts/default.njk
 <style>
 
  main h1 {
-    font-size: 1.75rem;
+    font-size: clamp(2.2rem, 5vw + 1rem, 5.2rem);
     font-weight: var(--font-weight-heading);
     line-height: calc(32 / 28);
     text-rendering: optimizeLegibility;
   }
-  /*  */
+
   @media (min-width: 30em) {
     main h1 {
-      font-size: calc(2.25rem + (5rem - 2.25rem) * ((100vw - 30em) / (79.9375em - 30em)));
+      font-size: clamp(2.8rem, 5vw + 1rem, 5.2rem);
       line-height: calc(30 / 28);
     }
   }
 
-  @media (min-width: 1279px) {
+  @media (min-width: 79.375em) {
     main h1 {
-      font-size: clamp(2.8rem, 5vw + 1rem, 5.2rem);
       margin-top: 0;
     }
   }
@@ -39,7 +38,7 @@ layout: layouts/default.njk
 
 <div class="splash">
 
-# Phil Thompson is a 'front of the front-end' engineer living <span class="amp">&amp;</span> working in London.
+# Phil Thompson is a UX Engineer living <span class="amp">&amp;</span> working in London, UK.
 
 </div>
 
@@ -47,9 +46,9 @@ layout: layouts/default.njk
 
 <ul class="arrow-list">
   <li>Coding rich single-page-applications (SPAs) with ReactJS and TypeScript
-    and testing with both Cypress and React Testing Library.</li>
+    and testing with both Cypress/Playwright and React Testing Library.</li>
   <li>Creating responsive and accessible HTML/CSS templates (which load quickly).</li>
-  <li>Building responsive HTML prototypes and style-guides/pattern libraries.</li>
+  <li>Building responsive HTML prototypes and design systems or style-guides/pattern libraries.</li>
   <li>Leading dev teams to stay motivated, meet deadlines, and deliver quality code.</li>
   <li>Writing bespoke WordPress <span class="amp">&amp;</span> Shopify themes.</li>
   <li>Coding framework-free JavaScript.</li>
@@ -87,14 +86,13 @@ CSS/HTML/JavaScript are also split into components for ease of maintenance.
 
 <a href="//github.com/imgiseverything/philthompson.co.uk">The code for this site</a> is
 available on GitHub for your perusal. It is a simple <del>PHP template (for easy header/footer
-includes)</del> 11ty static website that makes use of Github actions to deploy to a virtual private server with
-Continuous Integration (CI).
+includes)</del> 11ty static website that makes use of Github actions to deploy to a virtual private server with Continuous Integration (CI).
 
 Also happy using the latest JavaScript frameworks and learning new ones on the job.
 
 ## Development process (ReactJS)
 
-Phil Thompson builds ReactJS single-page apps (SPAs) with Create React App and TypeScript.
+Phil Thompson builds ReactJS single-page apps (SPAs) with Create React App (or NextJS) and TypeScript.
 
 Using either plain CSS or CSS-in-JS (either emotion or styled-components) for styling.
 
