@@ -204,7 +204,8 @@ ul {
 
 .header {
   padding-block: 1rem;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid
+    color-mix(in lch, var(--color-body-text) 5%, var(--color-body-background));
 }
 
 .logo {
