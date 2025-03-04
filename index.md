@@ -13,6 +13,7 @@ layout: layouts/default.njk
     font-weight: var(--font-weight-heading);
     line-height: calc(32 / 28);
     text-rendering: optimizeLegibility;
+    text-wrap: pretty;
   }
 
   @media (min-width: 30em) {
