@@ -12,27 +12,28 @@ layout: layouts/default.njk
     font-size: clamp(2.2rem, 5vw + 1rem, 5.2rem);
     font-weight: var(--font-weight-heading);
     line-height: calc(32 / 28);
+    margin-block: 2em 1em;
     text-rendering: optimizeLegibility;
     text-wrap: pretty;
   }
 
-  @media (min-width: 30em) {
+  @media (min-width: 37.5em) {
     main h1 {
       font-size: clamp(2.8rem, 5vw + 1rem, 5.2rem);
       line-height: calc(30 / 28);
     }
   }
 
-  @media (min-width: 79.375em) {
-    main h1 {
-      margin-top: 0;
-    }
+  .elevator-pitch {
+    font-size: clamp(1.4rem, 2.6vw + 1rem, 2.8rem);
+    line-height: 1.2;
+    text-wrap: pretty;
   }
 
-  .splash {
-    display: grid;
-    height: 100dvh;
-    place-items: center;
+  @media (min-width: 56.25em) {
+    .elevator-pitch {
+      font-size: clamp(2.2rem, 4vw + 1rem, 2.8rem);
+    }
   }
 
 </style>{% endblock %}
@@ -43,59 +44,53 @@ layout: layouts/default.njk
 
 </div>
 
-## Frontend skills/services
+<div class="elevator-pitch">
 
-<ul class="arrow-list">
-  <li>Coding rich single-page-applications (SPAs) with ReactJS and TypeScript
-    and testing with both Cypress/Playwright and React Testing Library.</li>
-  <li>Creating responsive and accessible HTML/CSS templates (which load quickly).</li>
-  <li>Building responsive HTML prototypes and design systems or style-guides/pattern libraries.</li>
-  <li>Leading dev teams to stay motivated, meet deadlines, and deliver quality code.</li>
-  <li>Writing bespoke WordPress <span class="amp">&amp;</span> Shopify themes.</li>
-  <li>Coding framework-free JavaScript.</li>
-</ul>
+He is a senior/lead front-end developer with over 20 years experience. Focusing on design systems, accessibility, usability, and performance; working across FinTech, Travel, Ecommerce, and UK Government.
 
-## Accessibility consultancy
+</div>
+
+## Frontend skills
+
+- Coding rich single-page-applications (SPAs) with ReactJS and TypeScript and testing with both Cypress/Playwright and React Testing Library
+- Creating responsive and accessible HTML/CSS templates (which load quickly)
+- Building responsive HTML prototypes and design systems or style-guides/pattern libraries
+- Coding framework-free JavaScript
+
+## Accessibility skills
 
 Phil provides web accessibility consultancy services under the name [A11y is Everything](https://www.a11yiseverything.com/).
 
-<ul class="arrow-list">
-  <li>Reviewing code and designs and suggest alterations to improve accessibility</li>
-  <li>Test websites with JAWS on Windows and VoiceOver on MacOS/iOS to notice issues</li>
-  <li>Help development teams to create accessible UI components by reviewing <abbr
-      title="Pull Requests">PRs</abbr></li>
-  <li>Help design teams to create accessible designs by reviewing designs and feeding back on
-    WCAG guidelines against the designs.</li>
+- Reviewing code and designs and suggest alterations to improve accessibility
+- Test websites with JAWS on Windows and VoiceOver on MacOS/iOS to notice issues>
+- Help development teams to create accessible UI components by reviewing <abbr title="Pull Requests">PRs</abbr>
+- Help design teams to create accessible designs by reviewing designs and feeding back on
+  <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> against the designs
+- Train people on how to use assistive tech (e.g. screen-readers), how to find and fix accessibility issues
 </ul>
+
+## Lead developer skills
+
+- Leading dev teams to stay motivated, meet deadlines, and deliver quality code
+- Reviewing code and providing feedback in a kind and constructive manner
+- Mentoring junior/middleweight developers
+- Bridging the gap between the business and developers or design and developers
+- Writing policies for development standards
 
 ## Ecommerce (Shopify) consultancy
 
 Phil provides ecommerce (Shopify) consultancy services under the name [Safra](https://www.safralondon.com/).
 
-<ul class="arrow-list">
-  <li>Writing bespoke Shopify themes.</li>
-</ul>
+- Writing bespoke Shopify themes
+- Advising on best practice to improve sales
 
-## Development process (vanilla)
-
-Phil Thompson builds HTML templates along with CSS and JavaScript <del>making use of
-Sass</del> using
-<abbr title="Block-Element-Modifier">BEM</abbr> syntax for his CSS (as well as alphabetising
-his CSS declarations).
-
-CSS/HTML/JavaScript are also split into components for ease of maintenance.
+## Development process
 
 <a href="//github.com/imgiseverything/philthompson.co.uk">The code for this site</a> is
 available on GitHub for your perusal. It is a simple <del>PHP template (for easy header/footer
 includes)</del> 11ty static website that makes use of Github actions to deploy to a virtual private server with Continuous Integration (CI).
 
 Also happy using the latest JavaScript frameworks and learning new ones on the job.
-
-## Development process (ReactJS)
-
-Phil Thompson builds ReactJS single-page apps (SPAs) with Create React App (or NextJS) and TypeScript.
-
-Using either plain CSS or CSS-in-JS (either emotion or styled-components) for styling.
 
 ## Direct clients
 

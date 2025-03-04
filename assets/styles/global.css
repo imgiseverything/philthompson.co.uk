@@ -92,23 +92,34 @@ ol,
 p,
 ul {
   margin-top: 1em;
+  padding-inline-start: 0;
 }
 
 .client-logo-list {
+  display: grid;
+  gap: 5vw;
+  grid-template-columns: 1fr 1fr;
   margin: 0;
   padding: 0;
-  display: grid;
-  gap: 1vw;
-  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (min-width: 48em) {
+  .client-logo-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .client-logo-list__item {
+  border: 1px solid
+    color-mix(in lch, var(--color-body-text) 5%, var(--color-body-background));
   display: grid;
+  padding: 2rem 1rem;
   place-items: center;
 }
 
 .client-logo-list__item > * {
   display: block;
+  max-height: 5rem;
   max-width: 100%;
 }
 
@@ -138,7 +149,7 @@ ul {
   width: 100%;
 }
 
-@media (min-width: 1025px) {
+@media (pointer: fine) {
   .social-list__link:hover {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 1.35em 0 1.65em;
