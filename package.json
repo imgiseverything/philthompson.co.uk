@@ -1,12 +1,12 @@
 {
-  "name": "philthompson-dot-co-do-uk",
+  "name": "philthompson-dot-co-dot-uk",
   "version": "2.0.0",
   "private": true,
   "description": "An 11ty based website for Phil Thompson - a London-based web 'front of the front-end' developer",
   "author": "Phil Thompson <phil@safralondon.com>",
   "licence": "none",
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1"
+    "@11ty/eleventy": "3.0.0"
   },
   "scripts": {
     "build": "npx @11ty/eleventy --input=./",
