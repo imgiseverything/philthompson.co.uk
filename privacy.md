@@ -85,19 +85,7 @@ You can enable or disable location services when you use our Service at any time
 
 #### Use of Cookies
 
-‘Cookies’ are small files saved to your device that track, save and store information which may include an anonymous unique identifier about your interactions and usage of the website. Cookies are useful because they allow a website to recognise a user’s device and to provide you with a tailored experience within this website. You can find more information about cookies at https://ico.org.uk/for-the-public/online/cookies
-
-The PT Digital Services Ltd website uses cookies to better your experience while visiting our website and to ensure that you can interact with our website successfully. The use of cookies does not give PT Digital Services Ltd access to the rest of your computer or to personal information about you.
-
-We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.
-
-Tracking technologies also used are beacons, tags, and scripts to collect and track information to improve and analyse our Service.
-
-You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.
-
-##### Examples of Cookies we use:
-
-- Session Cookies. We use Session Cookies to operate our Service to link the actions of a user during a browser session. Session cookies expire after a browser session ends. Session cookies are not stores beyond this.
+The PT Digital Services Ltd website does not use cookies.
 
 ## Use of data
 
@@ -199,54 +187,7 @@ We will not contact you for marketing purposes by email or phone unless you have
 
 The data we are given access to by social media services will vary but will always be in line with the Terms of that particular service. We will not be able to access your private messages or photos and it will include only what you specifically send to us.
 
-PT Digital Services Ltd’s website may use social sharing buttons which help share web content directly from web pages to the social media platform in question. Users are advised before using such social sharing buttons that they do so at their own discretion and note that the social media platform may track and save your request to share a web page respectively through your social media platform account.
-
-### Behavioural remarketing
-
-PT Digital Services Ltd may use remarketing services to advertise on third party websites to you after you visited our Service. We and our third-party vendors use cookies to inform, optimize and serve ads based on your past visits to our Service.
-
-### Twitter
-
-Twitter remarketing service is provided by Twitter Inc.
-
-You can opt-out from Twitter’s interest-based ads by following their instructions: https://support.twitter.com/articles/20170405
-
-You can learn more about the privacy practices and policies of Twitter by visiting their Privacy Policy page: https://twitter.com/privacy
-
-### Meta
-
-Facebook remarketing service is provided by Meta.
-
-You can learn more about interest-based advertising from Facebook by visiting this page: https://www.facebook.com/help/164968693837950
-
-To opt-out from Facebook’s interest-based ads follow these instructions from Facebook: https://www.facebook.com/help/568137493302217
-
-Facebook adheres to the Self-Regulatory Principles for Online Behavioural Advertising established by the Digital Advertising Alliance. You can also opt-out from Facebook and other participating companies through the Digital Advertising Alliance in the USA http://www.aboutads.info/choices/, the Digital Advertising Alliance of Canada in Canada http://youradchoices.ca/ or the European Interactive Digital Advertising Alliance in Europe http://www.youronlinechoices.eu/, or opt-out using your mobile device settings.
-
-For more information on the privacy practices of Facebook, please visit Facebook’s Data Policy: https://www.facebook.com/privacy/explanation
-
-### Google AdWords
-
-Google AdWords remarketing service is provided by Google Inc.
-
-You can opt-out of Google Analytics for Display Advertising and customize the Google Display Network ads by visiting the Google Ads Settings page: http://www.google.com/settings/ads
-
-Google also recommends installing the Google Analytics Opt-out Browser Add-on – https://tools.google.com/dlpage/gaoptout – for your web browser. Google Analytics Opt-out Browser Add-on provides visitors with the ability to prevent their data from being collected and used by Google Analytics.
-
-For more information on the privacy practices of Google, please visit the Google Privacy Terms web page: http://www.google.com/intl/en/policies/privacy/
-Analytics
-
-We may use third-party Service Providers to monitor and analyse the use of our Service.
-
-### Google Analytics
-
-Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.
-
-You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on at this link https://tools.google.com/dlpage/gaoptout . The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
-
-For more information on the privacy practices of Google, please visit the Google Privacy Terms web page: http://www.google.com/intl/en/policies/privacy/
-
-## Service Providers
+## Service providers
 
 We may employ third party companies and individuals to facilitate our Service (“Service Providers”), to provide the Service on our behalf, to perform Service-related services or to assist us in analysing how our Service is used. We and our third-party vendors use cookies to inform, optimize and serve ads based on your past visits to our Service.
 
