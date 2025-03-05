@@ -97,6 +97,11 @@ ul {
   padding-inline-start: 0;
 }
 
+ul:not([class]) li,
+ol:not([class]) li {
+  margin-bottom: 1em;
+}
+
 .client-logo-list {
   display: grid;
   gap: 5vw;
