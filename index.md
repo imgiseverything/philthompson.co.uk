@@ -184,7 +184,7 @@ Also happy using the latest JavaScript frameworks and learning new ones on the j
 
 ### Digital/Design agencies
 
-Working with established agencies like <a href="https://www.wearefriday.com/">Friday</a>,
+Working with established agencies like <a href="https://www.wearefriday.com/">Friday (now PA Consulting)</a>,
 <a href="https://fluxx.uk.com/">Fluxx</a>, and <a
     href="https://www.tribalworldwide.co.uk/">Tribal Worldwide</a> in London, <a
     href="https://www.383project.com/">383 Project</a> in Birmingham, <a
@@ -196,7 +196,7 @@ Working with established agencies like <a href="https://www.wearefriday.com/">Fr
 ## Nice things people have said
 
 <div class="group quotes js-slides" tabIndex="0" role="region" aria-label="Client recommendations">
-  <div class="quote js-slide active" id="slide1" data-slide-number="1" aria-hidden="false">
+  <div class="quote js-slide active" id="slide1" data-slide-number="1">
     <blockquote>
 
       Phil is a highly skilled developer and quickly became an invaluable member of the
@@ -207,7 +207,7 @@ Working with established agencies like <a href="https://www.wearefriday.com/">Fr
     </blockquote>
 
   </div>
-  <div class="quote js-slide" id="slide2" data-slide-number="2" aria-hidden="true">
+  <div class="quote js-slide" id="slide2" data-slide-number="2">
     <blockquote>
 
       Phil is an excellent developer and a great professional who was always keen to help
@@ -218,7 +218,7 @@ Working with established agencies like <a href="https://www.wearefriday.com/">Fr
     </blockquote>
 
   </div>
-  <div class="quote js-slide" id="slide3" data-slide-number="3" aria-hidden="true">
+  <div class="quote js-slide" id="slide3" data-slide-number="3">
     <blockquote>
 
 Phil is great to work with. He not only works to brief but will help shape it as
@@ -229,7 +229,7 @@ him again.
     </blockquote>
 
   </div>
-  <div class="quote active js-slide" id="slide4" data-slide-number="4" aria-hidden="true">
+  <div class="quote active js-slide" id="slide4" data-slide-number="4">
     <blockquote>
 
 Phil has great communication skills. We worked together on a redesign project across
