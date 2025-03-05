@@ -128,7 +128,7 @@ ul {
 
 .social-list {
   display: grid;
-  margin: 0;
+  margin: 1.5em 0 0;
   padding: 0;
   gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
