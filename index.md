@@ -244,9 +244,13 @@ personality to the table.
   </div>
 </div>
 
+<div class="work-together">
+
 ## Work together
 
 If you have project that you think would be suited to Phil then you can email him: <a href="mailto:work@philthompson.co.uk?subject=Let’s work together&amp;body=Hi Phil" class="email">work@philthompson.co.uk</a>
+
+</div>
 
 ### Elsewhere on the web
 
