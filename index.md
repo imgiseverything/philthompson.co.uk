@@ -182,7 +182,7 @@ Also happy using the latest JavaScript frameworks and learning new ones on the j
   </li>
 </ul>
 
-### Digital/Design agencies
+## Digital/Design agencies
 
 Working with established agencies like <a href="https://www.wearefriday.com/">Friday (now PA Consulting)</a>,
 <a href="https://fluxx.uk.com/">Fluxx</a>, and <a
