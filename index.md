@@ -67,7 +67,6 @@ Phil provides web accessibility consultancy services under the name [A11y is Eve
 - Help design teams to create accessible designs by reviewing designs and feeding back on
   <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> against the designs
 - Train people on how to use assistive tech (e.g. screen-readers), how to find and fix accessibility issues
-</ul>
 
 ## Lead developer skills
 
