@@ -1,3 +1,8 @@
+@view-transition {
+  navigation: auto;
+  types: slide, forwards;
+}
+
 .amp,
 .ampersand {
   font-family: Baskerville, Georgia, serif;
