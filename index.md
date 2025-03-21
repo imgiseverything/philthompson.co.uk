@@ -46,7 +46,7 @@ layout: layouts/default.njk
 
 <div class="elevator-pitch">
 
-He is a senior/lead front-end developer with over 20 years experience. Focusing on design systems, accessibility, usability, and performance; working across FinTech, Travel, Ecommerce, and UK Government.
+He is a senior/lead front-end developer with over 20 years experience. Focusing on design systems, accessibility, usability, and performance; working across FinTech, Travel, Health, Ecommerce, and UK Government.
 
 </div>
 
