@@ -61,6 +61,7 @@
   --color-brand-yellow: #ffdd22;
   --color-brand-off-black: #151515;
   --color-body-background: var(--color-brand-yellow);
+  --color-body-background-tint: rgba(0, 0, 0, 0.05);
   --color-body-text: var(--color-brand-off-black);
   --color-link: var(--color-body-text);
   accent-color: var(--color-brand-off-black);
@@ -75,6 +76,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-body-background: #151515;
+    --color-body-background-tint: rgba(255, 255, 255, 0.05);
     --color-body-text: #ffffff;
     --color-link: #ffffff;
     accent-color: var(--color-brand-yellow);

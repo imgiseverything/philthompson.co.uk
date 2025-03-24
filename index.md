@@ -36,6 +36,23 @@ layout: layouts/default.njk
     }
   }
 
+  @media (min-width: 37.5em) {
+
+    .skills {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .skills__accessibility {
+      background-color: var(--color-body-background-tint);
+      grid-column: 2;
+      grid-row: 1 / 3;
+      padding-inline: 2rem;
+    }
+  }
+
 </style>{% endblock %}
 
 <div class="splash">
@@ -50,12 +67,20 @@ He is a senior/lead front-end developer with over 20 years experience. Focusing 
 
 </div>
 
+<div class="skills">
+
+  <div class="skills__frontend">
+
 ## Frontend skills
 
 - Coding rich single-page-applications (SPAs) with ReactJS and TypeScript and testing with both Cypress/Playwright and React Testing Library
 - Creating responsive and accessible HTML/CSS templates (which load quickly)
 - Building responsive HTML prototypes and design systems or style-guides/pattern libraries
 - Coding framework-free JavaScript
+
+  </div>
+
+  <div class="skills__accessibility">
 
 ## Accessibility skills
 
@@ -68,6 +93,10 @@ Phil provides web accessibility consultancy services under the name [A11y is Eve
   <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> against the designs
 - Train people on how to use assistive tech (e.g. screen-readers), how to find and fix accessibility issues
 
+  </div>
+
+  <div class="">
+
 ## Lead developer skills
 
 - Leading dev teams to stay motivated, meet deadlines, and deliver quality code
@@ -75,6 +104,9 @@ Phil provides web accessibility consultancy services under the name [A11y is Eve
 - Mentoring junior/middleweight developers
 - Bridging the gap between the business and developers or design and developers
 - Writing policies for development standards
+
+  </div>
+</div>
 
 ## Ecommerce (Shopify) consultancy
 
