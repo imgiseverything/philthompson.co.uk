@@ -1,6 +1,6 @@
 ---
-title: &Daughter
-meta_description: We have worked with &Daughter since 2017 and with every iteration of their ecommerce website, we have always tried to ensure it is as accessible as possible.
+title: &amp;Daughter
+meta_description: Phil has worked with &Daughter since 2017 and with every iteration of their ecommerce website, we have always tried to ensure it is as accessible as possible.
 layout: layouts/default.njk
 ---
 

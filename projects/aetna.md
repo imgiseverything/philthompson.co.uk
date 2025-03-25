@@ -1,5 +1,5 @@
 ---
-title: Aetna member's area
+title: Aetna member's area for We Are Friday
 meta_description:
 layout: layouts/default.njk
 ---
