@@ -6,7 +6,7 @@ layout: layouts/default.njk
 
 # {{ title }}
 
-Phil revamped the [TOPSHOP](https://www.topshop.com/) blog alongside their inhouse designers making it load faster and look beautiful.
+Phil revamped the [TOPSHOP](https://www.topshop.com/)&nbsp;blog alongside their inhouse designers making it load faster and look beautiful.
 
 With London Fashion Week looming, Topshop wanted to update their WordPress blog for a cleaner, quicker and more on-trend design. Working with in-house designers Phil created a theme from scratch that used less plug-ins and therefore made less requests.
 
