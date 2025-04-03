@@ -26,3 +26,6 @@ module.exports = function (eleventyConfig) {
     return `${urlPart}?${params}`;
   });
 };
+
+// Put robots.txt in root
+eleventyConfig.addPassthroughCopy({ "./robots.txt": "/robots.txt" });
