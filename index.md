@@ -216,7 +216,7 @@ Also happy using the latest JavaScript frameworks and learning new ones on the j
 ## Digital/Design agencies
 
 Working with established agencies like <a href="https://www.paconsulting.com/">Friday (now PA Consulting)</a>,
-<a href="https://fluxx.uk.com/">Fluxx</a>, and <a
+<a href="https://wearemagnetic.com/events-insights/our-stories/news/fluxx-and-magneticnorth-become-magnetic">Fluxx (now Magnetic)</a>, and <a
     href="https://www.tribalworldwide.co.uk/">Tribal Worldwide</a> in London, <a
     href="https://www.383project.com/">383 Project</a> in Birmingham, <a
     href="https://www.cxpartners.co.uk/">cxpartners</a> in Bristol, <a
