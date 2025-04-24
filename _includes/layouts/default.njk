@@ -18,7 +18,10 @@
     <style>
     {% include "critical-path.css" %}
     </style>
-    <link href="{{ '/assets/styles/global.css' | url | bust }}" rel="stylesheet">
+    <link href="{{ '/assets/styles/global.css' | url | bust }}" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="{{ '/assets/styles/global.css' | url | bust }}" rel="stylesheet" media="all">
+    </noscript>
     {% block styles %}{% endblock %}
   </head>
   <body>
