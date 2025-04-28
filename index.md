@@ -87,7 +87,7 @@ He is a senior/lead front-end developer with over 20 years experience. Focusing 
 Phil provides web accessibility consultancy services under the name [A11y is Everything](https://www.a11yiseverything.com/).
 
 - Reviewing code and designs and suggest alterations to improve accessibility
-- Test websites with JAWS on Windows and VoiceOver on MacOS/iOS to notice issues>
+- Test websites with JAWS on Windows and VoiceOver on MacOS/iOS to notice issues
 - Help development teams to create accessible UI components by reviewing <abbr title="Pull Requests">PRs</abbr>
 - Help design teams to create accessible designs by reviewing designs and feeding back on
   <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> against the designs
