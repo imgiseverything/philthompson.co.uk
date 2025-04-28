@@ -28,5 +28,8 @@ module.exports = function (eleventyConfig) {
 
   // Put some files in the root
   eleventyConfig.addPassthroughCopy({ "./robots.txt": "/robots.txt" });
-  eleventyConfig.addPassthroughCopy({ "./.htaccess": "/.htaccess" });
+  eleventyConfig.addPassthroughCopy({ "./humans.txt": "/humans.txt" });
+  eleventyConfig.addPassthroughCopy({
+    "./BingSiteAuth.xml": "/BingSiteAuth.xml",
+  });
 };
