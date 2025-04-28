@@ -103,11 +103,9 @@ Header set Connection keep-alive
     ExpiresByType application/rss+xml                   "access plus 1 hour"
 
   # Web fonts
-    ExpiresByType application/font-woff                 "access plus 1 month"
-    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
-    ExpiresByType application/x-font-ttf                "access plus 1 month"
-    ExpiresByType font/opentype                         "access plus 1 month"
-    ExpiresByType font/woff2                            "access plus 1 month"
+    ExpiresByType application/font-woff                 "access plus 1 year"
+    ExpiresByType font/opentype                         "access plus 1 year"
+    ExpiresByType font/woff2                            "access plus 1 year"
     ExpiresByType image/svg+xml                         "access plus 1 month"
 </IfModule>
 
