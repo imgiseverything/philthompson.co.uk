@@ -120,3 +120,11 @@ body {
   margin: 0;
   min-block-size: 100dvb;
 }
+
+.page-container {
+  padding-inline: var(--spacing-document-inline);
+  margin-inline: auto;
+  max-width: calc(
+    64rem - var(--spacing-document-inline) - var(--spacing-document-inline)
+  );
+}

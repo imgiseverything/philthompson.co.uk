@@ -39,14 +39,6 @@ a:focus-visible {
   width: 1px;
 }
 
-.page-container {
-  padding-inline: var(--spacing-document-inline);
-  margin-inline: auto;
-  max-width: calc(
-    64rem - var(--spacing-document-inline) - var(--spacing-document-inline)
-  );
-}
-
 .block-list li {
   list-style: none;
   margin-inline-start: 0;
