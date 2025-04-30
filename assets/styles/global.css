@@ -279,16 +279,12 @@ ol:not([class]) li {
 }
 
 .footer nav a:not(:last-of-type) {
-  margin-block-end: 0.25em;
+  margin-block-end: 0.5em;
 }
 
 /* < 600px wide */
 @media (max-width: 37.5em) {
   .footer nav a {
     padding-block: 0.25em;
-  }
-
-  .footer nav a:not(:last-of-type) {
-    margin-block-end: 0.5em;
   }
 }
