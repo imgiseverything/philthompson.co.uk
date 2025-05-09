@@ -1,6 +1,6 @@
 ---
-title: London UX Engineer - Phil Thompson
-meta_description: Phil Thompson (CPACC) is a UX engineer or 'front of the front-end' engineer living and working in London with a special interest in digital accessibility and design systems.
+title: London Frontend Engineer - Phil Thompson
+meta_description: Phil Thompson (CPACC) is a Frontend engineer or 'front of the front-end' engineer living and working in London with a special interest in digital accessibility and design systems.
 layout: layouts/default.njk
 ---
 
@@ -57,7 +57,7 @@ layout: layouts/default.njk
 
 <div class="splash">
 
-# Phil Thompson is a UX Engineer living <span class="amp">&amp;</span> working in London, UK.
+# Phil Thompson is a Frontend Engineer living <span class="amp">&amp;</span> working in London, UK.
 
 </div>
 
