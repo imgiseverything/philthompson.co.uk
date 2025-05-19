@@ -11,7 +11,7 @@ layout: layouts/default.njk
   <ul>
     {%- for project in collections.project -%}
       <li>
-        <a href="{{ project.data.permalink }}">{{ article.data.title }}</a>
+        <a href="{{ project.data.permalink }}">{{ project.data.title }}</a>
       </li>
     {%- endfor -%}
   </ul>
