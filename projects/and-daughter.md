@@ -3,7 +3,7 @@ title: &amp;Daughter
 meta_description: Phil has worked with &Daughter since 2016 and with every iteration of their ecommerce website, we have always tried to ensure it is as accessible as possible.
 layout: layouts/default.njk
 permalink: "/projects/and-daughter/"
-tags: [frontend, shopify, ecommerce]
+tags: [project, frontend, shopify, ecommerce]
 ---
 
 # {{ title }}

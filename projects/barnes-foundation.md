@@ -3,7 +3,7 @@ title: Barnes Foundation for AREA 17
 meta_description:
 layout: layouts/default.njk
 permalink: "/projects/barnes-foundation/"
-tags: [frontend, "design system"]
+tags: [project, frontend, "design system"]
 ---
 
 # {{ title }}

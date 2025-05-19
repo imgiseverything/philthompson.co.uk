@@ -3,7 +3,7 @@ title: BBC - micro:bit
 meta_description:
 layout: layouts/default.njk
 permalink: "/projects/bbc-microbit/"
-tags: [frontend, "design system"]
+tags: [project, frontend, "design system"]
 ---
 
 # {{ title }}

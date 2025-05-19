@@ -3,7 +3,7 @@ title: Aetna member's area for We Are Friday
 meta_description:
 layout: layouts/default.njk
 permalink: "/projects/aetna/"
-tags: [frontend, accessiblility, forms]
+tags: [project, frontend, accessiblility, forms]
 ---
 
 # {{ title }}
