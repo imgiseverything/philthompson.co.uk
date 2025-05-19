@@ -78,6 +78,8 @@ He is a senior/lead front-end developer with over 20 years experience. Focusing 
 - Building responsive HTML prototypes and design systems or style-guides/pattern libraries
 - Coding framework-free JavaScript
 
+[View some projects](/projects/)
+
   </div>
 
   <div class="skills__accessibility">

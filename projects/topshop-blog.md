@@ -2,6 +2,8 @@
 title: TOPSHOP Blog
 meta_description:
 layout: layouts/default.njk
+permalink: "/projects/topshop-blog"
+tags: [frontend, backend, WordPress]
 ---
 
 # {{ title }}

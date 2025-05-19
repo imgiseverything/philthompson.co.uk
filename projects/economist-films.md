@@ -2,6 +2,8 @@
 title: The Economist Films
 meta_description: In 2015, Phil created the first iteration of the Economist Films website and an Amazon Fire TV app too.
 layout: layouts/default.njk
+permalink: "/projects/economist-films"
+tags: [backend, frontend, PHP, JSON]
 ---
 
 # {{ title }}

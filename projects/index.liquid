@@ -1,0 +1,18 @@
+---
+eleventyImport:
+  collections: ["project"]
+title: Projects
+meta_description: Case studies and examples of web projects carried out by Phil Thompson.
+layout: layouts/default.njk
+---
+<h1>{{ title }}</h1>
+
+<nav aria-labelledby="project list">
+  <ul>
+    {%- for project in collections.project -%}
+      <li>
+        <a href="{{ project.data.permalink }}">{{ article.data.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

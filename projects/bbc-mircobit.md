@@ -1,7 +1,9 @@
 ---
 title: BBC - micro:bit
-meta_description: 
+meta_description:
 layout: layouts/default.njk
+permalink: "/projects/bbc-microbit"
+tags: [frontend, "design system"]
 ---
 
 # {{ title }}
@@ -11,8 +13,6 @@ The Manchester-based agency Tangent approached me in 2015 with a tight deadline 
 Tangent, merely needed the pages created for the new website, however I felt it was important to create a design system for the project so it would be easy to build many different templates.
 
 As this project was created in a short period for a super tight deadline – it was redesigned very soon after launch. Thankfully some elements of the original design and original code still remain.
-
-If you would like a demo of the micro:bit design system please get in touch.
 
 ## Why go through this trouble?
 

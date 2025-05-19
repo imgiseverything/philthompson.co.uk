@@ -2,6 +2,7 @@
 title: Falabella for Tribal Worldwide
 meta_description:
 layout: layouts/default.njk
+tags: [frontend]
 ---
 
 # {{ title }}
