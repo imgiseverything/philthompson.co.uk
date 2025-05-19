@@ -14,4 +14,5 @@ Phil created the accessible front-end of the [Barnes Foundation](https://www.bar
 
 - Work started and completed: 2015
 - Project length: 2 months
-- Website URL: [https://www.barnesfoundation.org](https://www.barnesfoundation.org)
+- [Website URL](https://www.barnesfoundation.org)
+- [Design system](https://barnesfoundation.org/toolkit)

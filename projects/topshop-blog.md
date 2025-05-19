@@ -45,5 +45,5 @@ Mobile users may be on 3G or their local wifi – we’re never sure how fat the
 
 - Work started and completed: September 2015
 - Project duration: 75 hours
-- Website URL: http://insideout.topshop.com/ (no longer online)
-- Wayback machine archive: https://web.archive.org/web/20151007065550/http://insideout.topshop.com/
+- Website URL: no longer online
+- [Wayback machine archive](https://web.archive.org/web/20151007065550/http://insideout.topshop.com/)
