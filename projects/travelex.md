@@ -2,7 +2,7 @@
 title: Travelex
 meta_description: Phil created the website for Travelex's API alongside an inhouse designer.
 layout: layouts/default.njk
-permalink: "/projects/travelex"
+permalink: "/projects/travelex/"
 tags: [frontend]
 ---
 

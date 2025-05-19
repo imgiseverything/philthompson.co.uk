@@ -2,7 +2,7 @@
 title: BBC - micro:bit
 meta_description:
 layout: layouts/default.njk
-permalink: "/projects/bbc-microbit"
+permalink: "/projects/bbc-microbit/"
 tags: [frontend, "design system"]
 ---
 
