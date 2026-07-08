@@ -86,8 +86,7 @@ He is a senior/lead front-end developer with over 20 years experience. Focusing 
 
 ## Accessibility skills
 
-Phil provides web accessibility consultancy services under the name [A11y is Everything](https://www.a11yiseverything.com/).
-
+- Holds CPACC (Certified Professional in Accessibility Core Competencies) accreditation
 - Reviewing code and designs and suggest alterations to improve accessibility
 - Test websites with JAWS on Windows and VoiceOver on MacOS/iOS to notice issues
 - Help development teams to create accessible UI components by reviewing <abbr title="Pull Requests">PRs</abbr>
