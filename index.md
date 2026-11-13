@@ -1,6 +1,6 @@
 ---
 title: London Frontend Engineer - Phil Thompson
-meta_description: Phil Thompson (CPACC) is a Frontend engineer or 'front of the front-end' engineer living and working in London with a special interest in digital accessibility and design systems.
+meta_description: Phil Thompson (CPACC) is a Senior Frontend Engineer or 'front of the front-end' engineer living and working in London with a special interest in digital accessibility and design systems.
 layout: layouts/default.njk
 ---
 
@@ -57,13 +57,13 @@ layout: layouts/default.njk
 
 <div class="splash">
 
-# Phil Thompson is a Frontend Engineer living <span class="amp">&amp;</span> working in London, UK.
+# Phil Thompson is a Senior Frontend Engineer living <span class="amp">&amp;</span> working in London
 
 </div>
 
 <div class="elevator-pitch">
 
-He is a senior/lead front-end developer with over 20 years experience. Focusing on design systems, accessibility, usability, and performance; working across FinTech, Travel, Health, Ecommerce, and UK Government.
+He is a senior/lead front-end developer with over 20 years experience. Focusing on design systems, accessibility, usability, and performance; working across FinTech, Travel, Health, Ecommerce, OSINT, and UK Government.
 
 </div>
 
@@ -231,10 +231,9 @@ Also happy using the latest JavaScript frameworks and learning new ones on the j
 
 ## Digital/Design agencies
 
-Working with established agencies like <a href="https://www.paconsulting.com/">Friday (now PA Consulting)</a>,
+Working with established digital agencies (from 2007 to 2019) including <a href="https://www.paconsulting.com/">Friday (now PA Consulting)</a>,
 <a href="https://wearemagnetic.com/events-insights/our-stories/news/fluxx-and-magneticnorth-become-magnetic">Fluxx (now Magnetic)</a>, and <a
     href="https://www.tribalworldwide.co.uk/">Tribal Worldwide</a> in London, <a
-    href="https://www.383project.com/">383 Project</a> in Birmingham, <a
     href="https://www.cxpartners.co.uk/">cxpartners</a> in Bristol, <a
     href="https://www.area17.com/">AREA 17</a> in New York/Paris, <a
     href="https://www.codecomputerlove.com/">Code Computerlove</a> and <a
